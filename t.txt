@@ -1,0 +1,1 @@
+The goal is to create an android application with react native. This application allows word translation from English to Japanese and vice versa. The main screen allows you to choose between 3 modes: searching for an English translation from the Japanese word, searching for a Japanese translation from an English word and adding a new word to the dictionary.
