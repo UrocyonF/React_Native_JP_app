@@ -1,0 +1,48 @@
+{   
+    "verbe": {
+        "1": {
+            "fr": "être, exister",
+            "jp-kana": "いる",
+            "jp-kanji": "居る",
+            "jp-romanji": "iru"
+        },
+        "2": {
+            "fr": "avoir",
+            "jp-kana": "ある",
+            "jp-kanji": "有る",
+            "jp-romanji": "aru"
+        },
+        "3": {
+            "fr": "aller",
+            "jp-kana": "いく",
+            "jp-kanji": "行く",
+            "jp-romanji": "iku"
+        },
+        "4": {
+            "fr": "venir",
+            "jp-kana": "くる",
+            "jp-kanji": "来る",
+            "jp-romanji": "kuru"
+        }
+    }, 
+    "adjectif": {
+        "1": {
+            "fr": "bon",
+            "jp-kana": "いい",
+            "jp-kanji": "良い",
+            "jp-romanji": "ii"
+        },
+        "2": {
+            "fr": "jeune",
+            "jp-kana": "わかい",
+            "jp-kanji": "若い",
+            "jp-romanji": "wakai"
+        },
+        "3": {
+            "fr": "grand",
+            "jp-kana": "おおきい",
+            "jp-kanji": "大きい",
+            "jp-romanji": "ookii"
+        }
+    }
+}
