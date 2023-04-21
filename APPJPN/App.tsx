@@ -12,8 +12,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import LinearGradient from 'react-native-linear-gradient';
 
 import DicoScreen from './components/DicoScreen';
-import DicoSearchOutput from './components/DicoSearchOutput';
-import DicoAddInput from './components/DicoAddInput';
+import DicoSearchScreen from './components/DicoSearchScreen';
+import DicoAddScreen from './components/DicoAddScreen';
 import TradScreen from './components/TradScreen';
 import KanaScreen from './components/KanaScreen';
 
@@ -27,8 +27,8 @@ function App(): JSX.Element {
             <Stack.Navigator>
                 <Stack.Screen name="HomeScreen" component={HomeScreen} />
                 <Stack.Screen name="DicoScreen" component={DicoScreen} />
-                <Stack.Screen name="DicoSearchOutput" component={DicoSearchOutput} />
-                <Stack.Screen name="DicoAddInput" component={DicoAddInput} />
+                <Stack.Screen name="DicoSearchOutput" component={DicoSearchScreen} />
+                <Stack.Screen name="DicoAddInput" component={DicoAddScreen} />
                 <Stack.Screen name="TradScreen" component={TradScreen} />
                 <Stack.Screen name="KanaScreen" component={KanaScreen} />
             </Stack.Navigator>
@@ -72,7 +72,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         margin: 10,
         width: 200,
-        alignItems: 'center'
+        alignItems: 'center',
+        borderWidth: 1,
     },
     homeButtonText: {
         fontSize: 30,

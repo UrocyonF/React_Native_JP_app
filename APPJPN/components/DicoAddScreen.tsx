@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 
-function DicoSearchOutput({ navigation }: { navigation: any }) {
+function DicoAddScreen({ navigation }: { navigation: any }) {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Button
@@ -23,4 +23,4 @@ function DicoSearchOutput({ navigation }: { navigation: any }) {
 }
 
 
-export default DicoSearchOutput;
+export default DicoAddScreen;
