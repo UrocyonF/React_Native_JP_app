@@ -18,8 +18,6 @@ import LinearGradient from 'react-native-linear-gradient';
 import DicoScreen from './components/DicoScreen';
 import TradScreen from './components/TradScreen';
 import KanaScreen from './components/KanaScreen';
-import { presets } from './babel.config';
-
 
 const MainStack = createStackNavigator();
 

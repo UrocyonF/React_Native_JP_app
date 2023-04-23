@@ -36,10 +36,150 @@
             "kanji": "行く",
             "romaji": "iku"
         }, {
+            "fr": "faire",
+            "kana": "する",
+            "kanji": "",
+            "romaji": "suru (shimasu)"
+        }, {
             "fr": "venir",
             "kana": "くる",
             "kanji": "来る",
             "romaji": "kuru"
+        }, {
+            "fr": "rentrer, retourner",
+            "kana": "かえる",
+            "kanji": "帰る",
+            "romaji": "kaeru"
+        }, {
+            "fr": "manger",
+            "kana": "たべる",
+            "kanji": "食べる",
+            "romaji": "taberu"
+        }, {
+            "fr": "boire",
+            "kana": "のむ",
+            "kanji": "飲む",
+            "romaji": "nomu"
+        }, {
+            "fr": "lire",
+            "kana": "よむ",
+            "kanji": "読む",
+            "romaji": "yomu"
+        }, {
+            "fr": "écrire, dessiner, peindre",
+            "kana": "かく",
+            "kanji": "書く",
+            "romaji": "kaku"
+        }, {
+            "fr": "apprendre",
+            "kana": "ならう",
+            "kanji": "習う",
+            "romaji": "narau"
+        }, {
+            "fr": "acheter",
+            "kana": "かう",
+            "kanji": "買う",
+            "romaji": "kau"
+        }, {
+            "fr": "vendre",
+            "kana": "うる",
+            "kanji": "売る",
+            "romaji": "uru"
+        }, {
+            "fr": "travailler",
+            "kana": "はたらく",
+            "kanji": "働く",
+            "romaji": "hataraku"
+        }, {
+            "fr": "dormir",
+            "kana": "ねる",
+            "kanji": "寝る",
+            "romaji": "neru"
+        }, {
+            "fr": "se réveiller",
+            "kana": "おきる",
+            "kanji": "起きる",
+            "romaji": "okiru"
+        }, {
+            "fr": "fumer",
+            "kana": "すう",
+            "kanji": "吸う",
+            "romaji": "suu"
+        }, {
+            "fr": "voir, regarder",
+            "kana": "みる",
+            "kanji": "見る",
+            "romaji": "miru"
+        }, {
+            "fr": "écouter, entendre",
+            "kana": "きく",
+            "kanji": "聞く",
+            "romaji": "kiku"
+        }, {
+            "fr": "prendre (photo)",
+            "kana": "とる",
+            "kanji": "撮る",
+            "romaji": "toru"
+        }, {
+            "fr": "rencontrer, voir (ami)",
+            "kana": "あう",
+            "kanji": "会う",
+            "romaji": "au"
+        }, {
+            "fr": "couper",
+            "kana": "きる",
+            "kanji": "切る",
+            "romaji": "kiru"
+        }, {
+            "fr": "donner",
+            "kana": "あげる",
+            "kanji": "上げる",
+            "romaji": "ageru"
+        }, {
+            "fr": "recevoir, répondre (tel)",
+            "kana": "もらう",
+            "kanji": "貰う",
+            "romaji": "morau"
+        }, {
+            "fr": "envoyer, offrir",
+            "kana": "おくる",
+            "kanji": "送る",
+            "romaji": "okuru"
+        }, {
+            "fr": "appeler (tél.)",
+            "kana": "かける",
+            "kanji": "掛ける",
+            "romaji": "kakeru"
+        }, {
+            "fr": "prêter",
+            "kana": "かりる",
+            "kanji": "借りる",
+            "romaji": "kariru (kashimasu)"
+        }, {
+            "fr": "enseigner",
+            "kana": "おしえる",
+            "kanji": "教える",
+            "romaji": "oshieru (oshiemasu)"
+        }, {
+            "fr": "empreinter",
+            "kana": "かす",
+            "kanji": "貸す",
+            "romaji": "kasu"
+        }, {
+            "fr": "oublier",
+            "kana": "わすれる",
+            "kanji": "忘れる",
+            "romaji": "wasureru"
+        }, {
+            "fr": "aimer",
+            "kana": "すき",
+            "kanji": "好き",
+            "romaji": "suki"
+        }, {
+            "fr": "pas aimer, détester",
+            "kana": "きらい",
+            "kanji": "嫌い",
+            "romaji": "kirai"
         }
     ],
     "objet": [
@@ -48,6 +188,181 @@
             "kana": "でんわ",
             "kanji": "電話",
             "romaji": "denwa"
+        }, {
+            "fr": "clé",
+            "kana": "かぎ",
+            "kanji": "鍵",
+            "romaji": "kagi"
+        }, {
+            "fr": "cigarette",
+            "kana": "タバコ",
+            "kanji": "",
+            "romaji": "tabako"
+        }, {
+            "fr": "photographie",
+            "kana": "しゃしん",
+            "kanji": "写真",
+            "romaji": "shashin"
+        }, {
+            "fr": "portable",
+            "kana": "けいたい",
+            "kanji": "携帯",
+            "romaji": "keitai"
+        }, {
+            "fr": "magasine",
+            "kana": "ざっし",
+            "kanji": "雑誌",
+            "romaji": "zasshi"
+        }, {
+            "fr": "livre",
+            "kana": "ほん",
+            "kanji": "本",
+            "romaji": "hon"
+        }, {
+            "fr": "journal intime",
+            "kana": "にっき",
+            "kanji": "日記",
+            "romaji": "nikki"
+        }, {
+            "fr": "règle",
+            "kana": "じょうき",
+            "kanji": "定規",
+            "romaji": "jouki"
+        }, {
+            "fr": "horloge",
+            "kana": "とけい",
+            "kanji": "時計",
+            "romaji": "tokei"
+        }, {
+            "fr": "radio",
+            "kana": "ラジオ",
+            "kanji": "",
+            "romaji": "rajio"
+        }, {
+            "fr": "parapluie",
+            "kana": "かさ",
+            "kanji": "傘",
+            "romaji": "kasa"
+        }, {
+            "fr": "télévision",
+            "kana": "テレビ",
+            "kanji": "",
+            "romaji": "terebi"
+        }, {
+            "fr": "stylo bille",
+            "kana": "ボールペン",
+            "kanji": "",
+            "romaji": "boorupen"
+        }, {
+            "fr": "chaise",
+            "kana": "いす",
+            "kanji": "椅子",
+            "romaji": "isu"
+        }, {
+            "fr": "caméra",
+            "kana": "カメラ",
+            "kanji": "",
+            "romaji": "kamera"
+        }, {
+            "fr": "châpeau",
+            "kana": "ぼうし",
+            "kanji": "帽子",
+            "romaji": "boushi"
+        }, {
+            "fr": "dictonnaire",
+            "kana": "じしょ",
+            "kanji": "辞書",
+            "romaji": "jisho"
+        }, {
+            "fr": "chaussure",
+            "kana": "くつ",
+            "kanji": "靴",
+            "romaji": "kutsu"
+        }, {
+            "fr": "journal",
+            "kana": "しんぶん",
+            "kanji": "新聞",
+            "romaji": "shinbun"
+        }, {
+            "fr": "sac",
+            "kana": "かばん",
+            "kanji": "鞄",
+            "romaji": "kaban"
+        }, {
+            "fr": "lunette",
+            "kana": "めがね",
+            "kanji": "眼鏡",
+            "romaji": "megane"
+        }, {
+            "fr": "crayon",
+            "kana": "えんぴつ",
+            "kanji": "鉛筆",
+            "romaji": "enpitsu"
+        }, {
+            "fr": "porte",
+            "kana": "ドア",
+            "kanji": "",
+            "romaji": "doa"
+        }, {
+            "fr": "ordinateur",
+            "kana": "コンピューター",
+            "kanji": "",
+            "romaji": "konyuutaa"
+        }, {
+            "fr": "carte de visite",
+            "kana": "めいし",
+            "kanji": "名刺",
+            "romaji": "meishi"
+        }, {
+            "fr": "distributeur",
+            "kana": "じどうはんばいき",
+            "kanji": "自動販売機",
+            "romaji": "jidouhanbaiki"
+        }, {
+            "fr": "ciseau",
+            "kana": "はさみ",
+            "kanji": "",
+            "romaji": "hasami"
+        }, {
+            "fr": "lettre",
+            "kana": "てがみ",
+            "kanji": "手紙",
+            "romaji": "tegami"
+        }, {
+            "fr": "fourchette",
+            "kana": "フォーク",
+            "kanji": "",
+            "romaji": "fooku"
+        }, {
+            "fr": "cuillère",
+            "kana": "スプーン",
+            "kanji": "",
+            "romaji": "supuun"
+        }, {
+            "fr": "couteau",
+            "kana": "ナイフ",
+            "kanji": "",
+            "romaji": "naifu"
+        }, {
+            "fr": "porte feuille",
+            "kana": "さいふ",
+            "kanji": "財布",
+            "romaji": "saifu"
+        }, {
+            "fr": "montre",
+            "kana": "うでとけい",
+            "kanji": "腕時計",
+            "romaji": "udetokei"
+        }, {
+            "fr": "cadeau",
+            "kana": "プレゼント",
+            "kanji": "",
+            "romaji": "purezento"
+        }, {
+            "fr": "bouteille",
+            "kana": "びん",
+            "kanji": "瓶",
+            "romaji": "bin"
         }
     ],
     "adjectif": [
@@ -57,15 +372,220 @@
             "kanji": "良い",
             "romaji": "ii"
         }, {
+            "fr": "pas bien, mauvais",
+            "kana": "わるい",
+            "kanji": "悪い",
+            "romaji": "warui"
+        }, {
+            "fr": "beau (personne)",
+            "kana": "びじん",
+            "kanji": "美人",
+            "romaji": "bijin"
+        }, {
+            "fr": "parfait",
+            "kana": "かんぜん",
+            "kanji": "完全",
+            "romaji": "kanzen"
+        }, {
             "fr": "neuf",
             "kana": "あたらしい",
             "kanji": "新しい",
             "romaji": "atarashii"
         }, {
+            "fr": "vieux",
+            "kana": "ふるい",
+            "kanji": "古い",
+            "romaji": "furui"
+        },{
             "fr": "grand, gros",
             "kana": "おおきい",
             "kanji": "大きい",
             "romaji": "ookii"
+        }, {
+            "fr": "petit",
+            "kana": "ちいさい",
+            "kanji": "小さい",
+            "romaji": "chiisai"
+        }, {
+            "fr": "rapide, tôt",
+            "kana": "はやい",
+            "kanji": "早い",
+            "romaji": "hayai"
+        }, {
+            "fr": "lent",
+            "kana": "おそい",
+            "kanji": "遅い",
+            "romaji": "osoi"
+        }, {
+            "fr": "compliqué",
+            "kana": "むずかしい",
+            "kanji": "難しい",
+            "romaji": "muzukashii"
+        }, {
+            "fr": "simple",
+            "kana": "やさしい",
+            "kanji": "易しい",
+            "romaji": "yasashii"
+        }, {
+            "fr": "chaud",
+            "kana": "あつい",
+            "kanji": "暑い",
+            "romaji": "atsui"
+        }, {
+            "fr": "froid (température)",
+            "kana": "さむい",
+            "kanji": "寒い",
+            "romaji": "samui"
+        }, {
+            "fr": "frois (touché)",
+            "kana": "つめたい",
+            "kanji": "冷たい",
+            "romaji": "tsumetai"
+        }, {
+            "fr": "long",
+            "kana": "ながい",
+            "kanji": "長い",
+            "romaji": "nagai"
+        }, {
+            "fr": "court",
+            "kana": "みじかい",
+            "kanji": "短い",
+            "romaji": "mijikai"
+        }, {
+            "fr": "chère (prix)",
+            "kana": "たかい",
+            "kanji": "高い",
+            "romaji": "takai"
+        }, {
+            "fr": "pas chère (prix)",
+            "kana": "やすい",
+            "kanji": "安い",
+            "romaji": "yasui"
+        }, {
+            "fr": "intéressant",
+            "kana": "おもしろい",
+            "kanji": "面白い",
+            "romaji": "omoshiroi"
+        }, {
+            "fr": "ennyeux",
+            "kana": "つまらない",
+            "kanji": "詰まらない",
+            "romaji": "tsumaranai"
+        }, {
+            "fr": "bon (repas)",
+            "kana": "おいしい",
+            "kanji": "美味しい",
+            "romaji": "oishii"
+        }, {
+            "fr": "pas bon, mauvais (repas)",
+            "kana": "まずい",
+            "kanji": "不味い",
+            "romaji": "mazui"
+        }, {
+            "fr": "loin",
+            "kana": "とおい",
+            "kanji": "遠い",
+            "romaji": "tooi"
+        }, {
+            "fr": "près",
+            "kana": "ちかい",
+            "kanji": "近い",
+            "romaji": "chikai"
+        }, {
+            "fr": "large",
+            "kana": "ひろい",
+            "kanji": "広い",
+            "romaji": "hiroi"
+        }, {
+            "fr": "étroit",
+            "kana": "せまい",
+            "kanji": "狭い",
+            "romaji": "semai"
+        }, {
+            "fr": "occupé, prit",
+            "kana": "いそがしい",
+            "kanji": "忙しい",
+            "romaji": "isogashii"
+        }, {
+            "fr": "libre, tranquille",
+            "kana": "ひま(な)",
+            "kanji": "暇(な)",
+            "romaji": "hima(na)"
+        }, {
+            "fr": "calme",
+            "kana": "しずか(な)",
+            "kanji": "静か(な)",
+            "romaji": "shizuka(na)"
+        }, {
+            "fr": "annimé",
+            "kana": "にぎやか(な)",
+            "kanji": "賑やか(な)",
+            "romaji": "nigiyaka(na)"
+        }, {
+            "fr": "facile",
+            "kana": "かんたん(な)",
+            "kanji": "簡単(な)",
+            "romaji": "kantan(na)"
+        }, {
+            "fr": "amusant",
+            "kana": "たのしい",
+            "kanji": "楽しい",
+            "romaji": "tanoshii"
+        }, {
+            "fr": "propre",
+            "kana": "きれい(な)",
+            "kanji": "綺麗(な)",
+            "romaji": "kirei(na)"
+        }, {
+            "fr": "pratique",
+            "kana": "べんり(な)",
+            "kanji": "便利(な)",
+            "romaji": "benri(na)"
+        }, {
+            "fr": "beau",
+            "kana": "ハンサム(な)",
+            "kanji": "",
+            "romaji": "hansamu(na)"
+        }, {
+            "fr": "célèbre",
+            "kana": "ゆうめい(な)",
+            "kanji": "有名(な)",
+            "romaji": "yuumei(na)"
+        }, {
+            "fr": "gentil, gentille",
+            "kana": "しんせつ(な)",
+            "kanji": "親切(な)",
+            "romaji": "shinsetsu(na)"
+        }, {
+            "fr": "en forme, énergique",
+            "kana": "げんき(な)",
+            "kanji": "元気(な)",
+            "romaji": "genki(na)"
+        }, {
+            "fr": "magnifique",
+            "kana": "すてき(な)",
+            "kanji": "素敵(な)",
+            "romaji": "suteki(na)"
+        }, {
+            "fr": "doué, talentueux",
+            "kana": "じょうず(な)",
+            "kanji": "上手(な)",
+            "romaji": "jouzu(na)"
+        }, {
+            "fr": "pas doué",
+            "kana": "へた(な)",
+            "kanji": "下手(な)",
+            "romaji": "heta(na)"
+        }, {
+            "fr": "seul(e)",
+            "kana": "ひとり",
+            "kanji": "一人",
+            "romaji": "hitori"
+        }, {
+            "fr": "avec quelqu'un, ensemble",
+            "kana": "いっしょに",
+            "kanji": "一緒に",
+            "romaji": "isshoni"
         }
     ],
     "personne": [
@@ -74,6 +594,111 @@
             "kana": "ともだち",
             "kanji": "友達",
             "romaji": "tomodachi"
+        }, {
+            "fr": "personne",
+            "kana": "ひと",
+            "kanji": "人",
+            "romaji": "hito"
+        }, {
+            "fr": "elle, petite amie",
+            "kana": "かのじょ",
+            "kanji": "彼女",
+            "romaji": "kanjo"
+        }, {
+            "fr": "il, petit ami",
+            "kana": "かれ",
+            "kanji": "彼",
+            "romaji": "kare"
+        }, {
+            "fr": "famille",
+            "kana": "かぞく",
+            "kanji": "家族",
+            "romaji": "kazoku"
+        }, {
+            "fr": "mère",
+            "kana": "はは, おかあさん",
+            "kanji": "母, お母さん",
+            "romaji": "haha, okaasan"
+        }, {
+            "fr": "père",
+            "kana": "ちち, おとうさん",
+            "kanji": "父, お父さん",
+            "romaji": "chichi, otousan"
+        }, {
+            "fr": "frère",
+            "kana": "あに, おとうと",
+            "kanji": "兄, お兄さん",
+            "romaji": "ani, otouto"
+        }, {
+            "fr": "soeur",
+            "kana": "あね, いもうと",
+            "kanji": "姉, お姉さん",
+            "romaji": "ane, imouto"
+        }, {
+            "fr": "fils",
+            "kana": "むすこ",
+            "kanji": "息子",
+            "romaji": "musuko"
+        }, {
+            "fr": "fille",
+            "kana": "むすめ",
+            "kanji": "娘",
+            "romaji": "musume"
+        }, {
+            "fr": "grand-père",
+            "kana": "おじいさん",
+            "kanji": "お爺さん",
+            "romaji": "ojiisan"
+        }, {
+            "fr": "grand-mère",
+            "kana": "おばあさん",
+            "kanji": "お婆さん",
+            "romaji": "obaasan"
+        }, {
+            "fr": "oncle, tonton",
+            "kana": "おじさん",
+            "kanji": "お兄さん",
+            "romaji": "ojisan"
+        }, {
+            "fr": "tante, tata",
+            "kana": "おばさん",
+            "kanji": "お姉さん",
+            "romaji": "obasan"
+        }, {
+            "fr": "cousin",
+            "kana": "いとこ",
+            "kanji": "従兄弟",
+            "romaji": "itoko"
+        }, {
+            "fr": "cousine",
+            "kana": "いとこ",
+            "kanji": "従姉妹",
+            "romaji": "itoko"
+        }, {
+            "fr": "mari",
+            "kana": "おっと",
+            "kanji": "夫",
+            "romaji": "otto"
+        }, {
+            "fr": "professeur",
+            "kana": "せんせい",
+            "kanji": "先生",
+            "romaji": "sensei"
+        }, {
+            "fr": "président (entreprise)",
+            "kana": "しゃちょう",
+            "kanji": "社長",
+            "romaji": "shachou"
+        }, {
+            "fr": "élève",
+            "kana": "がくせい",
+            "kanji": "学生",
+            "romaji": "gakusei"
+        }, {
+            "fr": "employé",
+            "kana": "かいしゃいん",
+            "kanji": "会社員",
+            "romaji": "kaisha-in"
         }
     ],
     "interogation": [
@@ -125,6 +750,56 @@
             "kana": "きつね",
             "kanji": "狐",
             "romaji": "kitsune"
+        }, {
+            "fr": "chat",
+            "kana": "ねこ",
+            "kanji": "猫",
+            "romaji": "neko"
+        }, {
+            "fr": "chien",
+            "kana": "いぬ",
+            "kanji": "犬",
+            "romaji": "inu"
+        }, {
+            "fr": "cochon",
+            "kana": "ぶた",
+            "kanji": "豚",
+            "romaji": "buta"
+        }, {
+            "fr": "poule",
+            "kana": "にわとり",
+            "kanji": "鶏",
+            "romaji": "niwatori"
+        }, {
+            "fr": "vache",
+            "kana": "うし",
+            "kanji": "牛",
+            "romaji": "ushi"
+        }, {
+            "fr": "cheval",
+            "kana": "うま",
+            "kanji": "馬",
+            "romaji": "uma"
+        }, {
+            "fr": "poulet",
+            "kana": "とり",
+            "kanji": "鳥",
+            "romaji": "tori"
+        }, {
+            "fr": "oiseau",
+            "kana": "とり",
+            "kanji": "鳥",
+            "romaji": "tori"
+        }, {
+            "fr": "poisson",
+            "kana": "さかな",
+            "kanji": "魚",
+            "romaji": "sakana"
+        }, {
+            "fr": "poussin",
+            "kana": "こぶた",
+            "kanji": "小豚",
+            "romaji": "kobuta"
         }
     ],
     "connecteur": [
@@ -138,6 +813,11 @@
             "kana": "でも",
             "kanji": "",
             "romaji": "demo"
+        }, {
+            "fr": "donc, car, alors",
+            "kana": "だから",
+            "kanji": "",
+            "romaji": "dakara"
         }
     ],
     "lieu": [
@@ -146,14 +826,179 @@
             "kana": "がっこう",
             "kanji": "学校",
             "romaji": "gakkou"
+        }, {
+            "fr": "grande école",
+            "kana": "だいがく",
+            "kanji": "大学",
+            "romaji": "daigaku"
+        }, {
+            "fr": "supermarché",
+            "kana": "スーパーマーケット",
+            "kanji": "",
+            "romaji": "suupaa-maaketto"
+        }, {
+            "fr": "gare, station",
+            "kana": "えき",
+            "kanji": "駅",
+            "romaji": "eki"
+        }, {
+            "fr": "poste",
+            "kana": "ゆうびんきょく",
+            "kanji": "郵便局",
+            "romaji": "yubinkyoku"
+        }, {
+            "fr": "musée",
+            "kana": "びじゅつかん",
+            "kanji": "美術館",
+            "romaji": "bijutsukan"
+        }, {
+            "fr": "cinéma",
+            "kana": "えいがかん",
+            "kanji": "映画館",
+            "romaji": "eigakan"
+        }, {
+            "fr": "entreprise",
+            "kana": "かいしゃ",
+            "kanji": "会社",
+            "romaji": "kaisha"
+        }, {
+            "fr": "boutique",
+            "kana": "みせ",
+            "kanji": "店",
+            "romaji": "mise"
+        }, {
+            "fr": "jardin",
+            "kana": "にわ",
+            "kanji": "庭",
+            "romaji": "niwa"
+        }, {
+            "fr": "restaurant",
+            "kana": "レストラン",
+            "kanji": "",
+            "romaji": "resutoran"
+        }, {
+            "fr": "sallon de beauté",
+            "kana": "びよういん",
+            "kanji": "美容院",
+            "romaji": "biyouin"
+        }, {
+            "fr": "hôpital",
+            "kana": "びょういん",
+            "kanji": "病院",
+            "romaji": "byouin"
+        }, {
+            "fr": "plaine",
+            "kana": "へいや",
+            "kanji": "平野",
+            "romaji": "heya"
+        }, {
+            "fr": "lycée",
+            "kana": "こうこう",
+            "kanji": "高校",
+            "romaji": "koukou"
+        }, {
+            "fr": "banque",
+            "kana": "ぎんこう",
+            "kanji": "銀行",
+            "romaji": "ginkou"
+        }, {
+            "fr": "couloir",
+            "kana": "ろうか",
+            "kanji": "廊下",
+            "romaji": "rouka"
+        }, {
+            "fr": "pièce, chambre",
+            "kana": "へや",
+            "kanji": "部屋",
+            "romaji": "heya"
+        }, {
+            "fr": "cuisine",
+            "kana": "りょうり",
+            "kanji": "料理",
+            "romaji": "ryouri"
+        }, {
+            "fr": "toilette",
+            "kana": "トイレ",
+            "kanji": "",
+            "romaji": "toire"
+        }, {
+            "fr": "bureau",
+            "kana": "じむしょ",
+            "kanji": "事務所",
+            "romaji": "jimusho"
+        }, {
+            "fr": "salle de cours",
+            "kana": "きょうしつ",
+            "kanji": "教室",
+            "romaji": "kyoushitsu"
+        }, {
+            "fr": "assensseur",
+            "kana": "エレベーター",
+            "kanji": "",
+            "romaji": "erebeetaa"
+        }, {
+            "fr": "douche, bain",
+            "kana": "シャワー",
+            "kanji": "",
+            "romaji": "shawa"
+        }, {
+            "fr": "escalier",
+            "kana": "かいだん",
+            "kanji": "階段",
+            "romaji": "kaidan"
+        }, {
+            "fr": "bibliothèque",
+            "kana": "としょかん",
+            "kanji": "図書館",
+            "romaji": "toshokan"
+        }, {
+            "fr": "galerie de vente",
+            "kana": "デパート",
+            "kanji": "",
+            "romaji": "depaato"
+        }, {
+            "fr": "fleuriste",
+            "kana": "はなや",
+            "kanji": "花屋",
+            "romaji": "hanaya"
+        }, {
+            "fr": "nulle part",
+            "kana": "どこも",
+            "kanji": "何処も",
+            "romaji": "dokomo"
         }
     ],
     "démonstratif": [
         {
-            "fr": "ce",
+            "fr": "ce, cet (proche)",
+            "kana": "この",
+            "kanji": "此の",
+            "romaji": "kono"
+        }, {
+            "fr": "ce, cet (moyen)",
+            "kana": "その",
+            "kanji": "其の",
+            "romaji": "sono"
+        }, {
+            "fr": "ce, cet (lointain)",
+            "kana": "あの",
+            "kanji": "彼の",
+            "romaji": "ano"
+        }, {
+            "fr": "ça, cela (proche)",
             "kana": "これ",
             "kanji": "此れ",
             "romaji": "kore"
+        }, {
+            "fr": "ça, cela (moyen)",
+            "kana": "それ",
+            "kanji": "其れ",
+            "romaji": "sore"
+        }, {
+            "fr": "ça, cela (lointain)",
+            "kana": "あれ",
+            "kanji": "彼れ",
+            "romaji": "are"
         }
     ],
     "concept": [
@@ -162,6 +1007,71 @@
             "kana": "じかん",
             "kanji": "時間",
             "romaji": "jikan"
+        }, {
+            "fr": "courage",
+            "kana": "ゆうき",
+            "kanji": "勇気",
+            "romaji": "yuuki"
+        }, {
+            "fr": "espoir",
+            "kana": "きぼう",
+            "kanji": "希望",
+            "romaji": "kibou"
+        }, {
+            "fr": "souffrance",
+            "kana": "くろう",
+            "kanji": "苦労",
+            "romaji": "kurou"
+        }, {
+            "fr": "chance",
+            "kana": "きょうか",
+            "kanji": "幸運",
+            "romaji": "kyouka"
+        }, {
+            "fr": "déception",
+            "kana": "かなしみ",
+            "kanji": "悲しみ",
+            "romaji": "kanashimi"
+        }, {
+            "fr": "tristesse",
+            "kana": "かなしみ",
+            "kanji": "悲しみ",
+            "romaji": "kanashimi"
+        }, {
+            "fr": "absence",
+            "kana": "けっこん",
+            "kanji": "欠席",
+            "romaji": "kekkon"
+        }, {
+            "fr": "plus, beaucoup",
+            "kana": "もっと",
+            "kanji": "盛り",
+            "romaji": "motto"
+        }, {
+            "fr": "bonne réputation",
+            "kana": "かっさい",
+            "kanji": "格好",
+            "romaji": "kassai"
+        }, {
+            "fr": "noël",
+            "kana": "クリスマス",
+            "kanji": "",
+            "romaji": "kurisumasu"
+        }, {
+            "fr": "anniversaire",
+            "kana": "たんじょうび",
+            "kanji": "誕生日",
+            "romaji": "tanjoubi"
+        }, {
+            "fr": "pays",
+            "kana": "くに",
+            "kanji": "国",
+            "romaji": "kuni"
+        }, {
+            "fr": "autorisation",
+            "kana": "きょかしょう",
+            "kanji": "許可証",
+            "romaji": "kyokashou"
         }
     ],
     "date": [
@@ -170,6 +1080,181 @@
             "kana": "きょう",
             "kanji": "今日",
             "romaji": "kyou"
+        }, {
+            "fr": "demain",
+            "kana": "あした",
+            "kanji": "明日",
+            "romaji": "ashita"
+        }, {
+            "fr": "après-demain",
+            "kana": "あさって",
+            "kanji": "明後日",
+            "romaji": "asatte"
+        }, {
+            "fr": "hier",
+            "kana": "きのう",
+            "kanji": "昨日",
+            "romaji": "kinou"
+        }, {
+            "fr": "avant-hier",
+            "kana": "おととい",
+            "kanji": "一昨日",
+            "romaji": "ototoi"
+        }, {
+            "fr": "lundi",
+            "kana": "げつようび",
+            "kanji": "月曜日",
+            "romaji": "getsuyoubi"
+        }, {
+            "fr": "mardi",
+            "kana": "かようび",
+            "kanji": "火曜日",
+            "romaji": "kayoubi"
+        }, {
+            "fr": "mercredi",
+            "kana": "すいようび",
+            "kanji": "水曜日",
+            "romaji": "suiyoubi"
+        }, {
+            "fr": "jeudi",
+            "kana": "もくようび",
+            "kanji": "木曜日",
+            "romaji": "mokuyoubi"
+        }, {
+            "fr": "vendredi",
+            "kana": "きんようび",
+            "kanji": "金曜日",
+            "romaji": "kinyoubi"
+        }, {
+            "fr": "samedi",
+            "kana": "どようび",
+            "kanji": "土曜日",
+            "romaji": "doyoubi"
+        }, {
+            "fr": "dimanche",
+            "kana": "にちようび",
+            "kanji": "日曜日",
+            "romaji": "nichiyoubi"
+        }, {
+            "fr": "janvier",
+            "kana": "いちがつ",
+            "kanji": "一月",
+            "romaji": "ichigatsu"
+        }, {
+            "fr": "février",
+            "kana": "にがつ",
+            "kanji": "二月",
+            "romaji": "nigatsu"
+        }, {
+            "fr": "mars",
+            "kana": "さんがつ",
+            "kanji": "三月",
+            "romaji": "sangatsu"
+        }, {
+            "fr": "avril",
+            "kana": "しがつ",
+            "kanji": "四月",
+            "romaji": "shigatsu"
+        }, {
+            "fr": "mai",
+            "kana": "ごがつ",
+            "kanji": "五月",
+            "romaji": "gogatsu"
+        }, {
+            "fr": "juin",
+            "kana": "ろくがつ",
+            "kanji": "六月",
+            "romaji": "rokugatsu"
+        }, {
+            "fr": "juillet",
+            "kana": "しちがつ",
+            "kanji": "七月",
+            "romaji": "shichigatsu"
+        }, {
+            "fr": "août",
+            "kana": "はちがつ",
+            "kanji": "八月",
+            "romaji": "hachigatsu"
+        }, {
+            "fr": "septembre",
+            "kana": "くがつ",
+            "kanji": "九月",
+            "romaji": "kugatsu"
+        }, {
+            "fr": "octobre",
+            "kana": "じゅうがつ",
+            "kanji": "十月",
+            "romaji": "juugatsu"
+        }, {
+            "fr": "novembre",
+            "kana": "じゅういちがつ",
+            "kanji": "十一月",
+            "romaji": "juuichigatsu"
+        }, {
+            "fr": "décembre",
+            "kana": "じゅうにがつ",
+            "kanji": "十二月",
+            "romaji": "juunigatsu"
+        }, {
+            "fr": "année",
+            "kana": "とし",
+            "kanji": "年",
+            "romaji": "toshi"
+        }, {
+            "fr": "mois",
+            "kana": "つき",
+            "kanji": "月",
+            "romaji": "tsuki"
+        }, {
+            "fr": "jour",
+            "kana": "にち",
+            "kanji": "日",
+            "romaji": "nichi"
+        }, {
+            "fr": "heure",
+            "kana": "じ",
+            "kanji": "時",
+            "romaji": "ji"
+        }, {
+            "fr": "minute",
+            "kana": "ふん",
+            "kanji": "分",
+            "romaji": "fun"
+        }, {
+            "fr": "seconde",
+            "kana": "びょう",
+            "kanji": "秒",
+            "romaji": "byou"
+        }, {
+            "fr": "matin",
+            "kana": "あさ",
+            "kanji": "朝",
+            "romaji": "asa"
+        }, {
+            "fr": "après-midi",
+            "kana": "ひる",
+            "kanji": "昼",
+            "romaji": "hiru"
+        }, {
+            "fr": "soir",
+            "kana": "ゆうべ",
+            "kanji": "夕べ",
+            "romaji": "yube"
+        }, {
+            "fr": "nuit",
+            "kana": "よる",
+            "kanji": "夜",
+            "romaji": "yoru"
+        }, {
+            "fr": "avant",
+            "kana": "まえ",
+            "kanji": "前",
+            "romaji": "mae"
+        }, {
+            "fr": "après",
+            "kana": "あと",
+            "kanji": "後",
+            "romaji": "ato"
         }
     ],
     "nourriture": [
@@ -188,6 +1273,101 @@
             "kana": "さかな",
             "kanji": "魚",
             "romaji": "sakana"
+        }, {
+            "fr": "thé vert",
+            "kana": "おちゃ",
+            "kanji": "お茶",
+            "romaji": "ocha"
+        }, {
+            "fr": "lait",
+            "kana": "ぎゅうにゅう",
+            "kanji": "牛乳",
+            "romaji": "gyuunyuu"
+        }, {
+            "fr": "riz, repas",
+            "kana": "ごはん",
+            "kanji": "御飯",
+            "romaji": "gohan"
+        }, {
+            "fr": "petit déjeuner",
+            "kana": "あさごはん",
+            "kanji": "朝御飯",
+            "romaji": "asagohan"
+        }, {
+            "fr": "déjeuner",
+            "kana": "ひるごはん",
+            "kanji": "昼御飯",
+            "romaji": "hirugohan"
+        }, {
+            "fr": "dîner",
+            "kana": "ばんごはん",
+            "kanji": "晩御飯",
+            "romaji": "bangohan"
+        }, {
+            "fr": "soupe",
+            "kana": "しる",
+            "kanji": "汁",
+            "romaji": "shiru"
+        }, {
+            "fr": "sauce",
+            "kana": "ソース",
+            "kanji": "",
+            "romaji": "sousu"
+        }, {
+            "fr": "pain",
+            "kana": "パン",
+            "kanji": "",
+            "romaji": "pan"
+        }, {
+            "fr": "sushi",
+            "kana": "すし",
+            "kanji": "寿司",
+            "romaji": "sushi"
+        }, {
+            "fr": "soupe miso",
+            "kana": "みそしる",
+            "kanji": "味噌汁",
+            "romaji": "misoshiru"
+        }, {
+            "fr": "œuf",
+            "kana": "たまご",
+            "kanji": "卵",
+            "romaji": "tamago"
+        }, {
+            "fr": "viande",
+            "kana": "にく",
+            "kanji": "肉",
+            "romaji": "niku"
+        }, {
+            "fr": "légume",
+            "kana": "やさい",
+            "kanji": "野菜",
+            "romaji": "yasai"
+        }, {
+            "fr": "fruit",
+            "kana": "くだもの",
+            "kanji": "果物",
+            "romaji": "kudamono"
+        }, {
+            "fr": "eau",
+            "kana": "みず",
+            "kanji": "水",
+            "romaji": "mizu"
+        }, {
+            "fr": "chocolat",
+            "kana": "チョコレート",
+            "kanji": "",
+            "romaji": "chokoreeto"
+        }, {
+            "fr": "café",
+            "kana": "コーヒー",
+            "kanji": "",
+            "romaji": "koohii"
+        }, {
+            "fr": "haricot avec soja",
+            "kana": "えだまめ",
+            "kanji": "枝豆",
+            "romaji": "edamame"
         }
     ],
     "chiffre": [
@@ -241,6 +1421,16 @@
             "kana": "じゅう",
             "kanji": "十",
             "romaji": "juu"
+        }, {
+            "fr": "cent, 100",
+            "kana": "ひゃく",
+            "kanji": "百",
+            "romaji": "hyaku"
+        }, {
+            "fr": "mille, 1000",
+            "kana": "せん",
+            "kanji": "千",
+            "romaji": "sen"
         }
     ],
     "transport": [
@@ -254,6 +1444,91 @@
             "kana": "ひこうき",
             "kanji": "飛行機",
             "romaji": "hikouki"
+        }, {
+            "fr": "bâteau",
+            "kana": "ふね",
+            "kanji": "船",
+            "romaji": "fune"
+        }, {
+            "fr": "vélo",
+            "kana": "じてんしゃ",
+            "kanji": "自転車",
+            "romaji": "jitensha"
+        }, {
+            "fr": "moto",
+            "kana": "バイク",
+            "kanji": "",
+            "romaji": "baiku"
+        }, {
+            "fr": "taxi",
+            "kana": "タクシー",
+            "kanji": "",
+            "romaji": "takushii"
+        }, {
+            "fr": "bus, autobus",
+            "kana": "バス",
+            "kanji": "",
+            "romaji": "basu"
+        }, {
+            "fr": "métro",
+            "kana": "ちかてつ",
+            "kanji": "地下鉄",
+            "romaji": "chikatetsu"
+        }, {
+            "fr": "voiture",
+            "kana": "くるま",
+            "kanji": "車",
+            "romaji": "kuruma"
+        }, {
+            "fr": "à pied",
+            "kana": "あるいて",
+            "kanji": "歩いて",
+            "romaji": "aruite"
+        }, {
+            "fr": "tram",
+            "kana": "とらむ",
+            "kanji": "電車",
+            "romaji": "toramu"
+        }, {
+            "fr": "camion",
+            "kana": "トラック",
+            "kanji": "",
+            "romaji": "torakku"
+        }, {
+            "fr": "skate, skateboard",
+            "kana": "スケート",
+            "kanji": "",
+            "romaji": "sukeeto"
+        }, {
+            "fr": "scouteur",
+            "kana": "スクーター",
+            "kanji": "",
+            "romaji": "sukuutaa"
+        }, {
+            "fr": "fusée",
+            "kana": "ロケット",
+            "kanji": "",
+            "romaji": "roketto"
+        }, {
+            "fr": "hélicoptère",
+            "kana": "ヘリコプター",
+            "kanji": "",
+            "romaji": "herikoputaa"
+        }, {
+            "fr": "yatch",
+            "kana": "ヨット",
+            "kanji": "",
+            "romaji": "yotto"
+        }, {
+            "fr": "train",
+            "kana": "でんしゃ",
+            "kanji": "電車",
+            "romaji": "densha"
+        }, {
+            "fr": "trotinette",
+            "kana": "キックボード",
+            "kanji": "",
+            "romaji": "kikuboodo"
         }
     ],
     "activité": [
@@ -267,6 +1542,11 @@
             "kana": "テニス",
             "kanji": "",
             "romaji": "tenisu"
+        }, {
+            "fr": "devoirs",
+            "kana": "しゅくだい",
+            "kanji": "宿題",
+            "romaji": "shukudai"
         }
     ],
     "corps": [
@@ -358,6 +1638,31 @@
             "kana": "りょこう",
             "kanji": "旅行",
             "romaji": "ryokou"
+        }, {
+            "fr": "lumière, électricité",
+            "kana": "でんき",
+            "kanji": "電気",
+            "romaji": "denki"
+        }, {
+            "fr": "musique",
+            "kana": "おんがく",
+            "kanji": "音楽",
+            "romaji": "ongaku"
+        }, {
+            "fr": "preuve",
+            "kana": "しょうめい",
+            "kanji": "証明",
+            "romaji": "shoumei"
+        }, {
+            "fr": "blague",
+            "kana": "じょうだん",
+            "kanji": "冗談",
+            "romaji": "joudan"
+        }, {
+            "fr": "exercice, problème",
+            "kana": "もんだい",
+            "kanji": "問題",
+            "romaji": "mondai"
         }
     ],
     "couleur": [
