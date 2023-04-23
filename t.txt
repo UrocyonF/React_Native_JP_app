@@ -9,3 +9,5 @@ npm start -- --reset-cache
 #FFA7A6 peiche1
 #FFDCDC peiche2
 #D4E0EE
+
+-> virer les React inutile

@@ -1,0 +1,122 @@
+{   
+    "categorys": [
+        "verbe",
+        "objet",
+        "adjectif",
+        "personne",
+        "interogation",
+        "vivant",
+        "connecteur",
+        "lieu",
+        "démonstratif",
+        "concept",
+        "date",
+        "nourriture",
+        "chiffre",
+        "transport",
+        "activité",
+        "corps",
+        "imatériel"
+    ],
+    "verbe": [
+        {
+            "fr": "être, exister",
+            "kana": "いる",
+            "kanji": "居る",
+            "romaji": "iru"
+        }, {
+            "fr": "avoir",
+            "kana": "ある",
+            "kanji": "有る",
+            "romaji": "aru"
+        }, {
+            "fr": "aller",
+            "kana": "いく",
+            "kanji": "行く",
+            "romaji": "iku"
+        }, {
+            "fr": "venir",
+            "kana": "くる",
+            "kanji": "来る",
+            "romaji": "kuru"
+        }
+    ],
+    "objet": [
+        {
+        }
+    ],
+    "adjectif": [
+        {
+            "fr": "bon",
+            "kana": "いい",
+            "kanji": "良い",
+            "romaji": "ii"
+        }, {
+            "fr": "jeune",
+            "kana": "わかい",
+            "kanji": "若い",
+            "romaji": "wakai"
+        }, {
+            "fr": "grand",
+            "kana": "おおきい",
+            "kanji": "大きい",
+            "romaji": "ookii"
+        }
+    ],
+    "personne": [
+        {
+        }
+    ],
+    "interogation": [
+        {
+        }
+    ],
+    "vivant": [
+        {
+        }
+    ],
+    "connecteur": [
+        {
+        }
+    ],
+    "lieu": [
+        {
+        }
+    ],
+    "démonstratif": [
+        {
+        }
+    ],
+    "concept": [
+        {
+        }
+    ],
+    "date": [
+        {
+        }
+    ],
+    "nourriture": [
+        {
+        }
+    ],
+    "chiffre": [
+        {
+        }
+    ],
+    "transport": [
+        {
+        }
+    ],
+    "activité": [
+        {
+        }
+    ],
+    "corps": [
+        {
+        }
+    ],
+    "imatériel": [
+        {
+        }
+    ]
+}

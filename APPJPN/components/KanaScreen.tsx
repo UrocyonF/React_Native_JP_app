@@ -1,5 +1,8 @@
+/**
+ * @format
+ */
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, { Component } from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 
 import {
@@ -10,13 +13,13 @@ import {
 } from 'react-native';
 
 
-class KanaScreen extends React.Component {
+class KanaScreen extends Component {
     render() {
     return (
         <ScrollView>
-            <LinearGradient colors={['#FFA7A6', '#FFDCDC']} style={styles.kanaView}>
+            <LinearGradient colors={['#FFA7A6', '#FFDCDC']} style={styles.view}>
                 <View>
-                    <Text style={styles.kanaTitle}>Hiragana</Text>
+                    <Text style={styles.title}>Hiragana</Text>
 
                     <Text style={styles.kana}>       A   I   U   E   O</Text>
                     <Text style={styles.kana}>      あ い う え お</Text>
@@ -34,7 +37,7 @@ class KanaScreen extends React.Component {
                     <Text style={styles.kana}>O    を</Text>
 
                     <View style={styles.kanaSeparator} />
-                    <Text style={styles.kanaTitle}>Accents</Text>
+                    <Text style={styles.title}>Accents</Text>
 
                     <Text style={styles.kana}>       A   I   U   E   O</Text>
                     <Text style={styles.kana}>G    が ぎ ぐ げ ご</Text>
@@ -48,7 +51,7 @@ class KanaScreen extends React.Component {
                     <Text style={styles.kana}>Z              づ</Text>
 
                     <View style={styles.kanaSeparator} />
-                    <Text style={styles.kanaTitle}>Composition Y</Text>
+                    <Text style={styles.title}>Composition Y</Text>
 
                     <Text style={styles.kana}>    YA     YU     YO</Text>
                     <Text style={styles.kana}>K きゃ きゅ きょ</Text>
@@ -66,7 +69,7 @@ class KanaScreen extends React.Component {
                     <Text style={styles.kana}>CH ちゃ ちゅ ちょ</Text>
 
                     <View style={styles.kanaSeparator} />
-                    <Text style={styles.kanaTitle}>Double consone</Text>
+                    <Text style={styles.title}>Double consone</Text>
 
                     <Text style={styles.kana}>KKA      っか</Text>
                     <Text style={styles.kana}>SSA      っさ</Text>
@@ -78,7 +81,7 @@ class KanaScreen extends React.Component {
                     <Text style={styles.kana}>CCHI     っち</Text>
 
                     <View style={styles.kanaSeparator} />
-                    <Text style={styles.kanaTitle}>Cas particuliers katakana</Text>
+                    <Text style={styles.title}>Cas particuliers katakana</Text>
 
                     <Text style={styles.kana}>        A        I        U</Text>
                     <Text style={styles.kana}>W            ウィ</Text>
@@ -92,7 +95,7 @@ class KanaScreen extends React.Component {
                     <Text style={styles.kana}>DY                   デゥ</Text>
                 </View>
                 <View>
-                    <Text style={styles.kanaTitle}>Katakana</Text>
+                    <Text style={styles.title}>Katakana</Text>
 
                     <Text style={styles.kana}>      A   I   U   E   O</Text>
                     <Text style={styles.kana}>     ア イ ウ エ オ</Text>
@@ -110,7 +113,7 @@ class KanaScreen extends React.Component {
                     <Text style={styles.kana}>     ヲ</Text>
 
                     <View style={styles.kanaSeparator} />
-                    <Text style={styles.kanaTitle}>Accents</Text>
+                    <Text style={styles.title}>Accents</Text>
 
                     <Text style={styles.kana}>      A   I   U   E   O</Text>
                     <Text style={styles.kana}>     ガ ギ グ ゲ ゴ</Text>
@@ -124,7 +127,7 @@ class KanaScreen extends React.Component {
                     <Text style={styles.kana}>               ヅ</Text>
 
                     <View style={styles.kanaSeparator} />
-                    <Text style={styles.kanaTitle}>Composition Y</Text>
+                    <Text style={styles.title}>Composition Y</Text>
 
                     <Text style={styles.kana}>     YA     YU     YO</Text>
                     <Text style={styles.kana}>    キャ キュ キョ</Text>
@@ -142,7 +145,7 @@ class KanaScreen extends React.Component {
                     <Text style={styles.kana}>    チャ チュ チョ</Text>
 
                     <View style={styles.kanaSeparator} />
-                    <Text style={styles.kanaTitle}>Double consone</Text>
+                    <Text style={styles.title}>Double consone</Text>
 
                     <Text style={styles.kana}>           ッカ</Text>
                     <Text style={styles.kana}>           ッサ</Text>
@@ -172,22 +175,21 @@ class KanaScreen extends React.Component {
 
 
 const styles = StyleSheet.create({
-    kanaView: {
+    view: {
         flex:1,
         flexDirection: 'row',
         justifyContent: 'center'
     },
-    kanaTitle: {
-        fontWeight: '800',
+    title: {
         fontSize: 17,
         marginTop: 7,
         marginBottom: 10,
-        textAlign: 'center',
+        textAlign: 'center'
     },
     kana: {
         fontWeight: '800',
         fontSize: 26,
-        color: "#000000"
+        color: '#000000'
     },
     kanaSeparator: {
         height: 1,

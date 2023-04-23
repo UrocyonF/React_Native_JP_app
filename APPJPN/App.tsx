@@ -1,5 +1,11 @@
+/**
+ * @format
+ */
 import 'react-native-gesture-handler';
 import React from 'react';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import {
     StyleSheet,
@@ -7,31 +13,42 @@ import {
     Pressable
 } from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import LinearGradient from 'react-native-linear-gradient';
 
 import DicoScreen from './components/DicoScreen';
-import DicoSearchScreen from './components/DicoSearchScreen';
-import DicoAddScreen from './components/DicoAddScreen';
 import TradScreen from './components/TradScreen';
 import KanaScreen from './components/KanaScreen';
+import { presets } from './babel.config';
 
 
-const Stack = createStackNavigator();
+const MainStack = createStackNavigator();
 
 
 function App(): JSX.Element {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="HomeScreen" component={HomeScreen} />
-                <Stack.Screen name="DicoScreen" component={DicoScreen} />
-                <Stack.Screen name="DicoSearchOutput" component={DicoSearchScreen} />
-                <Stack.Screen name="DicoAddInput" component={DicoAddScreen} />
-                <Stack.Screen name="TradScreen" component={TradScreen} />
-                <Stack.Screen name="KanaScreen" component={KanaScreen} />
-            </Stack.Navigator>
+            <MainStack.Navigator>
+                <MainStack.Screen
+                    name="HomeScreen"
+                    component={HomeScreen}
+                    options={{ headerShown: false }}
+                />
+                <MainStack.Screen
+                    name="DicoScreen"
+                    component={DicoScreen}
+                    options={{ headerShown: false }}
+                />
+                <MainStack.Screen
+                    name="TradScreen"
+                    component={TradScreen}
+                    options={{ headerShown: false }}
+                />
+                <MainStack.Screen
+                    name="KanaScreen"
+                    component={KanaScreen}
+                    options={{ headerShown: false }}
+                />
+            </MainStack.Navigator>
         </NavigationContainer>
     )
 }
@@ -39,16 +56,16 @@ function App(): JSX.Element {
 
 function HomeScreen({ navigation }: { navigation: any }) {
     return (
-        <LinearGradient colors={['#EC275F', '#F25477', '#FFA7A6', '#FFDCDC']} style={styles.homeView}>
-            <Text style={styles.homeTitle}>日本語</Text>
-            <Pressable style={styles.homeButton} onPress={() => navigation.navigate('DicoScreen')}>
-                <Text style={styles.homeButtonText}>Dictionnary</Text>
+        <LinearGradient colors={['#EC275F', '#F25477', '#FFA7A6', '#FFDCDC']} style={styles.view}>
+            <Text style={styles.title}>日本語</Text>
+            <Pressable style={styles.button} onPress={() => navigation.navigate('DicoScreen')}>
+                <Text style={styles.ButtonText}>Dictionnary</Text>
             </Pressable>
-            <Pressable style={styles.homeButton} onPress={() => navigation.navigate('TradScreen')}>
-                <Text style={styles.homeButtonText}>Traduction</Text>
+            <Pressable style={styles.button} onPress={() => navigation.navigate('TradScreen')}>
+                <Text style={styles.ButtonText}>Traduction</Text>
             </Pressable>
-            <Pressable style={styles.homeButton} onPress={() => navigation.navigate('KanaScreen')}>
-                <Text style={styles.homeButtonText}>あ Kana ア</Text>
+            <Pressable style={styles.button} onPress={() => navigation.navigate('KanaScreen')}>
+                <Text style={styles.ButtonText}>あ Kana ア</Text>
             </Pressable>
         </LinearGradient>
     );
@@ -56,26 +73,26 @@ function HomeScreen({ navigation }: { navigation: any }) {
 
 
 const styles = StyleSheet.create({
-    homeView: {
+    view: {
         flex: 1,
         alignItems: 'center',
         justifyContent: "space-evenly"
     },
-    homeTitle: {
+    title: {
         fontWeight: '800',
         fontSize: 50,
         color: '#FFFFFF'
     },
-    homeButton: {
+    button: {
         backgroundColor: '#FFDCDC',
         padding: 10,
         borderRadius: 10,
         margin: 10,
         width: 200,
         alignItems: 'center',
-        borderWidth: 1,
+        borderWidth: 1
     },
-    homeButtonText: {
+    ButtonText: {
         fontSize: 30,
         color: "#444444"
     },

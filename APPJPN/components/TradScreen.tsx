@@ -1,23 +1,25 @@
+/**
+ * @format
+ */
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, { Component } from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 
 import {
     StyleSheet,
-    View,
     Text,
     Button,
     TextInput
 } from 'react-native';
 
 
-class TradScreen extends React.Component {
+class TradScreen extends Component {
     render() {
     return (
-        <LinearGradient colors={['#F25477', '#FFA7A6']} style={styles.tradView}>
-            <Text style={styles.tradTitle}>日本語訳</Text>
-            <TextInput style={styles.tradInput} placeholder="日本語" />
-            <TextInput style={styles.tradInput} placeholder="Français" />
+        <LinearGradient colors={['#F25477', '#FFA7A6']} style={styles.view}>
+            <Text style={styles.title}>日本語訳</Text>
+            <TextInput style={styles.input} placeholder="日本語" />
+            <TextInput style={styles.input} placeholder="Français" />
             <Button title="Traduire" onPress={() => {}} />
         </LinearGradient>
     )};
@@ -25,18 +27,18 @@ class TradScreen extends React.Component {
 
 
 const styles = StyleSheet.create({
-    tradView: {
+    view: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
-    tradTitle: {
+    title: {
         fontSize: 40,
         fontWeight: 'bold',
         color: '#FFFFFF',
-        marginBottom: 60,
+        marginBottom: 60
     },
-    tradInput: {
+    input: {
         height: 80,
         width: 300,
         margin: 12,
