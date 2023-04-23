@@ -8,8 +8,8 @@ import LinearGradient from 'react-native-linear-gradient';
 import {
     StyleSheet,
     Text,
-    Button,
-    TextInput
+    TextInput,
+    Pressable
 } from 'react-native';
 
 
@@ -20,7 +20,9 @@ class TradScreen extends Component {
             <Text style={styles.title}>日本語訳</Text>
             <TextInput style={styles.input} placeholder="日本語" />
             <TextInput style={styles.input} placeholder="Français" />
-            <Button title="Traduire" onPress={() => {}} />
+            <Pressable style={styles.button} onPress={() => {}}>
+                <Text style={styles.buttonText}>Traduire</Text>
+            </Pressable>
         </LinearGradient>
     )};
 }
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     title: {
-        fontSize: 40,
+        fontSize: 45,
         fontWeight: 'bold',
         color: '#FFFFFF',
         marginBottom: 60
@@ -47,6 +49,19 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: '#FFFFFF',
     },
+    button: {
+        backgroundColor: '#FFDCDC',
+        padding: 10,
+        borderRadius: 10,
+        margin: 10,
+        width: 200,
+        alignItems: 'center',
+        borderWidth: 1
+    },
+    buttonText: {
+        fontSize: 20,
+        color: '#000000'
+    }
 });
 
 

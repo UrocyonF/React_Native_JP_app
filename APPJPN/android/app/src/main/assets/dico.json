@@ -1,0 +1,431 @@
+{   
+    "categorys": [
+        "verbe",
+        "objet",
+        "adjectif",
+        "personne",
+        "interogation",
+        "vivant",
+        "connecteur",
+        "lieu",
+        "démonstratif",
+        "concept",
+        "date",
+        "nourriture",
+        "chiffre",
+        "transport",
+        "activité",
+        "corps",
+        "imatériel",
+        "couleur"
+    ],
+    "verbe": [
+        {
+            "fr": "être, exister",
+            "kana": "いる",
+            "kanji": "居る",
+            "romaji": "iru"
+        }, {
+            "fr": "avoir",
+            "kana": "ある",
+            "kanji": "有る",
+            "romaji": "aru"
+        }, {
+            "fr": "aller",
+            "kana": "いく",
+            "kanji": "行く",
+            "romaji": "iku"
+        }, {
+            "fr": "venir",
+            "kana": "くる",
+            "kanji": "来る",
+            "romaji": "kuru"
+        }
+    ],
+    "objet": [
+        {
+            "fr": "portable, téléphone",
+            "kana": "でんわ",
+            "kanji": "電話",
+            "romaji": "denwa"
+        }
+    ],
+    "adjectif": [
+        {
+            "fr": "bon, bien",
+            "kana": "いい",
+            "kanji": "良い",
+            "romaji": "ii"
+        }, {
+            "fr": "neuf",
+            "kana": "あたらしい",
+            "kanji": "新しい",
+            "romaji": "atarashii"
+        }, {
+            "fr": "grand, gros",
+            "kana": "おおきい",
+            "kanji": "大きい",
+            "romaji": "ookii"
+        }
+    ],
+    "personne": [
+        {
+            "fr": "ami",
+            "kana": "ともだち",
+            "kanji": "友達",
+            "romaji": "tomodachi"
+        }
+    ],
+    "interogation": [
+        {
+            "fr": "quel",
+            "kana": "どれ",
+            "kanji": "何れ",
+            "romaji": "dore"
+        }, {
+            "fr": "qui",
+            "kana": "だれ",
+            "kanji": "誰れ",
+            "romaji": "dare"
+        }, {
+            "fr": "quoi",
+            "kana": "なに",
+            "kanji": "何",
+            "romaji": "nani"
+        }, {
+            "fr": "où",
+            "kana": "どこ",
+            "kanji": "何処",
+            "romaji": "doko"
+        }, {
+            "fr": "combien",
+            "kana": "いくつ",
+            "kanji": "幾つ",
+            "romaji": "ikutsu"
+        }, {
+            "fr": "quand",
+            "kana": "いつ",
+            "kanji": "何時",
+            "romaji": "itsu"
+        }, {
+            "fr": "comment",
+            "kana": "どう",
+            "kanji": "何方",
+            "romaji": "dou"
+        }, {
+            "fr": "pourquoi",
+            "kana": "どうして",
+            "kanji": "何方",
+            "romaji": "doushite"
+        }
+    ],
+    "vivant": [
+        {
+            "fr": "renard",
+            "kana": "きつね",
+            "kanji": "狐",
+            "romaji": "kitsune"
+        }
+    ],
+    "connecteur": [
+        {
+            "fr": "et",
+            "kana": "と",
+            "kanji": "",
+            "romaji": "to"
+        }, {
+            "fr": "mais",
+            "kana": "でも",
+            "kanji": "",
+            "romaji": "demo"
+        }
+    ],
+    "lieu": [
+        {
+            "fr": "école",
+            "kana": "がっこう",
+            "kanji": "学校",
+            "romaji": "gakkou"
+        }
+    ],
+    "démonstratif": [
+        {
+            "fr": "ce",
+            "kana": "これ",
+            "kanji": "此れ",
+            "romaji": "kore"
+        }
+    ],
+    "concept": [
+        {
+            "fr": "temps",
+            "kana": "じかん",
+            "kanji": "時間",
+            "romaji": "jikan"
+        }
+    ],
+    "date": [
+        {
+            "fr": "aujourd'hui, maintenant",
+            "kana": "きょう",
+            "kanji": "今日",
+            "romaji": "kyou"
+        }
+    ],
+    "nourriture": [
+        {   
+            "fr": "pomme",
+            "kana": "りんご",
+            "kanji": "林檎",
+            "romaji": "ringo"
+        }, {
+            "fr": "banane",
+            "kana": "バナナ",
+            "kanji": "",
+            "romaji": "banana"
+        }, {
+            "fr": "poisson",
+            "kana": "さかな",
+            "kanji": "魚",
+            "romaji": "sakana"
+        }
+    ],
+    "chiffre": [
+        {
+            "fr": "un, 1",
+            "kana": "いち",
+            "kanji": "一",
+            "romaji": "ichi"
+        }, {
+            "fr": "deux, 2",
+            "kana": "に",
+            "kanji": "二",
+            "romaji": "ni"
+        }, {
+            "fr": "trois, 3",
+            "kana": "さん",
+            "kanji": "三",
+            "romaji": "san"
+        }, {
+            "fr": "quatre, 4",
+            "kana": "よん",
+            "kanji": "四",
+            "romaji": "yon"
+        }, {
+            "fr": "cinq, 5",
+            "kana": "ご",
+            "kanji": "五",
+            "romaji": "go"
+        }, {
+            "fr": "six, 6",
+            "kana": "ろく",
+            "kanji": "六",
+            "romaji": "roku"
+        }, {
+            "fr": "sept, 7",
+            "kana": "なな",
+            "kanji": "七",
+            "romaji": "nana"
+        }, {
+            "fr": "huit, 8",
+            "kana": "はち",
+            "kanji": "八",
+            "romaji": "hachi"
+        }, {
+            "fr": "neuf, 9",
+            "kana": "きゅう",
+            "kanji": "九",
+            "romaji": "kyuu"
+        }, {
+            "fr": "dix, 10",
+            "kana": "じゅう",
+            "kanji": "十",
+            "romaji": "juu"
+        }
+    ],
+    "transport": [
+        {
+            "fr": "train",
+            "kana": "でんしゃ",
+            "kanji": "電車",
+            "romaji": "densha"
+        }, {
+            "fr": "avion",
+            "kana": "ひこうき",
+            "kanji": "飛行機",
+            "romaji": "hikouki"
+        }
+    ],
+    "activité": [
+        {
+            "fr": "foot, football",
+            "kana": "サッカー",
+            "kanji": "",
+            "romaji": "sakkaa"
+        }, {
+            "fr": "tennis",
+            "kana": "テニス",
+            "kanji": "",
+            "romaji": "tenisu"
+        }
+    ],
+    "corps": [
+        {
+            "fr": "main",
+            "kana": "て",
+            "kanji": "手",
+            "romaji": "te"
+        }, {
+            "fr": "pied",
+            "kana": "あし",
+            "kanji": "足",
+            "romaji": "ashi"
+        }, {
+            "fr": "tête",
+            "kana": "あたま",
+            "kanji": "頭",
+            "romaji": "atama"
+        }, {
+            "fr": "yeux",
+            "kana": "め",
+            "kanji": "目",
+            "romaji": "me"
+        }, {
+            "fr": "nez",
+            "kana": "はな",
+            "kanji": "鼻",
+            "romaji": "hana"
+        }, {
+            "fr": "bouche",
+            "kana": "くち",
+            "kanji": "口",
+            "romaji": "kuchi"
+        }, {
+            "fr": "oreille",
+            "kana": "みみ",
+            "kanji": "耳",
+            "romaji": "mimi"
+        }, {
+            "fr": "jambe",
+            "kana": "あし",
+            "kanji": "足",
+            "romaji": "ashi"
+        }, {
+            "fr": "cou",
+            "kana": "くび",
+            "kanji": "首",
+            "romaji": "kubi"
+        }, {
+            "fr": "ventre",
+            "kana": "はら",
+            "kanji": "腹",
+            "romaji": "hara"
+        }, {
+            "fr": "dos",
+            "kana": "せ",
+            "kanji": "背",
+            "romaji": "se"
+        }, {
+            "fr": "poitrine",
+            "kana": "むね",
+            "kanji": "胸",
+            "romaji": "mune"
+        }, {
+            "fr": "coude",
+            "kana": "ひじ",
+            "kanji": "肘",
+            "romaji": "hiji"
+        }, {
+            "fr": "genou",
+            "kana": "ひざ",
+            "kanji": "膝",
+            "romaji": "hiza"
+        }, {
+            "fr": "cheville",
+            "kana": "くるぶし",
+            "kanji": "踵",
+            "romaji": "kurubushi"
+        }
+    ],
+    "imatériel": [
+        {
+            "fr": "film, cinéma",
+            "kana": "えいが",
+            "kanji": "映画",
+            "romaji": "eiga"
+        }, {
+            "fr": "voyage",
+            "kana": "りょこう",
+            "kanji": "旅行",
+            "romaji": "ryokou"
+        }
+    ],
+    "couleur": [
+        {
+            "fr": "rouge",
+            "kana": "あか",
+            "kanji": "赤",
+            "romaji": "aka"
+        }, {
+            "fr": "bleu",
+            "kana": "あお",
+            "kanji": "青",
+            "romaji": "ao"
+        }, {
+            "fr": "jaune",
+            "kana": "きいろ",
+            "kanji": "黄色",
+            "romaji": "kiiro"
+        }, {
+            "fr": "vert",
+            "kana": "みどり",
+            "kanji": "緑",
+            "romaji": "midori"
+        }, {
+            "fr": "noir",
+            "kana": "くろ",
+            "kanji": "黒",
+            "romaji": "kuro"
+        }, {
+            "fr": "blanc",
+            "kana": "しろ",
+            "kanji": "白",
+            "romaji": "shiro"
+        }, {
+            "fr": "violet",
+            "kana": "むらさき",
+            "kanji": "紫",
+            "romaji": "murasaki"
+        }, {
+            "fr": "rose",
+            "kana": "ピンク",
+            "kanji": "",
+            "romaji": "pinku"
+        }, {
+            "fr": "orange",
+            "kana": "オレンジ",
+            "kanji": "",
+            "romaji": "orenji"
+        }, {
+            "fr": "marron",
+            "kana": "ちゃいろ",
+            "kanji": "茶色",
+            "romaji": "chairo"
+        }, {
+            "fr": "gris",
+            "kana": "はいいろ",
+            "kanji": "灰色",
+            "romaji": "haiiro"
+        }, {
+            "fr": "argent",
+            "kana": "ぎんいろ",
+            "kanji": "銀色",
+            "romaji": "giniro"
+        }, {
+            "fr": "or",
+            "kana": "きんいろ",
+            "kanji": "金色",
+            "romaji": "kiniro"
+        }
+    ]
+}

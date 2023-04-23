@@ -14,7 +14,7 @@ import {
     Modal
 } from 'react-native';
 
-var RNFS = require('react-native-fs');
+import RNFS from 'react-native-fs';
 
 
 function DicoAddScreen() {
@@ -27,13 +27,14 @@ function DicoAddScreen() {
     const [romaji, setRomaji] = useState('');
 
     function addData() {
-        RNFS.readDir('./dico.json')
-        .then(({ dicoJson }: { dicoJson: any }) => {
+        if (category === '' || fr === '' || (kana === '' && romaji === '')) {
+            setModalVisible(true);
+            return;
+        }
 
-            if (category === '' || fr === '' || (kana === '' && romaji === '')) {
-                setModalVisible(true);
-                return;
-            }
+        RNFS.readFile(RNFS.DocumentDirectoryPath + '/dico.json', 'utf8')
+        .then((contents) => {
+            let dicoJson = JSON.parse(contents);
 
             let word = {
                 "fr": fr,
@@ -41,6 +42,7 @@ function DicoAddScreen() {
                 "kanji": kanji,
                 "romaji": romaji
             };
+
             let categoryExist = false;
             for (let i = 0; i < dicoJson.categorys.length; i++) {
                 if (dicoJson.categorys[i] === category) {
@@ -52,10 +54,19 @@ function DicoAddScreen() {
                 dicoJson.categorys.push(category);
                 dicoJson[category] = new Array(word);
             }
-            var fs = require('fs');
-            fs.writeFile('./dico.json', JSON.stringify(dicoJson));
-            console.log(dicoJson);
+
+            RNFS.writeFile(RNFS.DocumentDirectoryPath + '/dico.json', JSON.stringify(dicoJson), 'utf8')
+
+            setCategory('');
+            setFr('');
+            setKana('');
+            setKanji('');
+            setRomaji('');
         })
+        .catch((err) => {
+            console.log(err.message, err.code);
+            setModalVisible(true);
+        });
     }
 
     return (
@@ -66,6 +77,7 @@ function DicoAddScreen() {
                     autoComplete="off"
                     style={styles.input}
                     placeholder="Catégorie"
+                    value = {category}
                     onChange={(event) => setCategory(event.nativeEvent.text.toLowerCase())}
                 />
                 <TextInput
@@ -73,6 +85,7 @@ function DicoAddScreen() {
                     autoComplete="off"
                     style={styles.input}
                     placeholder="Français"
+                    value = {fr}
                     onChange={(event) => setFr(event.nativeEvent.text.toLowerCase())}
                 />
                 <TextInput
@@ -80,6 +93,7 @@ function DicoAddScreen() {
                     autoComplete="off"
                     style={styles.input}
                     placeholder="Kana"
+                    value = {kana}
                     onChange={(event) => setKana(event.nativeEvent.text.toLowerCase())}
                 />
                 <TextInput
@@ -87,6 +101,7 @@ function DicoAddScreen() {
                     autoComplete="off"
                     style={styles.input}
                     placeholder="Kanji"
+                    value = {kanji}
                     onChange={(event) => setKanji(event.nativeEvent.text.toLowerCase())}
                 />
                 <TextInput
@@ -94,6 +109,7 @@ function DicoAddScreen() {
                     autoComplete="off"
                     style={styles.input}
                     placeholder="Romaji"
+                    value = {romaji}
                     onChange={(event) => setRomaji(event.nativeEvent.text.toLowerCase())}
                 />
             </View>

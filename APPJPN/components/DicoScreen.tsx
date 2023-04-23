@@ -2,7 +2,7 @@
  * @format
  */
 import 'react-native-gesture-handler';
-import React, { Component } from 'react';
+import React, { useState, Component, useEffect } from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -17,8 +17,11 @@ import {
 
 import LinearGradient from 'react-native-linear-gradient';
 
-import DicoSearchScreen from './dico/DicoSearchScreen';
+import RNFS from 'react-native-fs';
+
+import DicoCategoryScreen from './dico/DicoCategoryScreen';
 import DicoAddScreen from './dico/DicoAddScreen';
+import DicoSearchScreen from './dico/DicoSearchScreen';
 
 
 const DicoStack = createStackNavigator();
@@ -43,6 +46,11 @@ class DicoScreen extends Component {
                     component={DicoAddScreen}
                     options={{ headerShown: false }}
                 />
+                <DicoStack.Screen
+                    name="DicoCategoryScreen"
+                    component={DicoCategoryScreen}
+                    options={{ headerShown: false }}
+                />
             </DicoStack.Navigator>
         </NavigationContainer>
     )}
@@ -50,7 +58,47 @@ class DicoScreen extends Component {
 
 
 function DicoMainScreen({ navigation }: { navigation: any }) {
-    const dicoJson = require('./dico/dico.json');
+    const [dicoJson, setDicoJson] = useState({categorys: []});
+
+    useEffect(() => {
+        RNFS.exists(RNFS.DocumentDirectoryPath + '/dico.json')
+        .then((result) => {
+            if (!result) {
+                RNFS.copyFileAssets('dico.json', RNFS.DocumentDirectoryPath + '/dico.json')
+                .then(() => {
+                    RNFS.readFile(RNFS.DocumentDirectoryPath + '/dico.json', 'utf8')
+                    .then((contents) => {
+                        setDicoJson(JSON.parse(contents));
+                    })
+                    .catch((err) => {
+                        console.log(err.message);
+                    });
+                })
+                .catch((err) => {
+                    console.log(err.message);
+                });
+            } else {
+                RNFS.readFile(RNFS.DocumentDirectoryPath + '/dico.json', 'utf8')
+                .then((contents) => {
+                    setDicoJson(JSON.parse(contents));
+                })
+                .catch((err) => {
+                    console.log(err.message);
+                });
+            }
+        })
+        .catch((err) => {
+            console.log(err.message, err.code);
+        });
+    }, [])
+
+    function toSearchScreen({ event }: { event: any }) {
+        let search = event.nativeEvent.text;
+        search = search.toLowerCase().replace(/ /g, '');
+        if (event.nativeEvent.text !== "") {
+            navigation.navigate('DicoSearchScreen', {search: {search}})
+        }
+    }
 
     return (
         <LinearGradient colors={['#EC275F', '#F25477']} style={styles.view}>
@@ -61,13 +109,14 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
                 autoCapitalize="none"
                 style={styles.input}
                 placeholder="Recherche"
+                onEndEditing={(event) => toSearchScreen({ event })}
             />
             <FlatList style={styles.categoriesView}
                 horizontal={false}
                 numColumns={2}
                 data={dicoJson.categorys}
                 renderItem={({item}) => 
-                    <Pressable style={styles.categoriesButton} onPress={() => navigation.navigate('DicoSearchScreen', {category: {item}})}>
+                    <Pressable style={styles.categoriesButton} onPress={() => navigation.navigate('DicoCategoryScreen', {category: {item}})}>
                         <Text style={styles.buttonText}>{item.charAt(0).toUpperCase() + item.slice(1)}</Text>
                     </Pressable>
                 }

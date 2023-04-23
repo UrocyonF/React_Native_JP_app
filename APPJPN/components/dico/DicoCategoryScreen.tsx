@@ -16,24 +16,13 @@ import RNFS from 'react-native-fs';
 
 
 function DicoSearchScreen({ route }: { route: any }) {
-    const strSearch = route.params.search.search;
-
-    const [response, setResponse] = useState([]);
+    const strCategory = route.params.category.item;
+    const [dicoJson, setDicoJson] = useState({categorys: []});
 
     useEffect(() => {
         RNFS.readFile(RNFS.DocumentDirectoryPath + '/dico.json', 'utf8')
         .then((contents) => {
-            const dicoJson = JSON.parse(contents);
-            let tmpSearch = [];
-            for (let i = 0; i < dicoJson.categorys.length; i++) {
-                for (let j = 0; j < dicoJson[dicoJson.categorys[i]].length; j++) {
-                    if (dicoJson[dicoJson.categorys[i]][j].fr.includes(strSearch) || dicoJson[dicoJson.categorys[i]][j].kana.includes(strSearch) || dicoJson[dicoJson.categorys[i]][j].kanji.includes(strSearch) || dicoJson[dicoJson.categorys[i]][j].romaji.includes(strSearch)) {
-                        tmpSearch.push(dicoJson[dicoJson.categorys[i]][j]);
-                    }
-                }
-            }
-            setResponse(tmpSearch);
-            return;
+            setDicoJson(JSON.parse(contents));
         })
         .catch((err) => {
             console.log(err.message);
@@ -51,7 +40,7 @@ function DicoSearchScreen({ route }: { route: any }) {
                 </View>
             </View>
             <FlatList
-                data={response}
+                data={dicoJson[strCategory]}
                 renderItem={({item}) => 
                     <View style={styles.article}>
                         <Text style={styles.articleText}>{item.fr}</Text>
