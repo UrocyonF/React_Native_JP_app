@@ -14,7 +14,5 @@ TODO:
 - remove all the error messages (from type issues)
 - start over the KanaScreen (with the new design -> using View instead of Text)
 - add comments to the code
-- change the name of the app
-- change the icon of the app
 - change the button color
 - upgrade the license
