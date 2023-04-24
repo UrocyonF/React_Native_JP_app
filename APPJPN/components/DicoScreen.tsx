@@ -59,6 +59,7 @@ class DicoScreen extends Component {
 
 function DicoMainScreen({ navigation }: { navigation: any }) {
     const [dicoJson, setDicoJson] = useState({categorys: []});
+    const [search, setSearch] = useState('');
 
     useEffect(() => {
         RNFS.exists(RNFS.DocumentDirectoryPath + '/dico.json')
@@ -92,12 +93,12 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
         });
     }, [])
 
-    function toSearchScreen({ event }: { event: any }) {
-        let search = event.nativeEvent.text;
-        search = search.toLowerCase().replace(/ /g, '');
-        if (event.nativeEvent.text !== "") {
+    function toSearchScreen() {
+        if (search !== "") {
+            setSearch(search.toLowerCase().replace(/ /g, ''));
             navigation.navigate('DicoSearchScreen', {search: {search}})
         }
+        setSearch('');
     }
 
     return (
@@ -109,7 +110,9 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
                 autoCapitalize="none"
                 style={styles.input}
                 placeholder="Recherche"
-                onEndEditing={(event) => toSearchScreen({ event })}
+                value = {search}
+                onChange={(event) => setSearch(event.nativeEvent.text)}
+                onEndEditing={toSearchScreen}
             />
             <FlatList style={styles.categoriesView}
                 horizontal={false}

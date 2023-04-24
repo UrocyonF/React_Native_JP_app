@@ -136,7 +136,7 @@
             "kanji": "上げる",
             "romaji": "ageru"
         }, {
-            "fr": "recevoir, répondre (tel)",
+            "fr": "recevoir, répondre (tel.)",
             "kana": "もらう",
             "kanji": "貰う",
             "romaji": "morau"
@@ -146,7 +146,7 @@
             "kanji": "送る",
             "romaji": "okuru"
         }, {
-            "fr": "appeler (tél.)",
+            "fr": "appeler (tel.)",
             "kana": "かける",
             "kanji": "掛ける",
             "romaji": "kakeru"
@@ -1431,6 +1431,46 @@
             "kana": "せん",
             "kanji": "千",
             "romaji": "sen"
+        }, {
+            "fr": "dix mille, 10 000",
+            "kana": "まん",
+            "kanji": "万",
+            "romaji": "man"
+        }, {
+            "fr": "cent mille, 100 000",
+            "kana": "じゅうまん",
+            "kanji": "十万",
+            "romaji": "juuman"
+        }, {
+            "fr": "un million, 1 000 000",
+            "kana": "ひゃくまん",
+            "kanji": "百万",
+            "romaji": "hyakuman"
+        }, {
+            "fr": "dix millions, 10 000 000",
+            "kana": "せんまん",
+            "kanji": "千万",
+            "romaji": "senman"
+        }, {
+            "fr": "cent millions, 100 000 000",
+            "kana": "おく",
+            "kanji": "億",
+            "romaji": "oku"
+        }, {
+            "fr": "un milliard, 1 000 000 000",
+            "kana": "じゅうおく",
+            "kanji": "十億",
+            "romaji": "juuoku"
+        }, {
+            "fr": "dix milliards, 10 000 000 000",
+            "kana": "ひゃくおく",
+            "kanji": "百億",
+            "romaji": "hyakuoku"
+        }, {
+            "fr": "cent milliards, 100 000 000 000",
+            "kana": "せんおく",
+            "kanji": "千億",
+            "romaji": "senoku"
         }
     ],
     "transport": [

@@ -123,7 +123,7 @@ function DicoAddScreen() {
                 onRequestClose={() => {
                     setModalVisible(!modalVisible);
                 }}>
-                <View style={styles.centeredView}>
+                <View style={styles.modalCenteredView}>
                     <View style={styles.modalView}>
                         <Text style={styles.modalText}>Il faut au moins renseigner la catégorie, la traduction française et le mot (kana ou romaji)</Text>
                         <Pressable style={styles.button} onPress={() => setModalVisible(!modalVisible)}>
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: '#444444'
     },
-    centeredView: {
+    modalCenteredView: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
         marginBottom: 15,
         textAlign: 'center',
         fontSize: 20
-    },
+    }
 });
 
 

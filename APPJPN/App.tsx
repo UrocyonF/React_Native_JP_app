@@ -57,13 +57,13 @@ function HomeScreen({ navigation }: { navigation: any }) {
         <LinearGradient colors={['#EC275F', '#F25477', '#FFA7A6', '#FFDCDC']} style={styles.view}>
             <Text style={styles.title}>日本語</Text>
             <Pressable style={styles.button} onPress={() => navigation.navigate('DicoScreen')}>
-                <Text style={styles.ButtonText}>Dictionnary</Text>
+                <Text style={styles.ButtonText}>Dico</Text>
             </Pressable>
             <Pressable style={styles.button} onPress={() => navigation.navigate('TradScreen')}>
-                <Text style={styles.ButtonText}>Traduction</Text>
+                <Text style={styles.ButtonText}>Trad</Text>
             </Pressable>
             <Pressable style={styles.button} onPress={() => navigation.navigate('KanaScreen')}>
-                <Text style={styles.ButtonText}>あ Kana ア</Text>
+                <Text style={styles.ButtonText}>Kana</Text>
             </Pressable>
         </LinearGradient>
     );

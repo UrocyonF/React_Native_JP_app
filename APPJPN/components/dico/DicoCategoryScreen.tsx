@@ -45,7 +45,7 @@ function DicoSearchScreen({ route }: { route: any }) {
                     <View style={styles.article}>
                         <Text style={styles.articleText}>{item.fr}</Text>
                         <Text style={styles.articleText}>{item.kana}</Text>
-                        <View style={styles.atricleTextKanjiRomanji}>
+                        <View style={styles.atricleViewKanjiRomanji}>
                             <Text style={styles.articleText}>{item.kanji}</Text>
                             <Text style={styles.articleTextRomanji}>{item.romaji}</Text>
                         </View>
@@ -81,19 +81,22 @@ const styles = StyleSheet.create({
         width: 375,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     articleText: {
         fontSize: 20,
-        color: '#000000'
+        color: '#000000',
+        maxWidth: 160,
+        flexWrap: 'wrap'
     },
-    atricleTextKanjiRomanji: {
+    atricleViewKanjiRomanji: {
         flexDirection: 'column',
         alignItems: 'center'
     },
     articleTextRomanji: {
         fontSize: 12,
-        color: '#444444'
+        color: '#444444',
+        flexWrap: 'wrap'
     }
 });
 
