@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         width: 375,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center',
+        alignItems: 'center'
     },
     articleText: {
         fontSize: 20,

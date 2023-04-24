@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 10,
         borderRadius: 10,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#FFFFFF'
     },
     output: {
         height: 200,
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 10,
         borderRadius: 10,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#FFFFFF'
     },
     button: {
         backgroundColor: '#FFDCDC',

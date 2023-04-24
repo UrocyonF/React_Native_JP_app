@@ -96,7 +96,7 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
     function toSearchScreen() {
         if (search !== "") {
             setSearch(search.toLowerCase().replace(/ /g, ''));
-            navigation.navigate('DicoSearchScreen', {search: {search}})
+            navigation.navigate('DicoSearchScreen', {search: {search}});
         }
         setSearch('');
     }
