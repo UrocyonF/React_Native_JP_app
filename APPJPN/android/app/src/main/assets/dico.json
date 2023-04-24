@@ -289,7 +289,7 @@
             "kanji": "鞄",
             "romaji": "kaban"
         }, {
-            "fr": "lunette",
+            "fr": "lunettes",
             "kana": "めがね",
             "kanji": "眼鏡",
             "romaji": "megane"
@@ -363,6 +363,26 @@
             "kana": "びん",
             "kanji": "瓶",
             "romaji": "bin"
+        }, {
+            "fr": "herbe",
+            "kana": "くさ",
+            "kanji": "草",
+            "romaji": "kusa"
+        }, {
+            "fr": "pierre",
+            "kana": "いし",
+            "kanji": "石",
+            "romaji": "ishi"
+        }, {
+            "fr": "sable",
+            "kana": "すな",
+            "kanji": "砂",
+            "romaji": "suna"
+        }, {
+            "fr": "argent",
+            "kana": "かね",
+            "kanji": "金",
+            "romaji": "kane"
         }
     ],
     "adjectif": [
@@ -377,7 +397,7 @@
             "kanji": "悪い",
             "romaji": "warui"
         }, {
-            "fr": "beau (personne)",
+            "fr": "beau, belle (personne)",
             "kana": "びじん",
             "kanji": "美人",
             "romaji": "bijin"
@@ -552,7 +572,7 @@
             "kanji": "有名(な)",
             "romaji": "yuumei(na)"
         }, {
-            "fr": "gentil, gentille",
+            "fr": "gentil",
             "kana": "しんせつ(な)",
             "kanji": "親切(な)",
             "romaji": "shinsetsu(na)"
@@ -577,7 +597,7 @@
             "kanji": "下手(な)",
             "romaji": "heta(na)"
         }, {
-            "fr": "seul(e)",
+            "fr": "seul",
             "kana": "ひとり",
             "kanji": "一人",
             "romaji": "hitori"
@@ -800,6 +820,36 @@
             "kana": "こぶた",
             "kanji": "小豚",
             "romaji": "kobuta"
+        }, {
+            "fr": "ours",
+            "kana": "くま",
+            "kanji": "熊",
+            "romaji": "kuma"
+        }, {
+            "fr": "dragon",
+            "kana": "りゅう",
+            "kanji": "竜",
+            "romaji": "ryuu"
+        }, {
+            "fr": "arbre",
+            "kana": "き",
+            "kanji": "木",
+            "romaji": "ki"
+        }, {
+            "fr": "racine",
+            "kana": "ね",
+            "kanji": "根",
+            "romaji": "ne"
+        }, {
+            "fr": "fleure",
+            "kana": "はな",
+            "kanji": "花",
+            "romaji": "hana"
+        }, {
+            "fr": "feuille",
+            "kana": "は",
+            "kanji": "葉",
+            "romaji": "ha"
         }
     ],
     "connecteur": [
@@ -847,7 +897,7 @@
             "kanji": "郵便局",
             "romaji": "yubinkyoku"
         }, {
-            "fr": "musée",
+            "fr": "musé",
             "kana": "びじゅつかん",
             "kanji": "美術館",
             "romaji": "bijutsukan"
@@ -966,6 +1016,101 @@
             "kana": "どこも",
             "kanji": "何処も",
             "romaji": "dokomo"
+        }, {
+            "fr": "forêt, bois",
+            "kana": "もり",
+            "kanji": "森",
+            "romaji": "mori"
+        }, {
+            "fr": "montagne",
+            "kana": "やま",
+            "kanji": "山",
+            "romaji": "yama"
+        }, {
+            "fr": "colline",
+            "kana": "おか",
+            "kanji": "丘",
+            "romaji": "oka"
+        }, {
+            "fr": "volcan",
+            "kana": "かざん",
+            "kanji": "火山",
+            "romaji": "kazan"
+        }, {
+            "fr": "cascade",
+            "kana": "たき",
+            "kanji": "滝",
+            "romaji": "taki"
+        }, {
+            "fr": "rivière",
+            "kana": "かわ",
+            "kanji": "川",
+            "romaji": "kawa"
+        }, {
+            "fr": "lac",
+            "kana": "みずうみ",
+            "kanji": "湖",
+            "romaji": "mizuumi"
+        }, {
+            "fr": "mer",
+            "kana": "うみ",
+            "kanji": "海",
+            "romaji": "umi"
+        }, {
+            "fr": "plage",
+            "kana": "はま",
+            "kanji": "浜",
+            "romaji": "hama"
+        }, {
+            "fr": "île",
+            "kana": "しま",
+            "kanji": "島",
+            "romaji": "shima"
+        }, {
+            "fr": "pont",
+            "kana": "はし",
+            "kanji": "橋",
+            "romaji": "hashi"
+        }, {
+            "fr": "ville",
+            "kana": "まち",
+            "kanji": "町",
+            "romaji": "machi"
+        }, {
+            "fr": "village",
+            "kana": "むら",
+            "kanji": "村",
+            "romaji": "mura"
+        }, {
+            "fr": "pays",
+            "kana": "くに",
+            "kanji": "国",
+            "romaji": "kuni"
+        }, {
+            "fr": "monde",
+            "kana": "せかい",
+            "kanji": "世界",
+            "romaji": "sekai"
+        }, {
+            "fr": "planète",
+            "kana": "ほし",
+            "kanji": "星",
+            "romaji": "hoshi"
+        }, {
+            "fr": "univers",
+            "kana": "うちゅう",
+            "kanji": "宇宙",
+            "romaji": "uchuu"
+        }, {
+            "fr": "espace",
+            "kana": "くうかん",
+            "kanji": "空間",
+            "romaji": "kuukan"
+        }, {
+            "fr": "grotte",
+            "kana": "どうくつ",
+            "kanji": "洞窟",
+            "romaji": "doukutsu"
         }
     ],
     "démonstratif": [
@@ -1003,6 +1148,11 @@
     ],
     "concept": [
         {
+            "fr": "dieu",
+            "kana": "かみ",
+            "kanji": "神",
+            "romaji": "kami"
+        }, {
             "fr": "temps",
             "kana": "じかん",
             "kanji": "時間",
@@ -1372,57 +1522,57 @@
     ],
     "chiffre": [
         {
-            "fr": "un, 1",
+            "fr": "1, un",
             "kana": "いち",
             "kanji": "一",
             "romaji": "ichi"
         }, {
-            "fr": "deux, 2",
+            "fr": "2, deux",
             "kana": "に",
             "kanji": "二",
             "romaji": "ni"
         }, {
-            "fr": "trois, 3",
+            "fr": "3, trois",
             "kana": "さん",
             "kanji": "三",
             "romaji": "san"
         }, {
-            "fr": "quatre, 4",
+            "fr": "4, quatre",
             "kana": "よん",
             "kanji": "四",
             "romaji": "yon"
         }, {
-            "fr": "cinq, 5",
+            "fr": "5, cinq",
             "kana": "ご",
             "kanji": "五",
             "romaji": "go"
         }, {
-            "fr": "six, 6",
+            "fr": "6, six",
             "kana": "ろく",
             "kanji": "六",
             "romaji": "roku"
         }, {
-            "fr": "sept, 7",
+            "fr": "7, sept",
             "kana": "なな",
             "kanji": "七",
             "romaji": "nana"
         }, {
-            "fr": "huit, 8",
+            "fr": "8, huit",
             "kana": "はち",
             "kanji": "八",
             "romaji": "hachi"
         }, {
-            "fr": "neuf, 9",
+            "fr": "9, neuf",
             "kana": "きゅう",
             "kanji": "九",
             "romaji": "kyuu"
         }, {
-            "fr": "dix, 10",
+            "fr": "10, dix",
             "kana": "じゅう",
             "kanji": "十",
             "romaji": "juu"
         }, {
-            "fr": "cent, 100",
+            "fr": "100, cent",
             "kana": "ひゃく",
             "kanji": "百",
             "romaji": "hyaku"
@@ -1703,6 +1853,61 @@
             "kana": "もんだい",
             "kanji": "問題",
             "romaji": "mondai"
+        }, {
+            "fr": "vent",
+            "kana": "かぜ",
+            "kanji": "風",
+            "romaji": "kaze"
+        }, {
+            "fr": "pluie",
+            "kana": "あめ",
+            "kanji": "雨",
+            "romaji": "ame"
+        }, {
+            "fr": "tempête",
+            "kana": "あらし",
+            "kanji": "嵐",
+            "romaji": "arashi"
+        }, {
+            "fr": "soleil",
+            "kana": "たいよう",
+            "kanji": "太陽",
+            "romaji": "taiyou"
+        }, {
+            "fr": "lune",
+            "kana": "つき",
+            "kanji": "月",
+            "romaji": "tsuki"
+        }, {
+            "fr": "étoile",
+            "kana": "ほし",
+            "kanji": "星",
+            "romaji": "hoshi"
+        }, {
+            "fr": "nuage",
+            "kana": "くも",
+            "kanji": "雲",
+            "romaji": "kumo"
+        }, {
+            "fr": "neige",
+            "kana": "ゆき",
+            "kanji": "雪",
+            "romaji": "yuki"
+        }, {
+            "fr": "feu",
+            "kana": "ひ",
+            "kanji": "火",
+            "romaji": "hi"
+        }, {
+            "fr": "fumée",
+            "kana": "けむり",
+            "kanji": "煙",
+            "romaji": "kemuri"
+        }, {
+            "fr": "éclaire",
+            "kana": "かみなり",
+            "kanji": "雷",
+            "romaji": "kaminari"
         }
     ],
     "couleur": [

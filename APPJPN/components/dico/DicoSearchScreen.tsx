@@ -1,4 +1,13 @@
 /**
+ * Copyright (c) 2023, UrocyonF
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. 
+ *
+ * Author: UrocyonF
+ * Date: 2023
+ *
  * @format
  */
 import 'react-native-gesture-handler';
@@ -144,7 +153,7 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 10,
         margin: 20,
-        width: 350,
+        width: 330,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center'
@@ -154,14 +163,16 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 10,
         margin: 5,
-        width: 375,
+        width: 350,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center'
     },
     articleText: {
         fontSize: 20,
-        color: '#000000'
+        color: '#000000',
+        maxWidth: 140,
+        flexWrap: 'wrap'
     },
     atricleTextKanjiRomanji: {
         flexDirection: 'column',

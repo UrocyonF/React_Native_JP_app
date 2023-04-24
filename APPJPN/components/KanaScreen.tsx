@@ -1,4 +1,13 @@
 /**
+ * Copyright (c) 2023, UrocyonF
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. 
+ *
+ * Author: UrocyonF
+ * Date: 2023
+ *
  * @format
  */
 import 'react-native-gesture-handler';
@@ -28,10 +37,10 @@ class KanaScreen extends Component {
                     <Text style={styles.kana}>T    た ち つ て と</Text>
                     <Text style={styles.kana}>N    な に ぬ ね の</Text>
                     <Text style={styles.kana}>H    は ひ ふ へ ほ</Text>
-                    <Text style={styles.kana}>M    ま み む め も</Text>
+                    <Text style={styles.kana}>M   ま み む め も</Text>
                     <Text style={styles.kana}>R    ら り る れ ろ</Text>
                     <Text style={styles.kana}>Y    や      ゆ      よ</Text>
-                    <Text style={styles.kana}>W    わ</Text>
+                    <Text style={styles.kana}>W   わ</Text>
                     <Text></Text>
                     <Text style={styles.kana}>N    ん</Text>
                     <Text style={styles.kana}>O    を</Text>
@@ -188,7 +197,7 @@ const styles = StyleSheet.create({
     },
     kana: {
         fontWeight: '800',
-        fontSize: 26,
+        fontSize: 22,
         color: '#000000'
     },
     kanaSeparator: {

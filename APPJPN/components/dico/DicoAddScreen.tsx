@@ -1,4 +1,13 @@
 /**
+ * Copyright (c) 2023, UrocyonF
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. 
+ *
+ * Author: UrocyonF
+ * Date: 2023
+ *
  * @format
  */
 import 'react-native-gesture-handler';
@@ -94,7 +103,7 @@ function DicoAddScreen() {
                     style={styles.input}
                     placeholder="Kana"
                     value = {kana}
-                    onChange={(event) => setKana(event.nativeEvent.text.toLowerCase())}
+                    onChange={(event) => setKana(event.nativeEvent.text)}
                 />
                 <TextInput
                     autoCapitalize="none"
@@ -102,7 +111,7 @@ function DicoAddScreen() {
                     style={styles.input}
                     placeholder="Kanji"
                     value = {kanji}
-                    onChange={(event) => setKanji(event.nativeEvent.text.toLowerCase())}
+                    onChange={(event) => setKanji(event.nativeEvent.text)}
                 />
                 <TextInput
                     autoCapitalize="none"
@@ -112,10 +121,10 @@ function DicoAddScreen() {
                     value = {romaji}
                     onChange={(event) => setRomaji(event.nativeEvent.text.toLowerCase())}
                 />
+                <Pressable style={styles.button} onPress={addData}>
+                    <Text style={styles.buttonText}>Ajouter</Text>
+                </Pressable>
             </View>
-            <Pressable style={styles.button} onPress={addData}>
-                <Text style={styles.buttonText}>Ajouter</Text>
-            </Pressable>
             <Modal
                 animationType="slide"
                 transparent={true}
@@ -146,15 +155,14 @@ const styles = StyleSheet.create({
     },
     inputView: {
         flex: 1,
-        justifyContent: 'space-evenly'
+        justifyContent: 'space-evenly',
+        alignItems: 'center'
     },
     input: {
         backgroundColor: '#FFDCDC',
         borderRadius: 10,
-        margin: 20,
         width: 250,
-        fontSize: 18,
-        alignItems: 'center'
+        fontSize: 18
     },
     button: {
         backgroundColor: '#FFFFFF',
@@ -162,7 +170,9 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         width: 200,
         alignItems: 'center',
-        borderWidth: 1
+        borderWidth: 1,
+        position: 'absolute',
+        bottom: -58
     },
     buttonText: {
         fontSize: 20,
