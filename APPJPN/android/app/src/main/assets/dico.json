@@ -542,7 +542,7 @@
             "kanji": "賑やか(な)",
             "romaji": "nigiyaka(na)"
         }, {
-            "fr": "facile",
+            "fr": "simple",
             "kana": "かんたん(な)",
             "kanji": "簡単(な)",
             "romaji": "kantan(na)"
@@ -606,6 +606,96 @@
             "kana": "いっしょに",
             "kanji": "一緒に",
             "romaji": "isshoni"
+        }, {
+            "fr": "facile",
+            "kana": "らく(な)",
+            "kanji": "楽(な)",
+            "romaji": "raku(na)"
+        }, {
+            "fr": "impossible",
+            "kana": "むり(な)",
+            "kanji": "無理(な)",
+            "romaji": "muri(na)"
+        }, {
+            "fr": "sérieux",
+            "kana": "まじめ(な)",
+            "kanji": "真面目(な)",
+            "romaji": "majime(na)"
+        }, {
+            "fr": "nécessaire",
+            "kana": "ひつよう(な)",
+            "kanji": "必要(な)",
+            "romaji": "hitsuyou(na)"
+        }, {
+            "fr": "solide",
+            "kana": "じょうぶ(な)",
+            "kanji": "丈夫(な)",
+            "romaji": "joubu(na)"
+        }, {
+            "fr": "pas pratique",
+            "kana": "ふべん(な)",
+            "kanji": "不便(な)",
+            "romaji": "fuben(na)"
+        }, {
+            "fr": "sûr",
+            "kana": "あんぜん(な)",
+            "kanji": "安全(な)",
+            "romaji": "anzen(na)"
+        }, {
+            "fr": "important",
+            "kana": "たいせつ(な)",
+            "kanji": "大切(な)",
+            "romaji": "taisetsu(na)"
+        }, {
+            "fr": "inutile",
+            "kana": "むだ(な)",
+            "kanji": "無駄(な)",
+            "romaji": "muda(na)"
+        }, {
+            "fr": "bizarre",
+            "kana": "へん(な)",
+            "kanji": "変(な)",
+            "romaji": "hen(na)"
+        }, {
+            "fr": "heureux",
+            "kana": "しあわせ(な)",
+            "kanji": "幸せ(な)",
+            "romaji": "shiawase(na)"
+        }, {
+            "fr": "poli",
+            "kana": "ていねい(な)",
+            "kanji": "丁寧(な)",
+            "romaji": "teinei(na)"
+        }, {
+            "fr": "compliqué",
+            "kana": "ふくざつ(な)",
+            "kanji": "複雑(な)",
+            "romaji": "fukuzatsu(na)"
+        }, {
+            "fr": "dangereux",
+            "kana": "きけん(な)",
+            "kanji": "危険(な)",
+            "romaji": "kiken(na)"
+        }, {
+            "fr": "végétalisé (ville)",
+            "kana": "みどりがおおい",
+            "kanji": "緑が多い",
+            "romaji": "midorigaooi"
+        }, {
+            "fr": "pas végétalisé (ville)",
+            "kana": "みどりがすくない",
+            "kanji": "緑が少ない",
+            "romaji": "midorigasukunai"
+        }, {
+            "fr": "gentil personne (ville)",
+            "kana": "ひとがやさしい",
+            "kanji": "人が優しい",
+            "romaji": "hitogayasashii"
+        }, {
+            "fr": "gens méchant, froid (ville)",
+            "kana": "ひとがつめたい",
+            "kanji": "人が冷たい",
+            "romaji": "hitogatsumetai"
         }
     ],
     "personne": [
@@ -1073,10 +1163,15 @@
             "romaji": "hashi"
         }, {
             "fr": "ville",
-            "kana": "まち",
-            "kanji": "町",
-            "romaji": "machi"
+            "kana": "まち, とかい",
+            "kanji": "町, 都会",
+            "romaji": "machi, tokai"
         }, {
+            "fr": "campagne",
+            "kana": "いなか",
+            "kanji": "田舎",
+            "romaji": "inaka"
+        },{
             "fr": "village",
             "kana": "むら",
             "kanji": "村",

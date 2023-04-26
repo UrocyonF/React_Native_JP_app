@@ -31,7 +31,18 @@ function DicoSearchScreen({ route }: { route: any }) {
     useEffect(() => {
         RNFS.readFile(RNFS.DocumentDirectoryPath + '/dico.json', 'utf8')
         .then((contents) => {
-            setDicoJson(JSON.parse(contents));
+            let json = JSON.parse(contents);
+            //tri pas ordre alphabétique les mots à partir de la clé "fr"
+            json[strCategory].sort((a: any, b: any) => {
+                if (a.fr < b.fr) {
+                    return -1;
+                }
+                if (a.fr > b.fr) {
+                    return 1;
+                }
+                return 0;
+            });
+            setDicoJson(json);
         })
         .catch((err) => {
             console.log(err.message);
@@ -93,7 +104,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     articleText: {
-        fontSize: 20,
+        fontSize: 16,
         color: '#000000',
         maxWidth: 140,
         flexWrap: 'wrap'
@@ -103,7 +114,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     articleTextRomanji: {
-        fontSize: 12,
+        fontSize: 11,
         color: '#444444',
         flexWrap: 'wrap'
     }

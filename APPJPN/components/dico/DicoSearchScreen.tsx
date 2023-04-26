@@ -42,7 +42,7 @@ function DicoSearchScreen({ route }: { route: any }) {
             let tmpSearch = [];
             for (let i = 0; i < dicoJson.categorys.length; i++) {
                 for (let j = 0; j < dicoJson[dicoJson.categorys[i]].length; j++) {
-                    if (dicoJson[dicoJson.categorys[i]][j].fr.includes(strSearch) || dicoJson[dicoJson.categorys[i]][j].kana.includes(strSearch) || dicoJson[dicoJson.categorys[i]][j].kanji.includes(strSearch) || dicoJson[dicoJson.categorys[i]][j].romaji.includes(strSearch)) {
+                    if (dicoJson[dicoJson.categorys[i]][j].fr.normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(strSearch.normalize('NFD').replace(/[\u0300-\u036f]/g, "")) || dicoJson[dicoJson.categorys[i]][j].kana.includes(strSearch) || dicoJson[dicoJson.categorys[i]][j].kanji.includes(strSearch) || dicoJson[dicoJson.categorys[i]][j].romaji.includes(strSearch)) {
                         tmpSearch.push(dicoJson[dicoJson.categorys[i]][j]);
                     }
                 }
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     articleText: {
-        fontSize: 20,
+        fontSize: 16,
         color: '#000000',
         maxWidth: 140,
         flexWrap: 'wrap'
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     articleTextRomanji: {
-        fontSize: 12,
+        fontSize: 11,
         color: '#444444'
     },
     articleDeleteButton: {
@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
         transform: [{translateY: -5}]
     },
     atricleDeleteButtonText: {
-        fontSize: 20,
+        fontSize: 17,
         color: '#FFFFFF'
     },
     modalCenteredView: {
