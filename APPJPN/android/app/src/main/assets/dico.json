@@ -542,11 +542,6 @@
             "kanji": "賑やか(な)",
             "romaji": "nigiyaka(na)"
         }, {
-            "fr": "simple",
-            "kana": "かんたん(な)",
-            "kanji": "簡単(な)",
-            "romaji": "kantan(na)"
-        }, {
             "fr": "amusant",
             "kana": "たのしい",
             "kanji": "楽しい",
@@ -556,6 +551,11 @@
             "kana": "きれい(な)",
             "kanji": "綺麗(な)",
             "romaji": "kirei(na)"
+        }, {
+            "fr": "sale, désordonné",
+            "kana": "きたない",
+            "kanji": "汚い",
+            "romaji": "kitanai"
         }, {
             "fr": "pratique",
             "kana": "べんり(な)",
@@ -607,10 +607,10 @@
             "kanji": "一緒に",
             "romaji": "isshoni"
         }, {
-            "fr": "facile",
-            "kana": "らく(な)",
-            "kanji": "楽(な)",
-            "romaji": "raku(na)"
+            "fr": "simple, facile",
+            "kana": "かんたん(な), らく(な)",
+            "kanji": "簡単(な), 楽(な)",
+            "romaji": "kantan(na), raku(na)"
         }, {
             "fr": "impossible",
             "kana": "むり(な)",
