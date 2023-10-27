@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2023, UrocyonF
  * All rights reserved.
  *
@@ -9,7 +9,8 @@
  * Date: 2023
  *
  * @format
- */
+*/
+
 import 'react-native-gesture-handler';
 import React, { useState, useEffect } from 'react';
 import LinearGradient from 'react-native-linear-gradient';
@@ -90,7 +91,7 @@ function DicoSearchScreen({ route }: { route: any }) {
     }
 
     return (
-        <LinearGradient colors={['#EC275F', '#F25477']} style={styles.view}>
+        <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.view}>
             <View style={styles.firstarticle}>
                 <Text style={styles.articleText}>Français</Text>
                 <Text style={styles.articleText}>Kana</Text>
@@ -148,6 +149,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         height: '200%'
     },
+
     firstarticle: {
         backgroundColor: '#FFFFFF',
         padding: 10,
@@ -159,7 +161,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     article: {
-        backgroundColor: '#FFDCDC',
+        backgroundColor: '#FDF0F0',
         padding: 10,
         borderRadius: 10,
         margin: 5,
@@ -194,6 +196,7 @@ const styles = StyleSheet.create({
         fontSize: 17,
         color: '#FFFFFF'
     },
+
     modalCenteredView: {
         flex: 1,
         justifyContent: 'center',
@@ -221,6 +224,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 20
     },
+
     button: {
         padding: 10,
         borderRadius: 10,

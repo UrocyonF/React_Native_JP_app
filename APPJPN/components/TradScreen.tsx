@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2023, UrocyonF
  * All rights reserved.
  *
@@ -9,7 +9,8 @@
  * Date: 2023
  *
  * @format
- */
+*/
+
 import 'react-native-gesture-handler';
 import React, { useState } from 'react';
 import LinearGradient from 'react-native-linear-gradient';
@@ -46,7 +47,7 @@ function TradScreen() {
 
     return (
         <TranslatorProvider>
-            <LinearGradient colors={['#F25477', '#FFA7A6']} style={styles.view}>
+            <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.view}>
                 <Text style={styles.title}>日本語訳</Text>
                 <Translator
                     from={fromLanguage}
@@ -71,12 +72,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
+
     title: {
         fontSize: 45,
         fontWeight: 'bold',
         color: '#FFFFFF',
         marginBottom: 60
     },
+
     input: {
         height: 80,
         width: 300,
@@ -95,8 +98,9 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: '#FFFFFF'
     },
+
     button: {
-        backgroundColor: '#FFDCDC',
+        backgroundColor: '#FDF0F0',
         padding: 10,
         borderRadius: 10,
         margin: 10,

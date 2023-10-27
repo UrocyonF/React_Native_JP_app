@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2023, UrocyonF
  * All rights reserved.
  *
@@ -9,7 +9,8 @@
  * Date: 2023
  *
  * @format
- */
+*/
+
 import 'react-native-gesture-handler';
 import React, { useState, Component, useEffect } from 'react';
 
@@ -111,10 +112,7 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
     }
 
     return (
-        <LinearGradient colors={['#EC275F', '#F25477']} style={styles.view}>
-            <Pressable style={styles.button} onPress={() => navigation.navigate('DicoAddScreen')}>
-                <Text style={styles.buttonText}>Ajouter</Text>
-            </Pressable>
+        <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.view}>
             <TextInput
                 autoCapitalize="none"
                 style={styles.input}
@@ -133,6 +131,9 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
                     </Pressable>
                 }
             />
+            <Pressable style={styles.button} onPress={() => navigation.navigate('DicoAddScreen')}>
+                <Text style={styles.buttonText}>Ajouter</Text>
+            </Pressable>
         </LinearGradient>
     );
 }
@@ -145,40 +146,42 @@ const styles = StyleSheet.create({
         height: '200%',
         justifyContent: 'space-evenly'
     },
+
     button: {
         backgroundColor: '#FFFFFF',
         padding: 10,
         borderRadius: 10,
         margin: 10,
         width: 200,
-        alignItems: 'center',
         borderWidth: 1
     },
     buttonText: {
+        textAlign: 'center',
         fontSize: 20,
-        color: '#444444'
+        color: '#2A2A2A'
     },
+
     input: {
         backgroundColor: '#FFFFFF',
         padding: 10,
         borderRadius: 10,
-        margin: 20,
-        marginBottom: 60,
-        width: 250,
-        alignItems: 'center'
+        margin: 10,
+        marginBottom: 20,
+        marginTop: 50,
+        width: 250
     },
+
     categoriesView: {
         flex:1,
         flexWrap: 'wrap',
         flexDirection: 'row'
     },
     categoriesButton: {
-        backgroundColor: '#FFDCDC',
+        backgroundColor: '#FDF0F0',
         padding: 10,
         borderRadius: 10,
         margin: 10,
         width: 150,
-        alignItems: 'center',
         borderWidth: 1
     }
 });

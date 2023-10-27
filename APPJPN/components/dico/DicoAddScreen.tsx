@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2023, UrocyonF
  * All rights reserved.
  *
@@ -9,7 +9,8 @@
  * Date: 2023
  *
  * @format
- */
+*/
+
 import 'react-native-gesture-handler';
 import React, { useState } from 'react';
 import LinearGradient from 'react-native-linear-gradient';
@@ -79,7 +80,7 @@ function DicoAddScreen() {
     }
 
     return (
-        <LinearGradient colors={['#EC275F', '#F25477']} style={styles.view}>
+        <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.view}>
             <View style={styles.inputView}>
                 <TextInput
                     autoCapitalize="none"
@@ -153,17 +154,19 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         paddingBottom: 60
     },
+
     inputView: {
         flex: 1,
         justifyContent: 'space-evenly',
         alignItems: 'center'
     },
     input: {
-        backgroundColor: '#FFDCDC',
+        backgroundColor: '#FDF0F0',
         borderRadius: 10,
         width: 250,
         fontSize: 18
     },
+
     button: {
         backgroundColor: '#FFFFFF',
         padding: 10,
@@ -178,6 +181,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: '#444444'
     },
+
     modalCenteredView: {
         flex: 1,
         justifyContent: 'center',

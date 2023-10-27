@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2023, UrocyonF
  * All rights reserved.
  *
@@ -9,7 +9,8 @@
  * Date: 2023
  *
  * @format
- */
+*/
+
 import 'react-native-gesture-handler';
 import React, { useState, useEffect } from 'react';
 import LinearGradient from 'react-native-linear-gradient';
@@ -22,6 +23,7 @@ import {
 } from 'react-native';
 
 import RNFS from 'react-native-fs';
+import { colors } from '@rneui/themed';
 
 
 function DicoSearchScreen({ route }: { route: any }) {
@@ -50,10 +52,10 @@ function DicoSearchScreen({ route }: { route: any }) {
     }, []);
 
     return (
-        <LinearGradient colors={['#EC275F', '#F25477']} style={styles.view}>
+        <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.view}>
             <View style={styles.firstarticle}>
-                <Text style={styles.articleText}>Français</Text>
-                <Text style={styles.articleText}>Kana</Text>
+                <Text numberOfLines={1} style={styles.articleText}>Français</Text>
+                <Text numberOfLines={1} style={styles.articleText}>Kana</Text>
                 <View>
                     <Text style={styles.articleText}>Kanji</Text>
                     <Text style={styles.articleTextRomanji}>Romaji</Text>
@@ -61,6 +63,7 @@ function DicoSearchScreen({ route }: { route: any }) {
             </View>
             <FlatList
                 data={dicoJson[strCategory]}
+                style={styles.flatlist}
                 renderItem={({item}) => 
                     <View style={styles.article}>
                         <Text style={styles.articleText}>{item.fr}</Text>
@@ -79,9 +82,11 @@ function DicoSearchScreen({ route }: { route: any }) {
 
 const styles = StyleSheet.create({
     view: {
-        flex: 1,
         alignItems: 'center',
         height: '200%'
+    },
+    flatlist: {
+        marginBottom: 830
     },
     firstarticle: {
         backgroundColor: '#FFFFFF',
@@ -90,28 +95,27 @@ const styles = StyleSheet.create({
         margin: 20,
         width: 330,
         flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center'
+        justifyContent: 'space-between'
     },
     article: {
-        backgroundColor: '#FFDCDC',
+        backgroundColor: '#FDF0F0',
         padding: 10,
         borderRadius: 10,
         margin: 5,
         width: 350,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
     },
     articleText: {
+        textAlignVertical: 'center',
         fontSize: 16,
         color: '#000000',
         maxWidth: 140,
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        flex: 1
     },
     atricleViewKanjiRomanji: {
-        flexDirection: 'column',
-        alignItems: 'center'
+        flexDirection: 'column'
     },
     articleTextRomanji: {
         fontSize: 11,

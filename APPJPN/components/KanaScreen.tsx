@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2023, UrocyonF
  * All rights reserved.
  *
@@ -9,7 +9,8 @@
  * Date: 2023
  *
  * @format
- */
+*/
+
 import 'react-native-gesture-handler';
 import React, { Component } from 'react';
 import LinearGradient from 'react-native-linear-gradient';
@@ -26,7 +27,7 @@ class KanaScreen extends Component {
     render() {
     return (
         <ScrollView>
-            <LinearGradient colors={['#FFA7A6', '#FFDCDC']} style={styles.view}>
+            <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.view}>
                 <View>
                     <Text style={styles.title}>Hiragana</Text>
 
@@ -189,20 +190,23 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center'
     },
+
     title: {
         fontSize: 17,
         marginTop: 7,
         marginBottom: 10,
-        textAlign: 'center'
+        textAlign: 'center',
+        color: '#FDF0F0'
     },
+
     kana: {
         fontWeight: '800',
         fontSize: 22,
-        color: '#000000'
+        color: '#FFFFFF'
     },
     kanaSeparator: {
         height: 1,
-        backgroundColor: 'black',
+        backgroundColor: 'white',
         marginTop: 10
     }
 });

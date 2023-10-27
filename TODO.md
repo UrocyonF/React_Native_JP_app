@@ -1,4 +1,5 @@
 Launch the app on the emulator:
+(-> cd APPJPN)
 npx react-native start
 npx react-native run-android
 npm start -- --reset-cache
