@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderWidth: 1,
         position: 'absolute',
-        bottom: -58
+        bottom: -20
     },
     buttonText: {
         fontSize: 20,

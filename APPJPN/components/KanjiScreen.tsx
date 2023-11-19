@@ -10,28 +10,6 @@
  *
  * @format
 */
-
-/*
-
-Screen to test yourself on kanji
-
-There is 3 parts on the screen:
-- the top bar
-- the input field
-- the result field
-
-On the top bar there is:
-- the reset button
-- the help button
-- the apply button
-- the kanji ask (in hiragana/katakana and it's translation)
-
-The input field is where you enter the kanji ask.
-
-The result field is where you see if you are right or not. It is empty at the beginning.
-And when you press the apply button, it will show you if you are right or not.
-*/
-
 import 'react-native-gesture-handler';
 
 import React, { useRef, useState, Component, useEffect } from 'react';
@@ -40,7 +18,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import {
-    Animated,
     StyleSheet,
     Text,
     TextInput,
@@ -80,8 +57,9 @@ class KanjiScreen extends Component {
 function KanjiMainScreen() {
     const [text, setText] = useState('');
     const [result, setResult] = useState('');
+    const [input, setInput] = useState('');
 
-    const [data, setData] = useState([]);
+    const [data, setData] = useState({jlpt5: []});
 
     const canvasRef = useRef<CanvasRef>(null);
 
@@ -89,11 +67,17 @@ function KanjiMainScreen() {
         RNFS.exists(RNFS.DocumentDirectoryPath + '/kanji.json')
         .then((result) => {
             if (!result) {
-                RNFS.copyFileAssets('dico.json', RNFS.DocumentDirectoryPath + '/kanji.json')
+                RNFS.copyFileAssets('kanji.json', RNFS.DocumentDirectoryPath + '/kanji.json')
                 .then(() => {
                     RNFS.readFile(RNFS.DocumentDirectoryPath + '/kanji.json', 'utf8')
                     .then((contents) => {
                         setData(JSON.parse(contents));
+
+                        console.log(data);
+
+                        // random chose a kanji
+                        //let rand = Math.floor(Math.random() * data.length);
+
                     })
                     .catch((err) => {
                         console.log(err.message);
@@ -128,6 +112,7 @@ function KanjiMainScreen() {
     }
 
     const reset = () => {
+        console.log(data);
         canvasRef.current?.clear();
     }
 
@@ -136,13 +121,7 @@ function KanjiMainScreen() {
             colors={['#4E164B', '#612B5E']}
             style={styles.container}
         >
-            <Text style={styles.title}>Kanji</Text>
-            <TextInput
-                style={styles.input}
-                onChangeText={setText}
-                value={text}
-                placeholder="Enter the kanji"
-            />
+            <Text style={styles.title}>{input}</Text>
             <Canvas
                 ref={canvasRef}
                 thickness={5}
@@ -150,17 +129,31 @@ function KanjiMainScreen() {
             />
             <Pressable
                 style={styles.button}
+                onPress={reset}
+            >
+                <Text style={styles.buttonText}>Reset </Text>
+            </Pressable>
+            <TextInput
+                autoCapitalize="none"
+                placeholder="Traduction : ..."
+                style={styles.input}
+                value={text}
+                onChange={(event) => setText(event.nativeEvent.text)}
+                onEndEditing={search}
+            />
+            <Pressable
+                style={styles.button}
                 onPress={search}
             >
-                <Text style={styles.buttonText}>Apply</Text>
+                <Text style={styles.buttonText}>Accepter </Text>
             </Pressable>
+            <Text style={styles.result}>{result}</Text>
             <Pressable
                 style={styles.button}
                 onPress={reset}
             >
-                <Text style={styles.buttonText}>Reset</Text>
+                <Text style={styles.buttonText}>Suivant </Text>
             </Pressable>
-            <Text style={styles.result}>{result}</Text>
         </LinearGradient>
     );
 }
@@ -180,7 +173,7 @@ const styles = StyleSheet.create({
     },
     input: {
         backgroundColor: '#ffffff',
-        width: 200,
+        width: 300,
         height: 50,
         borderRadius: 10,
         padding: 10,
@@ -205,7 +198,9 @@ const styles = StyleSheet.create({
     },
     canvas: {
         width: 300,
+        maxWidth: 300,
         height: 300,
+        maxHeight: 300,
         backgroundColor: '#ffffff',
         marginBottom: 20,
     }

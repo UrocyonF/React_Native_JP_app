@@ -40,7 +40,7 @@ function TradScreen() {
             setToLanguage('fr');
         } else {
             setFromLanguage('fr');
-            setPlaceholder('français');
+            setPlaceholder('Français');
             setToLanguage('ja');
         }
     }
@@ -105,12 +105,12 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         margin: 10,
         width: 200,
-        alignItems: 'center',
         borderWidth: 1
     },
     buttonText: {
         fontSize: 20,
-        color: '#000000'
+        color: '#000000',
+        textAlign: 'center'
     }
 });
 

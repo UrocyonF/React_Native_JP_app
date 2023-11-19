@@ -95,7 +95,8 @@ const styles = StyleSheet.create({
         margin: 20,
         width: 330,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        height: 70
     },
     article: {
         backgroundColor: '#FDF0F0',
@@ -108,9 +109,10 @@ const styles = StyleSheet.create({
     },
     articleText: {
         textAlignVertical: 'center',
-        fontSize: 16,
+        fontSize: 15,
         color: '#000000',
         maxWidth: 140,
+        minWidth: 40,
         flexWrap: 'wrap',
         flex: 1
     },
@@ -120,7 +122,8 @@ const styles = StyleSheet.create({
     articleTextRomanji: {
         fontSize: 11,
         color: '#444444',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        flex: 1
     }
 });
 

@@ -125,7 +125,8 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
                 horizontal={false}
                 numColumns={2}
                 data={dicoJson.categorys}
-                renderItem={({item}) => 
+                renderItem={
+                    ({item}) => 
                     <Pressable style={styles.categoriesButton} onPress={() => navigation.navigate('DicoCategoryScreen', {category: {item}})}>
                         <Text style={styles.buttonText}>{item.charAt(0).toUpperCase() + item.slice(1)}</Text>
                     </Pressable>

@@ -1,0 +1,169 @@
+{   
+    "jltp5": [
+        {
+            "fr": "un",
+            "kanji": "一",
+            "romaji": "ichi, hito(tsu)"
+        }, {
+            "fr": "deux",
+            "kanji": "二",
+            "romaji": "ni, futa(tsu)"
+        }, {
+            "fr": "trois",
+            "kanji": "三",
+            "romaji": "san, mit(tsu)"
+        }, {
+            "fr": "quatre",
+            "kanji": "四",
+            "romaji": "yon, yo(tsu), yon"
+        }, {
+            "fr": "cinq",
+            "kanji": "五",
+            "romaji": "go, itsu(tsu)"
+        }, {
+            "fr": "six",
+            "kanji": "六",
+            "romaji": "roku, mut(tsu), mui"
+        }, {
+            "fr": "sept",
+            "kanji": "七",
+            "romaji": "shichi, nana(tsu), nano"
+        }, {
+            "fr": "huit",
+            "kanji": "八",
+            "romaji": "hachi, yat(tsu), you"
+        }, {
+            "fr": "neuf",
+            "kanji": "九",
+            "romaji": "kyuu, ku, kokono(tsu)"
+        }, {
+            "fr": "dix",
+            "kanji": "十",
+            "romaji": "juu, tou, to"
+        }, {
+            "fr": "cent",
+            "kanji": "百",
+            "romaji": "hyaku, byaku, momo"
+        }, {
+            "fr": "mille",
+            "kanji": "千",
+            "romaji": "sen, chi"
+        }, {
+            "fr": "dix mille",
+            "kanji": "万",
+            "romaji": "man, ban"
+        }, {
+            "fr": "mois, lune",
+            "kanji": "月",
+            "romaji": "getsu, gatsu, tsuki"
+        }, {
+            "fr": "feu",
+            "kanji": "火",
+            "romaji": "ka, hi, bi, ho"
+        }, {
+            "fr": "eau",
+            "kanji": "水",
+            "romaji": "sui, mizu"
+        }, {
+            "fr": "arbre, bois",
+            "kanji": "木",
+            "romaji": "moku, boku, ki, ko"
+        }, {
+            "fr": "or",
+            "kanji": "金",
+            "romaji": "kin, kon, gon, kane, kana, gane"
+        }, {
+            "fr": "sol, terre",
+            "kanji": "土",
+            "romaji": "do, to, tsuchi"
+        }, {
+            "fr": "jour, soleil, compteur pour les jours",
+            "kanji": "日",
+            "romaji": "nichi, jitsu, hi, -bi, -ka"
+        }, {
+            "fr": "livre, présent, vrai, compteur pour les volumes",
+            "kanji": "本",
+            "romaji": "hon, moto"
+        }, {
+            "fr": "montagne",
+            "kanji": "山",
+            "romaji": "san, sen, yama"
+        }, {
+            "fr": "rivière, fleuve",
+            "kanji": "川",
+            "romaji": "sen, kawa"
+        }, {
+            "fr": "pluie",
+            "kanji": "雨",
+            "romaji": "u, ame, ama"
+        }, {
+            "fr": "esprit, âme, air, atmosphère",
+            "kanji": "気",
+            "romaji": "ki, ke, iki"
+        }, {
+            "fr": "paradis, ciel, impérial",
+            "kanji": "天",
+            "romaji": "ten, amatsu"
+        }, {
+            "fr": "est (direction)",
+            "kanji": "東",
+            "romaji": "tou, higashi"
+        }, {
+            "fr": "ouest (direction)",
+            "kanji": "西",
+            "romaji": "sei, sai, nishi"
+        }, {
+            "fr": "nord (direction)",
+            "kanji": "北",
+            "romaji": "hoku, kita"
+        }, {
+            "fr": "sud (direction)",
+            "kanji": "南",
+            "romaji": "nan, minami"
+        }, {
+            "fr": "droite (direction)",
+            "kanji": "右",
+            "romaji": "u, yuu, migi"
+        }, {
+            "fr": "gauche (direction)",
+            "kanji": "左",
+            "romaji": "sa, sha, hidari"
+        }, {
+            "fr": "devant, à l'avant",
+            "kanji": "前",
+            "romaji": "zen, mae"
+        }, {
+            "fr": "derrière, à l'arrière",
+            "kanji": "後",
+            "romaji": "go, kou, nochi, ushi(ro), ato"
+        }, {
+            "fr": "au-dessus, supérieur",
+            "kanji": "上",
+            "romaji": "jou, shou, shan, ue, uwa, kami, a(geru), nobo(ru), tatematsu(ru)"
+        }, {
+            "fr": "en-dessous, inférieur, bas, sous, donner",
+            "kanji": "下",
+            "romaji": "ka, ge, shita, shimo, moto, sa(geru), kuda(saru), o(rosu)"
+        }, {
+            "fr": "dehors, extérieur",
+            "kanji": "外",
+            "romaji": "gai, ge, soto, hoka, hazu-, to-"
+        }, {
+            "fr": "à l'intérieur, dedans, milieu, centre",
+            "kanji": "中",
+            "romaji": "chuu, naka, uchi, ata(ru)"
+        }, {
+            "fr": "moitié, demi",
+            "kanji": "半",
+            "romaji": "han, naka(ba)"
+        }, {
+            "fr": "entrer, insérer, mettre",
+            "kanji": "入",
+            "romaji": "nyuu, i(ru), hai(ru)"
+        }, {
+            "fr": "quitter, sortir, dehors",
+            "kanji": "出",
+            "romaji": "shutsu, sui, de(ru), da(su), i(deru)"
+        }
+    ]
+}

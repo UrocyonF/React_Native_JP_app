@@ -102,6 +102,7 @@ function DicoSearchScreen({ route }: { route: any }) {
             </View>
             <FlatList
                 data={response}
+                style={styles.flatlist}
                 renderItem={({item}) =>
                     <View style={styles.article}>
                         <Text style={styles.articleText}>{item.fr}</Text>
@@ -145,11 +146,12 @@ function DicoSearchScreen({ route }: { route: any }) {
 
 const styles = StyleSheet.create({
     view: {
-        flex: 1,
         alignItems: 'center',
         height: '200%'
     },
-
+    flatlist: {
+        marginBottom: 830
+    },
     firstarticle: {
         backgroundColor: '#FFFFFF',
         padding: 10,
@@ -158,7 +160,7 @@ const styles = StyleSheet.create({
         width: 330,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        height: 70
     },
     article: {
         backgroundColor: '#FDF0F0',
@@ -168,21 +170,24 @@ const styles = StyleSheet.create({
         width: 350,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
     },
     articleText: {
-        fontSize: 16,
+        textAlignVertical: 'center',
+        fontSize: 15,
         color: '#000000',
         maxWidth: 140,
-        flexWrap: 'wrap'
+        minWidth: 40,
+        flexWrap: 'wrap',
+        flex: 1
     },
-    atricleTextKanjiRomanji: {
-        flexDirection: 'column',
-        alignItems: 'center'
+    atricleViewKanjiRomanji: {
+        flexDirection: 'column'
     },
     articleTextRomanji: {
         fontSize: 11,
-        color: '#444444'
+        color: '#444444',
+        flexWrap: 'wrap',
+        flex: 1
     },
     articleDeleteButton: {
         backgroundColor: '#ff461d',
