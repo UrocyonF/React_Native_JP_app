@@ -22,6 +22,7 @@ import {
     Text,
     TextInput,
     Pressable,
+    View
 } from 'react-native';
 
 import {
@@ -29,14 +30,17 @@ import {
     CanvasRef,
   } from '@benjeau/react-native-draw';
 
+import  { SvgXml } from 'react-native-svg';
+
 import LinearGradient from 'react-native-linear-gradient';
 
-import RNFS from 'react-native-fs';
-
-//import KanjiCategoryScreen from './kanji/KanjiCategoryScreen';
+import kanjiData from './kanji/kanji.json';
 
 
 const KanjiStack = createStackNavigator();
+
+const emptySvg = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><path d="" stroke="#000000" stroke-width="5" opacity="1" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
+
 
 class KanjiScreen extends Component {
     render() {
@@ -59,62 +63,65 @@ function KanjiMainScreen() {
     const [result, setResult] = useState('');
     const [input, setInput] = useState('');
 
-    const [data, setData] = useState({jlpt5: []});
+    const [canvasWidth, setCanvasWidth] = useState(300);
+    const [canvasHeight, setCanvasHeight] = useState(300);
+    const [canvasEnabled, setCanvasEnabled] = useState(true);
+    const [svgPath, setSvgPath] = useState(emptySvg);
+
+    const [kanjiJson, setKanjiJson] = useState([]);
 
     const canvasRef = useRef<CanvasRef>(null);
 
+
     useEffect(() => {
-        RNFS.exists(RNFS.DocumentDirectoryPath + '/kanji.json')
-        .then((result) => {
-            if (!result) {
-                RNFS.copyFileAssets('kanji.json', RNFS.DocumentDirectoryPath + '/kanji.json')
-                .then(() => {
-                    RNFS.readFile(RNFS.DocumentDirectoryPath + '/kanji.json', 'utf8')
-                    .then((contents) => {
-                        setData(JSON.parse(contents));
+        setKanjiJson(kanjiData.jlpt5);
+    }, []);
 
-                        console.log(data);
 
-                        // random chose a kanji
-                        //let rand = Math.floor(Math.random() * data.length);
+    useEffect(() => {
+        giveNewKanji()
+    }, [kanjiJson]);
 
-                    })
-                    .catch((err) => {
-                        console.log(err.message);
-                    });
-                })
-                .catch((err) => {
-                    console.log(err.message);
-                });
-            } else {
-                RNFS.readFile(RNFS.DocumentDirectoryPath + '/kanji.json', 'utf8')
-                .then((contents) => {
-                    setData(JSON.parse(contents));
-                })
-                .catch((err) => {
-                    console.log(err.message);
-                });
-            }
-        })
-        .catch((err) => {
-            console.log(err.message, err.code);
-        });
-    }, [])
 
-    const search = () => {
-        let res = '';
-        for (let i = 0; i < data.length; i++) {
-            if (data[i].kana == text) {
-                res = data[i].kanji;
-            }
+    const giveNewKanji = () => {
+        if (kanjiJson.length > 0) {
+            setInput(kanjiJson[Math.floor(Math.random() * kanjiJson.length)].romaji);
         }
-        setResult(res);
     }
 
-    const reset = () => {
-        console.log(data);
-        canvasRef.current?.clear();
+
+    const validate = () => {
+        const paths = canvasRef.current?.getSvg();
+        resetCanva(150, 150, false);
+        if (paths) {
+            setSvgPath(paths);
+        }
     }
+
+
+    const resetCanva = (
+        width: React.SetStateAction<number>,
+        height: React.SetStateAction<number>,
+        enable: React.SetStateAction<boolean>,
+        reset_svg: React.SetStateAction<boolean> = true
+    ) => {
+        canvasRef.current?.clear();
+        setCanvasWidth(width);
+        setCanvasHeight(height);
+        setCanvasEnabled(enable);
+        if (reset_svg) {
+            setSvgPath(emptySvg);
+        }
+    }
+
+
+    const newWord = () => {
+        resetCanva(300, 300, true);
+        giveNewKanji();
+        setText('');
+        setResult('');
+    }
+
 
     return (
         <LinearGradient
@@ -122,35 +129,40 @@ function KanjiMainScreen() {
             style={styles.container}
         >
             <Text style={styles.title}>{input}</Text>
-            <Canvas
-                ref={canvasRef}
-                thickness={5}
-                style={styles.canvas} 
-            />
+            <View>
+                <Canvas
+                    ref={canvasRef}
+                    thickness={5}
+                    width={canvasWidth}
+                    height={canvasHeight}
+                    enabled={canvasEnabled}
+                    style = {{...styles.canvas, width: canvasWidth, height: canvasHeight}}
+                />
+                <SvgXml xml = {svgPath} width="150" height="150" style={styles.svg}/>
+            </View>
             <Pressable
                 style={styles.button}
-                onPress={reset}
+                onPress={() => resetCanva(300, 300, true)}
             >
                 <Text style={styles.buttonText}>Reset </Text>
             </Pressable>
             <TextInput
                 autoCapitalize="none"
-                placeholder="Traduction : ..."
+                placeholder="Traduction..."
                 style={styles.input}
                 value={text}
                 onChange={(event) => setText(event.nativeEvent.text)}
-                onEndEditing={search}
             />
-            <Pressable
-                style={styles.button}
-                onPress={search}
-            >
-                <Text style={styles.buttonText}>Accepter </Text>
-            </Pressable>
             <Text style={styles.result}>{result}</Text>
             <Pressable
                 style={styles.button}
-                onPress={reset}
+                onPress={validate}
+            >
+                <Text style={styles.buttonText}>Valider </Text>
+            </Pressable>
+            <Pressable
+                style={styles.button}
+                onPress={newWord}
             >
                 <Text style={styles.buttonText}>Suivant </Text>
             </Pressable>
@@ -197,12 +209,17 @@ const styles = StyleSheet.create({
         color: '#ffffff',
     },
     canvas: {
-        width: 300,
         maxWidth: 300,
-        height: 300,
         maxHeight: 300,
         backgroundColor: '#ffffff',
         marginBottom: 20,
+    },
+    svg : {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: 300,
+        height: 300,
     }
 });
 
