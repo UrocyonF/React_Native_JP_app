@@ -12,8 +12,6 @@ Color palette:
 #D4E0EE blue1
 
 TODO:
-- remove all the error messages (from type issues)
 - start over the KanaScreen (with the new design -> using View instead of Text)
 - add comments to the code
-- change the button color
 - upgrade the license

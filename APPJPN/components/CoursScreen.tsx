@@ -76,23 +76,22 @@ function DicoMainScreen() {
     }
 
     return (
-        <LinearGradient
-            colors={['#4E164B', '#612B5E']}
-            style={styles.container}
-        >
+        <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.container}>
             <Text style={styles.title}>日本語辞書</Text>
+
             <TextInput
                 style={styles.input}
                 onChangeText={text => setText(text)}
                 value={text}
                 placeholder="ひらがな"
             />
+
             <Pressable
                 style={styles.button}
-                onPress={search}
-            >
+                onPress={search}>
                 <Text style={styles.buttonText}>検索</Text>
             </Pressable>
+
             <Text style={styles.result}>{result}</Text>
         </LinearGradient>
     );

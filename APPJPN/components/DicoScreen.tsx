@@ -121,18 +121,24 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
                 onChange={(event) => setSearch(event.nativeEvent.text)}
                 onEndEditing={toSearchScreen}
             />
+
             <FlatList style={styles.categoriesView}
                 horizontal={false}
                 numColumns={2}
                 data={dicoJson.categorys}
                 renderItem={
                     ({item}) => 
-                    <Pressable style={styles.categoriesButton} onPress={() => navigation.navigate('DicoCategoryScreen', {category: {item}})}>
-                        <Text style={styles.buttonText}>{item.charAt(0).toUpperCase() + item.slice(1)}</Text>
+                    <Pressable
+                        style={styles.categoriesButton}
+                        onPress={() => navigation.navigate('DicoCategoryScreen', {category: {item}})}>
+                        <Text style={styles.buttonText}>{(item as string).charAt(0).toUpperCase() + (item as string).slice(1)}</Text>
                     </Pressable>
                 }
             />
-            <Pressable style={styles.button} onPress={() => navigation.navigate('DicoAddScreen')}>
+
+            <Pressable
+                style={styles.button}
+                onPress={() => navigation.navigate('DicoAddScreen')}>
                 <Text style={styles.buttonText}>Ajouter</Text>
             </Pressable>
         </LinearGradient>

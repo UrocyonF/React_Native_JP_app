@@ -90,6 +90,7 @@ function DicoAddScreen() {
                     value = {category}
                     onChange={(event) => setCategory(event.nativeEvent.text.toLowerCase())}
                 />
+
                 <TextInput
                     autoCapitalize="none"
                     autoComplete="off"
@@ -98,6 +99,7 @@ function DicoAddScreen() {
                     value = {fr}
                     onChange={(event) => setFr(event.nativeEvent.text.toLowerCase())}
                 />
+
                 <TextInput
                     autoCapitalize="none"
                     autoComplete="off"
@@ -106,6 +108,7 @@ function DicoAddScreen() {
                     value = {kana}
                     onChange={(event) => setKana(event.nativeEvent.text)}
                 />
+
                 <TextInput
                     autoCapitalize="none"
                     autoComplete="off"
@@ -114,6 +117,7 @@ function DicoAddScreen() {
                     value = {kanji}
                     onChange={(event) => setKanji(event.nativeEvent.text)}
                 />
+
                 <TextInput
                     autoCapitalize="none"
                     autoComplete="off"
@@ -122,10 +126,14 @@ function DicoAddScreen() {
                     value = {romaji}
                     onChange={(event) => setRomaji(event.nativeEvent.text.toLowerCase())}
                 />
-                <Pressable style={styles.button} onPress={addData}>
+
+                <Pressable 
+                    style={styles.button}
+                    onPress={addData}>
                     <Text style={styles.buttonText}>Ajouter</Text>
                 </Pressable>
             </View>
+
             <Modal
                 animationType="slide"
                 transparent={true}
@@ -136,7 +144,10 @@ function DicoAddScreen() {
                 <View style={styles.modalCenteredView}>
                     <View style={styles.modalView}>
                         <Text style={styles.modalText}>Il faut au moins renseigner la catégorie, la traduction française et le mot (kana ou romaji)</Text>
-                        <Pressable style={styles.button} onPress={() => setModalVisible(!modalVisible)}>
+
+                        <Pressable
+                            style={styles.button}
+                            onPress={() => setModalVisible(!modalVisible)}>
                             <Text style={styles.buttonText}>Fermer</Text>
                         </Pressable>
                     </View>

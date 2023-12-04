@@ -23,12 +23,11 @@ import {
 } from 'react-native';
 
 import RNFS from 'react-native-fs';
-import { colors } from '@rneui/themed';
 
 
 function DicoSearchScreen({ route }: { route: any }) {
     const strCategory = route.params.category.item;
-    const [dicoJson, setDicoJson] = useState({categorys: []});
+    const [dicoJson, setDicoJson] = useState([]);
 
     useEffect(() => {
         RNFS.readFile(RNFS.DocumentDirectoryPath + '/dico.json', 'utf8')
@@ -56,11 +55,13 @@ function DicoSearchScreen({ route }: { route: any }) {
             <View style={styles.firstarticle}>
                 <Text numberOfLines={1} style={styles.articleText}>Français</Text>
                 <Text numberOfLines={1} style={styles.articleText}>Kana</Text>
+
                 <View>
                     <Text style={styles.articleText}>Kanji</Text>
                     <Text style={styles.articleTextRomanji}>Romaji</Text>
                 </View>
             </View>
+
             <FlatList
                 data={dicoJson[strCategory]}
                 style={styles.flatlist}
@@ -68,6 +69,7 @@ function DicoSearchScreen({ route }: { route: any }) {
                     <View style={styles.article}>
                         <Text style={styles.articleText}>{item.fr}</Text>
                         <Text style={styles.articleText}>{item.kana}</Text>
+
                         <View style={styles.atricleViewKanjiRomanji}>
                             <Text style={styles.articleText}>{item.kanji}</Text>
                             <Text style={styles.articleTextRomanji}>{item.romaji}</Text>

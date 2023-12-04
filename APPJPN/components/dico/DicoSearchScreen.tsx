@@ -95,11 +95,13 @@ function DicoSearchScreen({ route }: { route: any }) {
             <View style={styles.firstarticle}>
                 <Text style={styles.articleText}>Français</Text>
                 <Text style={styles.articleText}>Kana</Text>
+
                 <View>
                     <Text style={styles.articleText}>Kanji</Text>
                     <Text style={styles.articleTextRomanji}>Romaji</Text>
                 </View>
             </View>
+
             <FlatList
                 data={response}
                 style={styles.flatlist}
@@ -107,12 +109,15 @@ function DicoSearchScreen({ route }: { route: any }) {
                     <View style={styles.article}>
                         <Text style={styles.articleText}>{item.fr}</Text>
                         <Text style={styles.articleText}>{item.kana}</Text>
-                        <View style={styles.atricleTextKanjiRomanji}>
+
+                        <View>
                             <Text style={styles.articleText}>{item.kanji}</Text>
                             <Text style={styles.articleTextRomanji}>{item.romaji}</Text>
                         </View>
+
                         <View style={styles.articleDeleteButton}>
-                            <Pressable style={styles.articleDeleteButton}
+                            <Pressable
+                                style={styles.articleDeleteButton}
                                 onPress={() => displayModal({item})}>
                                 <Text style={styles.atricleDeleteButtonText}>x</Text>
                             </Pressable>
@@ -120,6 +125,7 @@ function DicoSearchScreen({ route }: { route: any }) {
                     </View>
                 }
             />
+
             <Modal
                 animationType="slide"
                 transparent={true}
@@ -130,10 +136,16 @@ function DicoSearchScreen({ route }: { route: any }) {
                 <View style={styles.modalCenteredView}>
                     <View style={styles.modalView}>
                         <Text style={styles.modalText}>Es-tu sûre de vouloir supprimer ce mot ?</Text>
-                        <Pressable style={[styles.button, {backgroundColor: "#ff461d"}]} onPress={() => setModalVisible(!modalVisible)}>
+
+                        <Pressable
+                            style={[styles.button, {backgroundColor: "#ff461d"}]}
+                            onPress={() => setModalVisible(!modalVisible)}>
                             <Text style={styles.buttonText}>Non</Text>
                         </Pressable>
-                        <Pressable style={[styles.button, {backgroundColor: "#32d200"}]} onPress={deleteItemConfirm}>
+
+                        <Pressable
+                            style={[styles.button, {backgroundColor: "#32d200"}]}
+                            onPress={deleteItemConfirm}>
                             <Text style={styles.buttonText}>Oui</Text>
                         </Pressable>
                     </View>

@@ -12,7 +12,7 @@
 */
 
 import 'react-native-gesture-handler';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 
 import {
@@ -45,19 +45,31 @@ function TradScreen() {
         }
     }
 
+
     return (
         <TranslatorProvider>
-            <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.view}>
+            <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.container}>
                 <Text style={styles.title}>日本語訳</Text>
+
                 <Translator
-                    from={fromLanguage}
-                    to={toLanguage}
-                    value={value}
-                    onTranslated={(t) => setResult(t)}
+                    from = {fromLanguage}
+                    to = {toLanguage}
+                    value = {value}
+                    onTranslated = {(t) => setResult(t)}
                 />
-                <TextInput style={styles.input} placeholder={placeholder} value={value} onChangeText={(t) => setValue(t)} />
+
+                <TextInput
+                    style = {styles.input}
+                    placeholder = {placeholder}
+                    value = {value}
+                    onChangeText = {(t) => setValue(t)}
+                />
+    
                 <Text style={styles.output}>{result}</Text>
-                <Pressable style={styles.button} onPress={changeLangue}>
+
+                <Pressable
+                    style = {styles.button}
+                    onPress = {changeLangue}>
                     <Text style={styles.buttonText}>Changer de langue</Text>
                 </Pressable>
             </LinearGradient>
@@ -67,7 +79,7 @@ function TradScreen() {
 
 
 const styles = StyleSheet.create({
-    view: {
+    container: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'

@@ -59,16 +59,19 @@ class KanjiScreen extends Component {
 
 
 function KanjiMainScreen() {
-    const [text, setText] = useState('');
-    const [result, setResult] = useState('');
-    const [input, setInput] = useState('');
+    const [choice, setChoice] = useState(Object);
+    const [precendChoice, setPrecendChoice] = useState(Object);
+    
+    const [correctionViewDisplay, setcorrectionViewDisplay] = useState('none');
+    const [textInput, setTextInput] = useState('');
+    const [textInoutWidth, setTextInoutWidth] = useState(300);
 
-    const [canvasWidth, setCanvasWidth] = useState(300);
-    const [canvasHeight, setCanvasHeight] = useState(300);
+    const [showingCorrection, setShowingCorrection] = useState(false);
+    const [canvasSize, setCanvasSize] = useState(300);
     const [canvasEnabled, setCanvasEnabled] = useState(true);
     const [svgPath, setSvgPath] = useState(emptySvg);
 
-    const [kanjiJson, setKanjiJson] = useState([]);
+    const [kanjiJson, setKanjiJson] = useState([{}]);
 
     const canvasRef = useRef<CanvasRef>(null);
 
@@ -85,87 +88,119 @@ function KanjiMainScreen() {
 
     const giveNewKanji = () => {
         if (kanjiJson.length > 0) {
-            setInput(kanjiJson[Math.floor(Math.random() * kanjiJson.length)].romaji);
+            let choice = kanjiJson[Math.floor(Math.random() * kanjiJson.length)]
+            while (choice === precendChoice) {
+                choice = kanjiJson[Math.floor(Math.random() * kanjiJson.length)]
+            }
+            setChoice(choice);
+            setPrecendChoice(choice);
         }
     }
 
 
     const validate = () => {
-        const paths = canvasRef.current?.getSvg();
-        resetCanva(150, 150, false);
-        if (paths) {
-            setSvgPath(paths);
+        if (!showingCorrection) {
+            const paths = canvasRef.current?.getSvg();
+            resetCanvas(150, 180, false);
+            if (paths) {
+                setSvgPath(paths);
+            }
+            setShowingCorrection(true);
         }
     }
 
 
-    const resetCanva = (
+    const resetCanvas = (
+        size: React.SetStateAction<number>,
         width: React.SetStateAction<number>,
-        height: React.SetStateAction<number>,
-        enable: React.SetStateAction<boolean>,
-        reset_svg: React.SetStateAction<boolean> = true
+        enable_n_reset: React.SetStateAction<boolean>,
     ) => {
+        setTextInput('');
         canvasRef.current?.clear();
-        setCanvasWidth(width);
-        setCanvasHeight(height);
-        setCanvasEnabled(enable);
-        if (reset_svg) {
+        setCanvasSize(size);
+        setTextInoutWidth(width);
+        setCanvasEnabled(enable_n_reset);
+        if (enable_n_reset) {
             setSvgPath(emptySvg);
+            setcorrectionViewDisplay('none');
+        } else {
+            setcorrectionViewDisplay('flex');
         }
+        setShowingCorrection(false);
     }
 
 
     const newWord = () => {
-        resetCanva(300, 300, true);
+        resetCanvas(300, 300, true);
         giveNewKanji();
-        setText('');
-        setResult('');
+        setShowingCorrection(false);
     }
 
 
     return (
-        <LinearGradient
-            colors={['#4E164B', '#612B5E']}
-            style={styles.container}
-        >
-            <Text style={styles.title}>{input}</Text>
-            <View>
-                <Canvas
-                    ref={canvasRef}
-                    thickness={5}
-                    width={canvasWidth}
-                    height={canvasHeight}
-                    enabled={canvasEnabled}
-                    style = {{...styles.canvas, width: canvasWidth, height: canvasHeight}}
-                />
-                <SvgXml xml = {svgPath} width="150" height="150" style={styles.svg}/>
+        <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.container}>
+            <View style={{height: 60}}></View>
+            <Text style={styles.wordGiven}>{choice.romaji}</Text>
+
+            <View style={styles.centredView}>
+                <View style={styles.viewFlexRow}>
+                    <View style={styles.viewRow}>
+                        <Canvas
+                            ref={canvasRef}
+                            thickness={5}
+                            width={canvasSize}
+                            height={canvasSize}
+                            enabled={canvasEnabled}
+                            style = {{width: canvasSize, height: canvasSize}}
+                        />
+                        <SvgXml xml = {svgPath} width="150" height="150" style={styles.svg}/>
+                    </View>
+
+                    <View style={{...styles.viewRow, minHeight: 150, minWidth: 150, display: correctionViewDisplay as "none" | "flex"}}>
+                        <Text style={styles.kanjiCorrection}>{choice.kanji}</Text>
+                    </View>
+                </View>
+
+                <Pressable
+                    style={styles.button}
+                    onPress={() => resetCanvas(300, 300, true)}>
+                    <Text style={styles.buttonText}>Reset</Text>
+                </Pressable>
+                
+                <View style={styles.viewFlexRow}>
+                    <View style={{...styles.viewRow, backgroundColor: "none", borderWidth: 0}}>
+                        <TextInput
+                            autoCapitalize="none"
+                            placeholder="Traduction..."
+                            style={{...styles.tradInput, width: textInoutWidth}}
+                            value={textInput}
+                            multiline={true}
+                            onChange={(event) => setTextInput(event.nativeEvent.text)}
+                        />
+                    </View>
+
+                    <View style={{...styles.viewRow, backgroundColor: "none", borderWidth: 0, display: correctionViewDisplay as "none" | "flex"}}>
+                        <TextInput
+                            editable = {false}
+                            style={{...styles.tradInput, width: 180}}
+                            value={choice.fr}
+                            multiline={true}
+                        />
+                    </View>
+                </View>
+
+                <Pressable
+                    style={styles.button}
+                    onPress={validate}>
+                    <Text style={styles.buttonText}>Valider</Text>
+                </Pressable>
+
+                <Pressable
+                    style={styles.button}
+                    onPress={newWord}>
+                    <Text style={styles.buttonText}>Suivant</Text>
+                </Pressable>
             </View>
-            <Pressable
-                style={styles.button}
-                onPress={() => resetCanva(300, 300, true)}
-            >
-                <Text style={styles.buttonText}>Reset </Text>
-            </Pressable>
-            <TextInput
-                autoCapitalize="none"
-                placeholder="Traduction..."
-                style={styles.input}
-                value={text}
-                onChange={(event) => setText(event.nativeEvent.text)}
-            />
-            <Text style={styles.result}>{result}</Text>
-            <Pressable
-                style={styles.button}
-                onPress={validate}
-            >
-                <Text style={styles.buttonText}>Valider </Text>
-            </Pressable>
-            <Pressable
-                style={styles.button}
-                onPress={newWord}
-            >
-                <Text style={styles.buttonText}>Suivant </Text>
-            </Pressable>
         </LinearGradient>
     );
 }
@@ -174,52 +209,68 @@ function KanjiMainScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
         justifyContent: 'center',
-        fontFamily: 'Roboto',
     },
-    title: {
-        fontSize: 50,
-        color: '#ffffff',
-        marginBottom: 20,
+
+    wordGiven: {
+        textAlign: 'center',
+        height: 120,
+        fontSize: 33,
+        color: '#FFFFFF',
+        marginBottom: 20
     },
-    input: {
-        backgroundColor: '#ffffff',
-        width: 300,
-        height: 50,
-        borderRadius: 10,
-        padding: 10,
-        marginBottom: 20,
-        fontSize: 20,
+
+    centredView: {
+        alignItems: 'center',
     },
+
     button: {
-        backgroundColor: '#ffffff',
+        backgroundColor: '#FDF0F0',
+        padding: 10,
         width: 200,
         height: 50,
         borderRadius: 10,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginBottom: 20,
+        marginBottom: 20
     },
     buttonText: {
         fontSize: 20,
+        color: '#000000',
+        textAlign: 'center'
     },
-    result: {
-        fontSize: 20,
-        color: '#ffffff',
+
+    viewFlexRow: {
+        display: 'flex',
+        flexDirection: 'row'
     },
-    canvas: {
-        maxWidth: 300,
-        maxHeight: 300,
+    viewRow: {
+        display: 'flex',
         backgroundColor: '#ffffff',
         marginBottom: 20,
+        borderWidth: 1,
+        padding: 2
     },
-    svg : {
+
+    kanjiCorrection: {
+        fontSize: 100,
+        textAlign: 'center',
+        color: '#0F0F0F'
+    },
+
+    svg: {
         position: 'absolute',
         top: 0,
         left: 0,
         width: 300,
-        height: 300,
+        height: 300
+    },
+
+    tradInput: {
+        backgroundColor: '#ffffff',
+        borderRadius: 10,
+        padding: 10,
+        marginBottom: 20,
+        fontSize: 17,
+        color: '#000000'
     }
 });
 
