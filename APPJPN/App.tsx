@@ -17,13 +17,10 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import {
-    ThemeProvider,
-    Button
-} from '@rneui/themed';
-import {
     StyleSheet,
     Text,
-    Pressable
+    Pressable,
+    View
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
@@ -79,22 +76,51 @@ function App(): JSX.Element {
 
 function HomeScreen({ navigation }: { navigation: any }) {
     return (
-        <LinearGradient colors={['#AA135F', '#FFA6C9']} style={styles.view}>
-            <Text style={styles.title}>日本語</Text>
-            <Pressable style={styles.button} onPress={() => navigation.navigate('DicoScreen')}>
-                <Text style={styles.ButtonText}>Dico</Text>
+        <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>
+            <View style={styles.title}>
+                <Text style={styles.titleText}>日</Text>
+                <Text style={styles.titleText}>本</Text>
+                <Text style={styles.titleText}>語</Text>
+            </View>
+
+            <Pressable
+                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
+                onPress={() => navigation.navigate('DicoScreen')}>
+                {({ pressed }) => (
+                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Dictionnaire</Text>
+                )}
             </Pressable>
-            <Pressable style={styles.button} onPress={() => navigation.navigate('TradScreen')}>
-                <Text style={styles.ButtonText}>Trad</Text>
+
+            <Pressable
+                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
+                onPress={() => navigation.navigate('TradScreen')}>
+                {({ pressed }) => (
+                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Traduction</Text>
+                )}
             </Pressable>
-            <Pressable style={styles.button} onPress={() => navigation.navigate('KanaScreen')}>
-                <Text style={styles.ButtonText}>Kana</Text>
+
+            <Pressable
+                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
+                onPress={() => navigation.navigate('KanaScreen')}>
+                {({ pressed }) => (
+                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Kana</Text>
+                )}
             </Pressable>
-            <Pressable style={styles.button} onPress={() => navigation.navigate('KanjiScreen')}>
-                <Text style={styles.ButtonText}>Kanji</Text>
+
+            <Pressable
+                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
+                onPress={() => navigation.navigate('KanjiScreen')}>
+                {({ pressed }) => (
+                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Kanji</Text>
+                )}
             </Pressable>
-            <Pressable style={styles.button} onPress={() => navigation.navigate('CoursScreen')}>
-                <Text style={styles.ButtonText}>Cours</Text>
+
+            <Pressable
+                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
+                onPress={() => navigation.navigate('CoursScreen')}>
+                {({ pressed }) => (
+                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Leçons</Text>
+                )}
             </Pressable>
         </LinearGradient>
     );
@@ -105,28 +131,37 @@ const styles = StyleSheet.create({
     view: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: "space-evenly"
+        justifyContent: "space-evenly",
+        paddingBottom: 15,
+        paddingTop: 15
     },
 
     title: {
-        fontWeight: '800',
-        fontSize: 50,
-        color: '#FFFFFF'
+        position: 'absolute',
+        flexDirection: 'column'
+    },
+    titleText: {
+        fontSize: 280,
+        color: '#FF9AB6',
+        lineHeight: 325,
+        opacity: 0.2,
+        marginTop: -60,
+        textShadowColor: '#FF88AA',
+        textShadowOffset: { width: 0, height: 0 },
+        textShadowRadius: 10,
     },
 
     button: {
-        backgroundColor: '#FDF0F0',
         padding: 10,
-        borderRadius: 10,
+        borderRadius: 6,
         margin: 10,
         width: 200,
         borderWidth: 1
     },
-    ButtonText: {
+    buttonText: {
         fontSize: 30,
-        textAlign: 'center',
-        color: "#2A2A2A"
-    },
+        textAlign: 'center'
+    }
 });
 
 

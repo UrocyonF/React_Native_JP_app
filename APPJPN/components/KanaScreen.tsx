@@ -27,7 +27,7 @@ class KanaScreen extends Component {
     render() {
     return (
         <ScrollView>
-            <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.view}>
+            <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>
                 <View>
                     <Text style={styles.title}>Hiragana</Text>
 

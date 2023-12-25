@@ -76,7 +76,7 @@ function DicoMainScreen() {
     }
 
     return (
-        <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.container}>
+        <LinearGradient colors={['#02006F', '#10002B']} style={styles.container}>
             <Text style={styles.title}>日本語辞書</Text>
 
             <TextInput

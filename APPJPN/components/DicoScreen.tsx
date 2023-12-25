@@ -112,7 +112,7 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
     }
 
     return (
-        <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.view}>
+        <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>
             <TextInput
                 autoCapitalize="none"
                 style={styles.input}

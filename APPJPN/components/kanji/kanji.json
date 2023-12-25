@@ -3,167 +3,423 @@
         {
             "fr": "un",
             "kanji": "一",
-            "romaji": "ichi, hito(tsu)"
+            "onyomi": "ichi",
+            "kunyomi": "hito(tsu)"
         }, {
             "fr": "deux",
             "kanji": "二",
-            "romaji": "ni, futa(tsu)"
+            "onyomi": "ni",
+            "kunyomi": "futa(tsu)"
         }, {
             "fr": "trois",
             "kanji": "三",
-            "romaji": "san, mit(tsu)"
+            "onyomi": "san",
+            "kunyomi": "mit(tsu)"
         }, {
             "fr": "quatre",
             "kanji": "四",
-            "romaji": "yon, yo(tsu), yon"
+            "onyomi": "shi",
+            "kunyomi": "yo(tsu), yon"
         }, {
             "fr": "cinq",
             "kanji": "五",
-            "romaji": "go, itsu(tsu)"
+            "onyomi": "go",
+            "kunyomi": "itsu(tsu)"
         }, {
             "fr": "six",
             "kanji": "六",
-            "romaji": "roku, mut(tsu), mui"
+            "onyomi": "roku",
+            "kunyomi": "mut(tsu), mui"
         }, {
             "fr": "sept",
             "kanji": "七",
-            "romaji": "shichi, nana(tsu), nano"
+            "onyomi": "shichi",
+            "kunyomi": "nana(tsu), nana"
         }, {
             "fr": "huit",
             "kanji": "八",
-            "romaji": "hachi, yat(tsu), you"
+            "onyomi": "hachi",
+            "kunyomi": "ya(tsu), you"
         }, {
             "fr": "neuf",
             "kanji": "九",
-            "romaji": "kyuu, ku, kokono(tsu)"
+            "onyomi": "kyuu, ku",
+            "kunyomi": "kokono(tsu)"
         }, {
             "fr": "dix",
             "kanji": "十",
-            "romaji": "juu, tou, to"
+            "onyomi": "juu",
+            "kunyomi": "too, to"
         }, {
             "fr": "cent",
             "kanji": "百",
-            "romaji": "hyaku, byaku, momo"
+            "onyomi": "hyaku, byaku",
+            "kunyomi": "momo"
         }, {
             "fr": "mille",
             "kanji": "千",
-            "romaji": "sen, chi"
+            "onyomi": "sen",
+            "kunyomi": "chi"
         }, {
             "fr": "dix mille",
             "kanji": "万",
-            "romaji": "man, ban"
-        }, {
+            "onyomi": "man, ban",
+            "kunyomi": ""
+        },
+
+        {
             "fr": "mois, lune",
             "kanji": "月",
-            "romaji": "getsu, gatsu, tsuki"
+            "onyomi": "getsu, gatsu",
+            "kunyomi": "tsuki"
         }, {
             "fr": "feu",
             "kanji": "火",
-            "romaji": "ka, hi, bi, ho"
+            "onyomi": "ka",
+            "kunyomi": "hi, bi, ho"
         }, {
             "fr": "eau",
             "kanji": "水",
-            "romaji": "sui, mizu"
+            "onyomi": "sui",
+            "kunyomi": "mizu"
         }, {
             "fr": "arbre, bois",
             "kanji": "木",
-            "romaji": "moku, boku, ki, ko"
+            "onyomi": "moku, boku",
+            "kunyomi": "ki, ko"
         }, {
             "fr": "or",
             "kanji": "金",
-            "romaji": "kin, kon, gon, kane, kana, gane"
+            "onyomi": "kin, kon, gon",
+            "kunyomi": "kane, kana, gane"
         }, {
             "fr": "sol, terre",
             "kanji": "土",
-            "romaji": "do, to, tsuchi"
+            "onyomi": "do, to",
+            "kunyomi": "tsuchi"
         }, {
             "fr": "jour, soleil, compteur pour les jours",
             "kanji": "日",
-            "romaji": "nichi, jitsu, hi, -bi, -ka"
-        }, {
+            "onyomi": "nichi, jitsu",
+            "kunyomi": "hi, -bi, -ka"
+        },
+
+        {
             "fr": "livre, présent, vrai, compteur pour les volumes",
             "kanji": "本",
-            "romaji": "hon, moto"
+            "onyomi": "hon",
+            "kunyomi": "moto"
         }, {
             "fr": "montagne",
             "kanji": "山",
-            "romaji": "san, sen, yama"
+            "onyomi": "san, sen",
+            "kunyomi": "yama"
         }, {
             "fr": "rivière, fleuve",
             "kanji": "川",
-            "romaji": "sen, kawa"
+            "onyomi": "sen",
+            "kunyomi": "kawa"
         }, {
             "fr": "pluie",
             "kanji": "雨",
-            "romaji": "u, ame, ama"
+            "onyomi": "u",
+            "kunyomi": "ame, ama"
         }, {
             "fr": "esprit, âme, air, atmosphère",
             "kanji": "気",
-            "romaji": "ki, ke, iki"
+            "onyomi": "ki, ke",
+            "kunyomi": "iki"
         }, {
             "fr": "paradis, ciel, impérial",
             "kanji": "天",
-            "romaji": "ten, amatsu"
-        }, {
+            "onyomi": "ten",
+            "kunyomi": "amatsu"
+        },
+
+        {
             "fr": "est (direction)",
             "kanji": "東",
-            "romaji": "tou, higashi"
+            "onyomi": "tou",
+            "kunyomi": "higashi"
         }, {
             "fr": "ouest (direction)",
             "kanji": "西",
-            "romaji": "sei, sai, nishi"
+            "onyomi": "sei, sai",
+            "kunyomi": "nishi"
         }, {
             "fr": "nord (direction)",
             "kanji": "北",
-            "romaji": "hoku, kita"
+            "onyomi": "hoku",
+            "kunyomi": "kita"
         }, {
             "fr": "sud (direction)",
             "kanji": "南",
-            "romaji": "nan, minami"
-        }, {
+            "onyomi": "nan, na",
+            "kunyomi": "minami"
+        },
+
+        {
             "fr": "droite (direction)",
             "kanji": "右",
-            "romaji": "u, yuu, migi"
+            "onyomi": "u, yuu",
+            "kunyomi": "migi"
         }, {
             "fr": "gauche (direction)",
             "kanji": "左",
-            "romaji": "sa, sha, hidari"
+            "onyomi": "san sha",
+            "kunyomi": "hidari"
         }, {
             "fr": "devant, à l'avant",
             "kanji": "前",
-            "romaji": "zen, mae"
+            "onyomi": "zen",
+            "kunyomi": "mae"
         }, {
             "fr": "derrière, à l'arrière",
             "kanji": "後",
-            "romaji": "go, kou, nochi, ushi(ro), ato"
+            "onyomi": "go, kou",
+            "kunyomi": "nochi, ushi(ro), ato"
         }, {
             "fr": "au-dessus, supérieur",
             "kanji": "上",
-            "romaji": "jou, shou, shan, ue, uwa, kami, a(geru), nobo(ru), tatematsu(ru)"
+            "onyomi": "jou, shou, shan",
+            "kunyomi": "ue, uwa, kami, a(geru), nobo(ru), tatematsu(ru)"
         }, {
             "fr": "en-dessous, inférieur, bas, sous, donner",
             "kanji": "下",
-            "romaji": "ka, ge, shita, shimo, moto, sa(geru), kuda(saru), o(rosu)"
+            "onyomi": "ka, ge",
+            "kunyomi": "shita, shimo, moto, sa(geru), kuda(saru), o(rosu)"
         }, {
             "fr": "dehors, extérieur",
             "kanji": "外",
-            "romaji": "gai, ge, soto, hoka, hazu-, to-"
+            "onyomi": "gai, ge",
+            "kunyomi": "soto, hoka, hazu-, to-"
         }, {
             "fr": "à l'intérieur, dedans, milieu, centre",
             "kanji": "中",
-            "romaji": "chuu, naka, uchi, ata(ru)"
+            "onyomi": "chuu",
+            "kunyomi": "naka, uchi, ata(ru)"
         }, {
             "fr": "moitié, demi",
             "kanji": "半",
-            "romaji": "han, naka(ba)"
+            "onyomi": "han",
+            "kunyomi": "naka(ba)"
         }, {
             "fr": "entrer, insérer, mettre",
             "kanji": "入",
-            "romaji": "nyuu, i(ru), hai(ru)"
+            "onyomi": "nyuu",
+            "kunyomi": "hai(ru), i(ru)"
         }, {
             "fr": "quitter, sortir, dehors",
             "kanji": "出",
-            "romaji": "shutsu, sui, de(ru), da(su), i(deru)"
+            "onyomi": "shutsu, sui",
+            "kunyomi": "de(ru), da(su), i(deru)"
+        }, {
+            "fr": "devant, à l'avant, futur, précédent",
+            "kanji": "先",
+            "onyomi": "sen",
+            "kunyomi": "saki, ma(zu)"
+        }, {
+            "fr": "venir, dû, prochain, causer, devenir",
+            "kanji": "来",
+            "onyomi": "rai, tai",
+            "kunyomi": "kuru, kitaru, ki, ko"
+        },
+
+        {
+            "fr": "maintenant, présent, actuel",
+            "kanji": "今",
+            "onyomi": "kon, kin",
+            "kunyomi": "ima"
+        }, {
+            "fr": "tous (les), toujours",
+            "kanji": "毎",
+            "onyomi": "mai",
+            "kunyomi": "goto(ni)"
+        }, {
+            "fr": "année, compteur pour les années",
+            "kanji": "年",
+            "onyomi": "nen",
+            "kunyomi": "toshi"
+        }, {
+            "fr": "temps, heure, compteur pour les heures",
+            "kanji": "時",
+            "onyomi": "ji",
+            "kunyomi": "toki, doki"
+        }, {
+            "fr": "minute, compteur pour les minutes, comprendre",
+            "kanji": "分",
+            "onyomi": "bun, fun, bu",
+            "kunyomi": "wa(keru)"
+        }, {
+            "fr": "intervale, espace",
+            "kanji": "間",
+            "onyomi": "kan, ken",
+            "kunyomi": "aida, ma, ai"
+        }, {
+            "fr": "midi, cheval",
+            "kanji": "午",
+            "onyomi": "go",
+            "kunyomi": "uma"
+        },
+
+        {
+            "fr": "vie, authentique, naissance",
+            "kanji": "生",
+            "onyomi": "sei, shou",
+            "kunyomi": "i(kiru), u(mu), ha(eru), nama, o(u)"
+        }, {
+            "fr": "ami, camarade, compagnon",
+            "kanji": "友",
+            "onyomi": "yuu",
+            "kunyomi": "tomo"
+        }, {
+            "fr": "personne",
+            "kanji": "人",
+            "onyomi": "jin, nin",
+            "kunyomi": "hito"
+        }, {
+            "fr": "femme, femmelle",
+            "kanji": "女",
+            "onyomi": "jo, nyo",
+            "kunyomi": "onna, me"
+        }, {
+            "fr": "homme, mâle",
+            "kanji": "男",
+            "onyomi": "dan, nan",
+            "kunyomi": "otoko"
+        }, {
+            "fr": "mère",
+            "kanji": "母",
+            "onyomi": "bo",
+            "kunyomi": "haha, kaa"
+        }, {
+            "fr": "père",
+            "kanji": "父",
+            "onyomi": "fu",
+            "kunyomi": "chichi, tou"
+        }, {
+            "fr": "enfant",
+            "kanji": "子",
+            "onyomi": "shi, su, tsu",
+            "kunyomi": "ko, ne"
+        },
+
+        {
+            "fr": "étude, apprendre, science",
+            "kanji": "学",
+            "onyomi": "gaku",
+            "kunyomi": "mana(bu)"
+        }, {
+            "fr": "aller, voyage, effectuer, ligne, rangée",
+            "kanji": "行",
+            "onyomi": "kou, gyou, an",
+            "kunyomi": "i(ku), yu(ku), okona(u)"
+        }, {
+            "fr": "parler, conte",
+            "kanji": "話",
+            "onyomi": "wa",
+            "kunyomi": "hana(su), hanashi"
+        }, {
+            "fr": "écrire",
+            "kanji": "書",
+            "onyomi": "sho",
+            "kunyomi": "ka(ku)"
+        }, {
+            "fr": "manger, nourriture",
+            "kanji": "食",
+            "onyomi": "shoku, jiki",
+            "kunyomi": "ta(beru), k(u), ha(mu)"
+        }, {
+            "fr": "repos, jour de congé, retraite, sommeil, dormir",
+            "kanji": "休",
+            "onyomi": "kyuu",
+            "kunyomi": "yasu(mu)"
+        }, {
+            "fr": "voir, espoire, chance, opinion, idée, apparence, visible",
+            "kanji": "見",
+            "onyomi": "ken",
+            "kunyomi": "mi(ru), mi(seru)"
+        }, {
+            "fr": "lire",
+            "kanji": "読",
+            "onyomi": "doku, toku tou",
+            "kunyomi": "yo(mu)"
+        }, {
+            "fr": "entendre, écouter, demander",
+            "kanji": "聞",
+            "onyomi": "bun, mon",
+            "kunyomi": "ki(ku)"
+        },
+
+        {
+            "fr": "école, examen",
+            "kanji": "校",
+            "onyomi": "kou",
+            "kunyomi": ""
+        }, {
+            "fr": "pays, région",
+            "kanji": "国",
+            "onyomi": "koku",
+            "kunyomi": "kuni"
+        }, {
+            "fr": "voiture, roue",
+            "kanji": "車",
+            "onyomi": "sha",
+            "kunyomi": "kuruma"
+        },
+
+        {
+            "fr": "large, gros",
+            "kanji": "大",
+            "onyomi": "dai, tai",
+            "kunyomi": "oo(kii)"
+        }, {
+            "fr": "petit",
+            "kanji": "小",
+            "onyomi": "shou",
+            "kunyomi": "chii(sai), ko-, o-, sa-"
+        }, {
+            "fr": "long, chef, leader, aîné, supériorité",
+            "kanji": "長",
+            "onyomi": "chou",
+            "kunyomi": "naga(i), osa"
+        }, {
+            "fr": "grand, haut, cher",
+            "kanji": "高",
+            "onyomi": "kou",
+            "kunyomi": "taka(i)"
+        },
+
+        {
+            "fr": "cercle, rond, yen",
+            "kanji": "円",
+            "onyomi": "en",
+            "kunyomi": "maru(i)"
+        }, {
+            "fr": "nom, titre, renommée, réputation, justification, compteur pour les personnes",
+            "kanji": "名",
+            "onyomi": "mei, myou",
+            "kunyomi": "na"
+        }, {
+            "fr": "électricité, électrique",
+            "kanji": "電",
+            "onyomi": "den",
+            "kunyomi": ""
+        }, {
+            "fr": "mot, language, discours",
+            "kanji": "語",
+            "onyomi": "go",
+            "kunyomi": "kata(ru)"
+        }, {
+            "fr": "quoi (?)",
+            "kanji": "何",
+            "onyomi": "ka",
+            "kunyomi": "nani, nan"
+        }, {
+            "fr": "blanc",
+            "kanji": "白",
+            "onyomi": "haku, byaku",
+            "kunyomi": "shiro(i)"
         }
     ]
 }

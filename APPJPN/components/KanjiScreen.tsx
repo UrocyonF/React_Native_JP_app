@@ -138,9 +138,10 @@ function KanjiMainScreen() {
 
 
     return (
-        <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.container}>
+        <LinearGradient colors={['#02006F', '#10002B']} style={styles.container}>
             <View style={{height: 60}}></View>
-            <Text style={styles.wordGiven}>{choice.romaji}</Text>
+            <Text style={styles.wordGiven}>{choice.on}</Text>
+            <Text style={styles.wordGiven}>{choice.kun}</Text>
 
             <View style={styles.centredView}>
                 <View style={styles.viewFlexRow}>

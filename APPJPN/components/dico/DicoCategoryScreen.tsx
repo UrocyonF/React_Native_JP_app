@@ -51,7 +51,7 @@ function DicoSearchScreen({ route }: { route: any }) {
     }, []);
 
     return (
-        <LinearGradient colors={['#4E164B', '#612B5E']} style={styles.view}>
+        <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>
             <View style={styles.firstarticle}>
                 <Text numberOfLines={1} style={styles.articleText}>Français</Text>
                 <Text numberOfLines={1} style={styles.articleText}>Kana</Text>
