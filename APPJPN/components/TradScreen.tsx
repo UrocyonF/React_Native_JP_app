@@ -27,21 +27,23 @@ import Translator from 'react-native-translator';
 
 
 function TradScreen() {
-    const [fromLanguage, setFromLanguage] = useState('fr');
-    const [toLanguage, setToLanguage] = useState('ja');
+    type Language = "fr" | "ja";
+
+    const [fromLanguage, setFromLanguage] = useState<Language>("fr");
+    const [toLanguage, setToLanguage] = useState<Language>("ja");
     const [placeholder, setPlaceholder] = useState('français');
     const [value, setValue] = useState('');
     const [result, setResult] = useState('');
 
     function changeLangue() {
         if (fromLanguage === 'fr') {
-            setFromLanguage('ja');
+            setFromLanguage("ja");
             setPlaceholder('日本語');
-            setToLanguage('fr');
+            setToLanguage("fr");
         } else {
-            setFromLanguage('fr');
+            setFromLanguage("fr");
             setPlaceholder('Français');
-            setToLanguage('ja');
+            setToLanguage("ja");
         }
     }
 
@@ -64,13 +66,15 @@ function TradScreen() {
                     value = {value}
                     onChangeText = {(t) => setValue(t)}
                 />
-    
+
                 <Text style={styles.output}>{result}</Text>
 
                 <Pressable
-                    style = {styles.button}
+                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
                     onPress = {changeLangue}>
-                    <Text style={styles.buttonText}>Changer de langue</Text>
+                    {({ pressed }) => (
+                        <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Changer de langue</Text>
+                    )}
                 </Pressable>
             </LinearGradient>
         </TranslatorProvider>
@@ -93,16 +97,19 @@ const styles = StyleSheet.create({
     },
 
     input: {
-        height: 80,
-        width: 300,
+        fontSize: 18,
+        height: 60,
+        width: 320,
         margin: 12,
         borderWidth: 1,
         padding: 10,
         borderRadius: 10,
         backgroundColor: '#FFFFFF'
     },
+
     output: {
-        height: 200,
+        fontSize: 22,
+        height: 350,
         width: 300,
         margin: 12,
         borderWidth: 1,
@@ -112,16 +119,15 @@ const styles = StyleSheet.create({
     },
 
     button: {
-        backgroundColor: '#FDF0F0',
+        marginTop: 40,
         padding: 10,
-        borderRadius: 10,
+        borderRadius: 6,
         margin: 10,
         width: 200,
         borderWidth: 1
     },
     buttonText: {
         fontSize: 20,
-        color: '#000000',
         textAlign: 'center'
     }
 });

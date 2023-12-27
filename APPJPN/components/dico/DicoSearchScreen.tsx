@@ -27,12 +27,35 @@ import {
 import RNFS from 'react-native-fs';
 
 
+interface ResponseItem {
+    fr: string;
+    kana: string;
+    kanji: string;
+    romaji: string;
+}
+
+interface ModalItem {
+    fr: string;
+    kana: string;
+    kanji: string;
+    romaji: string;
+}
+
+
 function DicoSearchScreen({ route }: { route: any }) {
     const strSearch = route.params.search.search;
 
-    const [response, setResponse] = useState([]);
+    const [response, setResponse] = useState<ResponseItem[]>([]);
     const [modalVisible, setModalVisible] = useState(false);
-    const [modalItem, setModalItem] = useState({});
+    const [modalItem, setModalItem] = useState<ModalItem>({
+        fr: '',
+        kana: '',
+        kanji: '',
+        romaji: ''
+    });
+
+    // TODO: maybe use this
+    //useState<DataItem[]>([]);
 
     useEffect(readData, []);
 
@@ -43,7 +66,10 @@ function DicoSearchScreen({ route }: { route: any }) {
             let tmpSearch = [];
             for (let i = 0; i < dicoJson.categorys.length; i++) {
                 for (let j = 0; j < dicoJson[dicoJson.categorys[i]].length; j++) {
-                    if (dicoJson[dicoJson.categorys[i]][j].fr.normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(strSearch.normalize('NFD').replace(/[\u0300-\u036f]/g, "")) || dicoJson[dicoJson.categorys[i]][j].kana.includes(strSearch) || dicoJson[dicoJson.categorys[i]][j].kanji.includes(strSearch) || dicoJson[dicoJson.categorys[i]][j].romaji.includes(strSearch)) {
+                    if (dicoJson[dicoJson.categorys[i]][j].fr.normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(strSearch.normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
+                        || dicoJson[dicoJson.categorys[i]][j].kana.includes(strSearch)
+                        || dicoJson[dicoJson.categorys[i]][j].kanji.includes(strSearch)
+                        || dicoJson[dicoJson.categorys[i]][j].romaji.includes(strSearch)) {
                         tmpSearch.push(dicoJson[dicoJson.categorys[i]][j]);
                     }
                 }
@@ -68,7 +94,10 @@ function DicoSearchScreen({ route }: { route: any }) {
 
             for (let i = 0; i < dicoJson.categorys.length; i++) {
                 for (let j = 0; j < dicoJson[dicoJson.categorys[i]].length; j++) {
-                    if (dicoJson[dicoJson.categorys[i]][j].fr === modalItem.fr && dicoJson[dicoJson.categorys[i]][j].kana === modalItem.kana && dicoJson[dicoJson.categorys[i]][j].kanji === modalItem.kanji && dicoJson[dicoJson.categorys[i]][j].romaji === modalItem.romaji) {
+                    if (dicoJson[dicoJson.categorys[i]][j].fr === modalItem.fr
+                        && dicoJson[dicoJson.categorys[i]][j].kana === modalItem.kana
+                        && dicoJson[dicoJson.categorys[i]][j].kanji === modalItem.kanji
+                        && dicoJson[dicoJson.categorys[i]][j].romaji === modalItem.romaji) {
                         dicoJson[dicoJson.categorys[i]].splice(j, 1);
                         break;
                     }
@@ -161,9 +190,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         height: '200%'
     },
+
     flatlist: {
         marginBottom: 830
     },
+
     firstarticle: {
         backgroundColor: '#FFFFFF',
         padding: 10,
@@ -174,8 +205,9 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         height: 70
     },
+
     article: {
-        backgroundColor: '#FDF0F0',
+        backgroundColor: '#FFFFFF',
         padding: 10,
         borderRadius: 10,
         margin: 5,
@@ -204,10 +236,11 @@ const styles = StyleSheet.create({
     articleDeleteButton: {
         backgroundColor: '#ff461d',
         position: 'absolute',
-        padding: 5,
-        borderRadius: 3,
+        paddingLeft: 6,
+        paddingRight: 6,
+        borderRadius: 2,
         top: 0,
-        transform: [{translateY: -5}]
+        transform: [{translateY: -2}]
     },
     atricleDeleteButtonText: {
         fontSize: 17,
@@ -251,7 +284,6 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         fontSize: 20,
-        color: '#FFFFFF'
     }
 });
 

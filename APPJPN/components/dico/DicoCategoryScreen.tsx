@@ -87,9 +87,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         height: '200%'
     },
+
     flatlist: {
         marginBottom: 830
     },
+
     firstarticle: {
         backgroundColor: '#FFFFFF',
         padding: 10,
@@ -100,8 +102,9 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         height: 70
     },
+
     article: {
-        backgroundColor: '#FDF0F0',
+        backgroundColor: '#FFFFFF',
         padding: 10,
         borderRadius: 10,
         margin: 5,

@@ -104,6 +104,7 @@ class KanaScreen extends Component {
                     <Text style={styles.kana}>D             ディ ドゥ</Text>
                     <Text style={styles.kana}>DY                   デゥ</Text>
                 </View>
+
                 <View>
                     <Text style={styles.title}>Katakana</Text>
 

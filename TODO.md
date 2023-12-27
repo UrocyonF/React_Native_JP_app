@@ -18,4 +18,4 @@ TODO:
 - do the CoursScreen.tsx and cours/CoursScreenTemplate.tsx
 - correct errors in TradScreen.tsx, CoursScreen.tsx and DicoScreen.tsx
 - fix the bug on leaving the TradScreen.tsx
-- look for a way to make the app lighter (maybe by using a database instead of a json file)
+- look for a way to make the app lighter (maybe by using a database instead of a json file / multiple json files)

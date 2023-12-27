@@ -127,10 +127,12 @@ function DicoAddScreen() {
                     onChange={(event) => setRomaji(event.nativeEvent.text.toLowerCase())}
                 />
 
-                <Pressable 
-                    style={styles.button}
+                <Pressable
+                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
                     onPress={addData}>
-                    <Text style={styles.buttonText}>Ajouter</Text>
+                    {({ pressed }) => (
+                        <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Ajouter</Text>
+                    )}
                 </Pressable>
             </View>
 
@@ -146,7 +148,7 @@ function DicoAddScreen() {
                         <Text style={styles.modalText}>Il faut au moins renseigner la catégorie, la traduction française et le mot (kana ou romaji)</Text>
 
                         <Pressable
-                            style={styles.button}
+                            style={styles.modalButton}
                             onPress={() => setModalVisible(!modalVisible)}>
                             <Text style={styles.buttonText}>Fermer</Text>
                         </Pressable>
@@ -172,16 +174,15 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     input: {
-        backgroundColor: '#FDF0F0',
+        backgroundColor: '#FFFFFF',
         borderRadius: 10,
         width: 250,
         fontSize: 18
     },
 
     button: {
-        backgroundColor: '#FFFFFF',
         padding: 10,
-        borderRadius: 10,
+        borderRadius: 6,
         width: 200,
         alignItems: 'center',
         borderWidth: 1,
@@ -189,21 +190,20 @@ const styles = StyleSheet.create({
         bottom: -20
     },
     buttonText: {
+        color: 'black',
         fontSize: 20,
-        color: '#444444'
     },
 
     modalCenteredView: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 22
+        padding: 15
     },
     modalView: {
-        margin: 20,
         backgroundColor: 'white',
         borderRadius: 20,
-        padding: 35,
+        padding: 15,
         alignItems: 'center',
         shadowColor: '#000',
         shadowOffset: {
@@ -215,9 +215,17 @@ const styles = StyleSheet.create({
         elevation: 5
     },
     modalText: {
-        marginBottom: 15,
+        color: 'red',
         textAlign: 'center',
-        fontSize: 20
+        fontSize: 20,
+        paddingBottom: 20
+    },
+    modalButton: {
+        padding: 10,
+        borderRadius: 6,
+        width: 180,
+        alignItems: 'center',
+        borderWidth: 1,
     }
 });
 

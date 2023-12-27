@@ -129,17 +129,21 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
                 renderItem={
                     ({item}) => 
                     <Pressable
-                        style={styles.categoriesButton}
+                        style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.categoriesButton ]}
                         onPress={() => navigation.navigate('DicoCategoryScreen', {category: {item}})}>
-                        <Text style={styles.buttonText}>{(item as string).charAt(0).toUpperCase() + (item as string).slice(1)}</Text>
+                        {({ pressed }) => (
+                            <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>{(item as string).charAt(0).toUpperCase() + (item as string).slice(1)}</Text>
+                        )}
                     </Pressable>
                 }
             />
 
             <Pressable
-                style={styles.button}
+                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
                 onPress={() => navigation.navigate('DicoAddScreen')}>
-                <Text style={styles.buttonText}>Ajouter</Text>
+                {({ pressed }) => (
+                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Ajouter</Text>
+                )}
             </Pressable>
         </LinearGradient>
     );
@@ -155,9 +159,8 @@ const styles = StyleSheet.create({
     },
 
     button: {
-        backgroundColor: '#FFFFFF',
         padding: 10,
-        borderRadius: 10,
+        borderRadius: 6,
         margin: 10,
         width: 200,
         borderWidth: 1
@@ -165,7 +168,6 @@ const styles = StyleSheet.create({
     buttonText: {
         textAlign: 'center',
         fontSize: 20,
-        color: '#2A2A2A'
     },
 
     input: {
@@ -184,9 +186,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row'
     },
     categoriesButton: {
-        backgroundColor: '#FDF0F0',
         padding: 10,
-        borderRadius: 10,
+        borderRadius: 5,
         margin: 10,
         width: 150,
         borderWidth: 1

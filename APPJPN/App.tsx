@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
         marginTop: -60,
         textShadowColor: '#FF88AA',
         textShadowOffset: { width: 0, height: 0 },
-        textShadowRadius: 10,
+        textShadowRadius: 5,
     },
 
     button: {

@@ -48,11 +48,17 @@ class CoursScreen extends Component {
 }
 
 
+interface DataItem {
+    kana: string;
+    kanji: string;
+}
+
+
 function DicoMainScreen() {
     const [text, setText] = useState('');
     const [result, setResult] = useState('');
 
-    const [data, setData] = useState([]);
+    const [data, setData] = useState<DataItem[]>([]);
 
     useEffect(() => {
         RNFS.readFileAssets('data/dico.json', 'utf8')
@@ -126,13 +132,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: 32,
         borderRadius: 4,
         elevation: 3,
-        backgroundColor: '#FFFFFF',
         marginTop: 20,
     },
     buttonText: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#FF1493',
     },
     result: {
         fontSize: 20,

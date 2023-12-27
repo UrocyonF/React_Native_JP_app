@@ -92,6 +92,7 @@ function KanjiMainScreen() {
             while (choice === precendChoice) {
                 choice = kanjiJson[Math.floor(Math.random() * kanjiJson.length)]
             }
+            console.log(choice);
             setChoice(choice);
             setPrecendChoice(choice);
         }
@@ -139,9 +140,10 @@ function KanjiMainScreen() {
 
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.container}>
-            <View style={{height: 60}}></View>
-            <Text style={styles.wordGiven}>{choice.on}</Text>
-            <Text style={styles.wordGiven}>{choice.kun}</Text>
+            <View style={{height: 140, paddingTop: 25}}>
+                <Text style={styles.wordGiven}>{choice.onyomi}</Text>
+                <Text style={styles.wordGiven}>{choice.kunyomi}</Text>
+            </View>
 
             <View style={styles.centredView}>
                 <View style={styles.viewFlexRow}>
@@ -163,11 +165,13 @@ function KanjiMainScreen() {
                 </View>
 
                 <Pressable
-                    style={styles.button}
+                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
                     onPress={() => resetCanvas(300, 300, true)}>
-                    <Text style={styles.buttonText}>Reset</Text>
+                    {({ pressed }) => (
+                        <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Reset</Text>
+                    )}
                 </Pressable>
-                
+
                 <View style={styles.viewFlexRow}>
                     <View style={{...styles.viewRow, backgroundColor: "none", borderWidth: 0}}>
                         <TextInput
@@ -191,16 +195,20 @@ function KanjiMainScreen() {
                 </View>
 
                 <Pressable
-                    style={styles.button}
+                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
                     onPress={validate}>
-                    <Text style={styles.buttonText}>Valider</Text>
+                    {({ pressed }) => (
+                        <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Valider</Text>
+                    )}
                 </Pressable>
 
                 <Pressable
-                    style={styles.button}
+                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
                     onPress={newWord}>
-                    <Text style={styles.buttonText}>Suivant</Text>
-                </Pressable>
+                    {({ pressed }) => (
+                        <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Suivant</Text>
+                    )}
+            </Pressable>
             </View>
         </LinearGradient>
     );
@@ -210,15 +218,12 @@ function KanjiMainScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
     },
 
     wordGiven: {
         textAlign: 'center',
-        height: 120,
-        fontSize: 33,
+        fontSize: 27,
         color: '#FFFFFF',
-        marginBottom: 20
     },
 
     centredView: {
@@ -226,16 +231,14 @@ const styles = StyleSheet.create({
     },
 
     button: {
-        backgroundColor: '#FDF0F0',
         padding: 10,
         width: 200,
         height: 50,
-        borderRadius: 10,
+        borderRadius: 6,
         marginBottom: 20
     },
     buttonText: {
         fontSize: 20,
-        color: '#000000',
         textAlign: 'center'
     },
 
