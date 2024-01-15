@@ -130,7 +130,6 @@ function KanjiMainScreen() {
         setShowingCorrection(false);
     }
 
-
     const newWord = () => {
         resetCanvas(300, 300, true);
         giveNewKanji();
@@ -141,12 +140,12 @@ function KanjiMainScreen() {
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.container}>
             <View style={{height: 140, paddingTop: 25}}>
-                <Text style={styles.wordGiven}>{choice.onyomi}</Text>
                 <Text style={styles.wordGiven}>{choice.kunyomi}</Text>
+                <Text style={styles.wordGiven}>{choice.onyomi}</Text>
             </View>
 
             <View style={styles.centredView}>
-                <View style={styles.viewFlexRow}>
+                <View style={{...styles.viewFlexRow, height: 325}}>
                     <View style={styles.viewRow}>
                         <Canvas
                             ref={canvasRef}
@@ -159,7 +158,7 @@ function KanjiMainScreen() {
                         <SvgXml xml = {svgPath} width="150" height="150" style={styles.svg}/>
                     </View>
 
-                    <View style={{...styles.viewRow, minHeight: 150, minWidth: 150, display: correctionViewDisplay as "none" | "flex"}}>
+                    <View style={{...styles.viewRow, minHeight: 156, minWidth: 156, display: correctionViewDisplay as "none" | "flex"}}>
                         <Text style={styles.kanjiCorrection}>{choice.kanji}</Text>
                     </View>
                 </View>
@@ -171,8 +170,8 @@ function KanjiMainScreen() {
                         <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Reset</Text>
                     )}
                 </Pressable>
-
-                <View style={styles.viewFlexRow}>
+                
+                <View style={{...styles.viewFlexRow, height: 140}}>
                     <View style={{...styles.viewRow, backgroundColor: "none", borderWidth: 0}}>
                         <TextInput
                             autoCapitalize="none"
@@ -223,7 +222,7 @@ const styles = StyleSheet.create({
     wordGiven: {
         textAlign: 'center',
         fontSize: 27,
-        color: '#FFFFFF',
+        color: 'white',
     },
 
     centredView: {
@@ -248,16 +247,17 @@ const styles = StyleSheet.create({
     },
     viewRow: {
         display: 'flex',
-        backgroundColor: '#ffffff',
+        backgroundColor: 'white',
         marginBottom: 20,
         borderWidth: 1,
-        padding: 2
+        padding: 2,
+        alignSelf: 'center'
     },
 
     kanjiCorrection: {
         fontSize: 100,
         textAlign: 'center',
-        color: '#0F0F0F'
+        color: 'black'
     },
 
     svg: {
@@ -269,12 +269,12 @@ const styles = StyleSheet.create({
     },
 
     tradInput: {
-        backgroundColor: '#ffffff',
+        backgroundColor: 'white',
         borderRadius: 10,
         padding: 10,
         marginBottom: 20,
         fontSize: 17,
-        color: '#000000'
+        color: 'black'
     }
 });
 

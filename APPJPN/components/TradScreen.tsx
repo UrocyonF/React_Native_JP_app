@@ -12,7 +12,7 @@
 */
 
 import 'react-native-gesture-handler';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 
 import {
@@ -22,7 +22,6 @@ import {
     Pressable
 } from 'react-native';
 
-import {TranslatorProvider} from 'react-native-translator'
 import Translator from 'react-native-translator';
 
 
@@ -49,35 +48,33 @@ function TradScreen() {
 
 
     return (
-        <TranslatorProvider>
-            <LinearGradient colors={['#02006F', '#10002B']} style={styles.container}>
-                <Text style={styles.title}>日本語訳</Text>
+        <LinearGradient colors={['#02006F', '#10002B']} style={styles.container}>
+            <Text style={styles.title}>日本語訳</Text>
 
-                <Translator
-                    from = {fromLanguage}
-                    to = {toLanguage}
-                    value = {value}
-                    onTranslated = {(t) => setResult(t)}
-                />
+            <Translator
+                from = {fromLanguage}
+                to = {toLanguage}
+                value = {value}
+                onTranslated = {(t) => setResult(t)}
+            />
 
-                <TextInput
-                    style = {styles.input}
-                    placeholder = {placeholder}
-                    value = {value}
-                    onChangeText = {(t) => setValue(t)}
-                />
+            <TextInput
+                style = {styles.input}
+                placeholder = {placeholder}
+                value = {value}
+                onChangeText = {(t) => setValue(t)}
+            />
 
-                <Text style={styles.output}>{result}</Text>
+            <Text style={styles.output}>{result}</Text>
 
-                <Pressable
-                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
-                    onPress = {changeLangue}>
-                    {({ pressed }) => (
-                        <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Changer de langue</Text>
-                    )}
-                </Pressable>
-            </LinearGradient>
-        </TranslatorProvider>
+            <Pressable
+                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
+                onPress = {changeLangue}>
+                {({ pressed }) => (
+                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Changer de langue</Text>
+                )}
+            </Pressable>
+        </LinearGradient>
     );
 }
 
@@ -92,7 +89,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 45,
         fontWeight: 'bold',
-        color: '#FFFFFF',
+        color: 'white',
         marginBottom: 60
     },
 
@@ -104,7 +101,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 10,
         borderRadius: 10,
-        backgroundColor: '#FFFFFF'
+        backgroundColor: 'white'
     },
 
     output: {
@@ -115,7 +112,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 10,
         borderRadius: 10,
-        backgroundColor: '#FFFFFF'
+        backgroundColor: 'white'
     },
 
     button: {

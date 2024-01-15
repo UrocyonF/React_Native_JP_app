@@ -197,13 +197,13 @@ const styles = StyleSheet.create({
         marginTop: 7,
         marginBottom: 10,
         textAlign: 'center',
-        color: '#FDF0F0'
+        color: 'thistle'
     },
 
     kana: {
         fontWeight: '800',
         fontSize: 22,
-        color: '#FFFFFF'
+        color: 'white'
     },
     kanaSeparator: {
         height: 1,

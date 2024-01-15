@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     },
 
     firstarticle: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: 'white',
         padding: 10,
         borderRadius: 10,
         margin: 20,
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     },
 
     article: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: 'white',
         padding: 10,
         borderRadius: 10,
         margin: 5,
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     articleText: {
         textAlignVertical: 'center',
         fontSize: 15,
-        color: '#000000',
+        color: 'black',
         maxWidth: 140,
         minWidth: 40,
         flexWrap: 'wrap',
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     },
     articleTextRomanji: {
         fontSize: 11,
-        color: '#444444',
+        color: 'gray',
         flexWrap: 'wrap',
         flex: 1
     }

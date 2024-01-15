@@ -148,9 +148,11 @@ function DicoAddScreen() {
                         <Text style={styles.modalText}>Il faut au moins renseigner la catégorie, la traduction française et le mot (kana ou romaji)</Text>
 
                         <Pressable
-                            style={styles.modalButton}
+                            style={({ pressed }) => [{ backgroundColor: pressed ? 'crimson' : 'white' }, styles.modalButton]}
                             onPress={() => setModalVisible(!modalVisible)}>
-                            <Text style={styles.buttonText}>Fermer</Text>
+                            {({ pressed }) => (
+                                <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Fermer</Text>
+                            )}
                         </Pressable>
                     </View>
                 </View>
@@ -163,7 +165,6 @@ function DicoAddScreen() {
 const styles = StyleSheet.create({
     view: {
         flex: 1,
-        alignItems: 'center',
         justifyContent: 'space-between',
         paddingBottom: 60
     },
@@ -174,7 +175,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     input: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: 'white',
         borderRadius: 10,
         width: 250,
         fontSize: 18
@@ -184,14 +185,13 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 6,
         width: 200,
-        alignItems: 'center',
         borderWidth: 1,
         position: 'absolute',
         bottom: -20
     },
     buttonText: {
-        color: 'black',
         fontSize: 20,
+        textAlign: 'center'
     },
 
     modalCenteredView: {
@@ -202,10 +202,10 @@ const styles = StyleSheet.create({
     },
     modalView: {
         backgroundColor: 'white',
-        borderRadius: 20,
+        borderRadius: 10,
         padding: 15,
         alignItems: 'center',
-        shadowColor: '#000',
+        shadowColor: 'black',
         shadowOffset: {
           width: 0,
           height: 2
@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
         elevation: 5
     },
     modalText: {
-        color: 'red',
+        color: 'crimson',
         textAlign: 'center',
         fontSize: 20,
         paddingBottom: 20
@@ -224,7 +224,6 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 6,
         width: 180,
-        alignItems: 'center',
         borderWidth: 1,
     }
 });

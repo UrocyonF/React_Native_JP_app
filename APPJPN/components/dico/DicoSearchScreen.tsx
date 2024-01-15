@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
     },
 
     firstarticle: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: 'white',
         padding: 10,
         borderRadius: 10,
         margin: 20,
@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
     },
 
     article: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: 'white',
         padding: 10,
         borderRadius: 10,
         margin: 5,
@@ -218,7 +218,7 @@ const styles = StyleSheet.create({
     articleText: {
         textAlignVertical: 'center',
         fontSize: 15,
-        color: '#000000',
+        color: 'black',
         maxWidth: 140,
         minWidth: 40,
         flexWrap: 'wrap',
@@ -229,12 +229,12 @@ const styles = StyleSheet.create({
     },
     articleTextRomanji: {
         fontSize: 11,
-        color: '#444444',
+        color: 'gray',
         flexWrap: 'wrap',
         flex: 1
     },
     articleDeleteButton: {
-        backgroundColor: '#ff461d',
+        backgroundColor: 'crimson',
         position: 'absolute',
         paddingLeft: 6,
         paddingRight: 6,
@@ -244,7 +244,7 @@ const styles = StyleSheet.create({
     },
     atricleDeleteButtonText: {
         fontSize: 17,
-        color: '#FFFFFF'
+        color: 'white'
     },
 
     modalCenteredView: {
@@ -259,7 +259,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         padding: 35,
         alignItems: 'center',
-        shadowColor: '#000',
+        shadowColor: 'black',
         shadowOffset: {
           width: 0,
           height: 2
@@ -269,7 +269,7 @@ const styles = StyleSheet.create({
         elevation: 5
     },
     modalText: {
-        color: '#000000',
+        color: 'black',
         marginBottom: 15,
         textAlign: 'center',
         fontSize: 20

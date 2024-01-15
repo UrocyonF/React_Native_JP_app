@@ -108,23 +108,25 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center',
-        // backgroundColor: '#FFC0CB',
+        justifyContent: 'center'
     },
+
     title: {
         fontSize: 50,
         fontWeight: 'bold',
-        color: '#FFFFFF',
+        color: 'white',
         marginBottom: 50,
     },
+
     input: {
         height: 40,
         width: 200,
         margin: 12,
         borderWidth: 1,
         padding: 10,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: 'white',
     },
+
     button: {
         alignItems: 'center',
         justifyContent: 'center',
@@ -138,12 +140,13 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
     },
+
     result: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#FFFFFF',
+        color: 'white',
         marginTop: 20,
-    },
+    }
 });
 
 
