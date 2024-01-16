@@ -20,7 +20,8 @@ import {
     StyleSheet,
     Text,
     Pressable,
-    View
+    View,
+    StatusBar
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
@@ -37,36 +38,32 @@ const MainStack = createStackNavigator();
 function App(): JSX.Element {
     return (
         <NavigationContainer>
-            <MainStack.Navigator>
+            <MainStack.Navigator
+                screenOptions={{headerShown: false}}
+                >
                 <MainStack.Screen
                     name="HomeScreen"
                     component={HomeScreen}
-                    options={{ headerShown: false }}
                 />
                 <MainStack.Screen
                     name="DicoScreen"
                     component={DicoScreen}
-                    options={{ headerShown: false }}
                 />
                 <MainStack.Screen
                     name="TradScreen"
                     component={TradScreen}
-                    options={{ headerShown: false }}
                 />
                 <MainStack.Screen
                     name="KanaScreen"
                     component={KanaScreen}
-                    options={{ headerShown: false }}
                 />
                 <MainStack.Screen
                     name="KanjiScreen"
                     component={KanjiScreen}
-                    options={{ headerShown: false }}
                 />
                 <MainStack.Screen
                     name="CoursScreen"
                     component={CoursScreen}
-                    options={{ headerShown: false }}
                 />
             </MainStack.Navigator>
         </NavigationContainer>
@@ -77,6 +74,8 @@ function App(): JSX.Element {
 function HomeScreen({ navigation }: { navigation: any }) {
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>
+            <StatusBar barStyle="light-content" translucent={true} backgroundColor={'#02006F'}/>
+
             <View style={styles.title}>
                 <Text style={styles.titleText}>日</Text>
                 <Text style={styles.titleText}>本</Text>

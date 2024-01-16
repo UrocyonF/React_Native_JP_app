@@ -22,7 +22,8 @@ import {
     Text,
     TextInput,
     Pressable,
-    View
+    View,
+    StatusBar
 } from 'react-native';
 
 import {
@@ -92,7 +93,6 @@ function KanjiMainScreen() {
             while (choice === precendChoice) {
                 choice = kanjiJson[Math.floor(Math.random() * kanjiJson.length)]
             }
-            console.log(choice);
             setChoice(choice);
             setPrecendChoice(choice);
         }
@@ -116,7 +116,6 @@ function KanjiMainScreen() {
         width: React.SetStateAction<number>,
         enable_n_reset: React.SetStateAction<boolean>,
     ) => {
-        setTextInput('');
         canvasRef.current?.clear();
         setCanvasSize(size);
         setTextInoutWidth(width);
@@ -131,6 +130,7 @@ function KanjiMainScreen() {
     }
 
     const newWord = () => {
+        setTextInput('');
         resetCanvas(300, 300, true);
         giveNewKanji();
         setShowingCorrection(false);
@@ -139,7 +139,36 @@ function KanjiMainScreen() {
 
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.container}>
-            <View style={{height: 140, paddingTop: 25}}>
+            <StatusBar barStyle="light-content" translucent={true}/>
+
+            <View style={styles.viewFlexRow}>
+                <Pressable
+                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.topBarItems]}
+                    onPress={() => resetCanvas(300, 300, true)}>
+                    {({ pressed }) => (
+                        <Text style={[{ color: pressed ? 'white' : 'black' }]}>Réinitialiser</Text>
+                    )}
+                </Pressable>
+
+                <Pressable
+                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.topBarItems]}
+                    onPress={() => resetCanvas(300, 300, true)}>
+                    {({ pressed }) => (
+                        <Text style={[{ color: pressed ? 'white' : 'black' }]}>Réinitialiser</Text>
+                    )}
+                </Pressable>
+
+                <Pressable
+                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.topBarItems]}
+                    onPress={() => resetCanvas(300, 300, true)}>
+                    {({ pressed }) => (
+                        <Text style={[{ color: pressed ? 'white' : 'black' }]}>Réinitialiser</Text>
+                    )}
+                </Pressable>
+            </View>
+
+
+            <View style={{height: 130, paddingTop: 5}}>
                 <Text style={styles.wordGiven}>{choice.kunyomi}</Text>
                 <Text style={styles.wordGiven}>{choice.onyomi}</Text>
             </View>
@@ -167,7 +196,7 @@ function KanjiMainScreen() {
                     style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
                     onPress={() => resetCanvas(300, 300, true)}>
                     {({ pressed }) => (
-                        <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Reset</Text>
+                        <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Réinitialiser</Text>
                     )}
                 </Pressable>
                 
@@ -197,7 +226,7 @@ function KanjiMainScreen() {
                     style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
                     onPress={validate}>
                     {({ pressed }) => (
-                        <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Valider</Text>
+                        <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Vérifier</Text>
                     )}
                 </Pressable>
 
@@ -219,6 +248,11 @@ const styles = StyleSheet.create({
         flex: 1,
     },
 
+    topBarItems: {
+        alignSelf: 'center',
+
+    },
+
     wordGiven: {
         textAlign: 'center',
         fontSize: 27,
@@ -226,7 +260,7 @@ const styles = StyleSheet.create({
     },
 
     centredView: {
-        alignItems: 'center',
+        alignItems: 'center'
     },
 
     button: {
@@ -271,7 +305,7 @@ const styles = StyleSheet.create({
     tradInput: {
         backgroundColor: 'white',
         borderRadius: 10,
-        padding: 10,
+        padding: 8,
         marginBottom: 20,
         fontSize: 17,
         color: 'black'

@@ -20,6 +20,7 @@ import {
     View,
     Text,
     ScrollView,
+    StatusBar
 } from 'react-native';
 
 
@@ -28,6 +29,8 @@ class KanaScreen extends Component {
     return (
         <ScrollView>
             <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>
+                <StatusBar barStyle="light-content" translucent={true}/>
+
                 <View>
                     <Text style={styles.title}>Hiragana</Text>
 
@@ -188,6 +191,7 @@ class KanaScreen extends Component {
 const styles = StyleSheet.create({
     view: {
         flex:1,
+        marginTop: 15,
         flexDirection: 'row',
         justifyContent: 'center'
     },

@@ -21,7 +21,8 @@ import {
     Text,
     TextInput,
     Pressable,
-    Modal
+    Modal,
+    StatusBar
 } from 'react-native';
 
 import RNFS from 'react-native-fs';
@@ -81,6 +82,8 @@ function DicoAddScreen() {
 
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>
+            <StatusBar barStyle="light-content" translucent={true}/>
+
             <View style={styles.inputView}>
                 <TextInput
                     autoCapitalize="none"
@@ -165,8 +168,7 @@ function DicoAddScreen() {
 const styles = StyleSheet.create({
     view: {
         flex: 1,
-        justifyContent: 'space-between',
-        paddingBottom: 60
+        marginTop: 10
     },
 
     inputView: {
@@ -182,12 +184,11 @@ const styles = StyleSheet.create({
     },
 
     button: {
+        marginTop: 25,
         padding: 10,
         borderRadius: 6,
         width: 200,
         borderWidth: 1,
-        position: 'absolute',
-        bottom: -20
     },
     buttonText: {
         fontSize: 20,

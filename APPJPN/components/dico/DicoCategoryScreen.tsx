@@ -19,7 +19,8 @@ import {
     StyleSheet,
     View,
     Text,
-    FlatList
+    FlatList,
+    StatusBar
 } from 'react-native';
 
 import RNFS from 'react-native-fs';
@@ -52,6 +53,8 @@ function DicoSearchScreen({ route }: { route: any }) {
 
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>
+            <StatusBar barStyle="light-content" translucent={true}/>
+
             <View style={styles.firstarticle}>
                 <Text numberOfLines={1} style={styles.articleText}>Français</Text>
                 <Text numberOfLines={1} style={styles.articleText}>Kana</Text>

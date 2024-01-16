@@ -21,7 +21,8 @@ import {
     Text,
     FlatList,
     Pressable,
-    Modal
+    Modal,
+    StatusBar
 } from 'react-native';
 
 import RNFS from 'react-native-fs';
@@ -121,6 +122,8 @@ function DicoSearchScreen({ route }: { route: any }) {
 
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>
+            <StatusBar barStyle="light-content" translucent={true}/>
+
             <View style={styles.firstarticle}>
                 <Text style={styles.articleText}>Français</Text>
                 <Text style={styles.articleText}>Kana</Text>
@@ -167,13 +170,13 @@ function DicoSearchScreen({ route }: { route: any }) {
                         <Text style={styles.modalText}>Es-tu sûre de vouloir supprimer ce mot ?</Text>
 
                         <Pressable
-                            style={[styles.button, {backgroundColor: "#ff461d"}]}
+                            style={[styles.button, {backgroundColor: 'crimson'}]}
                             onPress={() => setModalVisible(!modalVisible)}>
                             <Text style={styles.buttonText}>Non</Text>
                         </Pressable>
 
                         <Pressable
-                            style={[styles.button, {backgroundColor: "#32d200"}]}
+                            style={[styles.button, {backgroundColor: 'limegreen'}]}
                             onPress={deleteItemConfirm}>
                             <Text style={styles.buttonText}>Oui</Text>
                         </Pressable>
@@ -188,11 +191,8 @@ function DicoSearchScreen({ route }: { route: any }) {
 const styles = StyleSheet.create({
     view: {
         alignItems: 'center',
-        height: '200%'
-    },
-
-    flatlist: {
-        marginBottom: 830
+        height: '200%',
+        marginTop: 10
     },
 
     firstarticle: {
@@ -204,6 +204,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         height: 70
+    },
+
+    flatlist: {
+        marginBottom: 920,
     },
 
     article: {

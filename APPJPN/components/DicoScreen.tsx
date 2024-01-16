@@ -22,7 +22,8 @@ import {
     Text,
     TextInput,
     Pressable,
-    FlatList
+    FlatList,
+    StatusBar
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
@@ -113,6 +114,8 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
 
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>
+            <StatusBar barStyle="light-content" translucent={true}/>
+
             <TextInput
                 autoCapitalize="none"
                 style={styles.input}
@@ -121,6 +124,14 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
                 onChange={(event) => setSearch(event.nativeEvent.text)}
                 onEndEditing={toSearchScreen}
             />
+
+            <Pressable
+                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
+                onPress={() => navigation.navigate('DicoAddScreen')}>
+                {({ pressed }) => (
+                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Ajouter</Text>
+                )}
+            </Pressable>
 
             <FlatList style={styles.categoriesView}
                 horizontal={false}
@@ -137,14 +148,6 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
                     </Pressable>
                 }
             />
-
-            <Pressable
-                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
-                onPress={() => navigation.navigate('DicoAddScreen')}>
-                {({ pressed }) => (
-                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Ajouter</Text>
-                )}
-            </Pressable>
         </LinearGradient>
     );
 }
@@ -153,16 +156,14 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
 const styles = StyleSheet.create({
     view: {
         flex: 1,
-        alignItems: 'center',
-        height: '200%',
-        justifyContent: 'space-evenly'
+        alignItems: 'center'
     },
 
     button: {
-        padding: 10,
+        padding: 7,
         borderRadius: 6,
-        margin: 10,
-        width: 200,
+        marginBottom: 30,
+        width: 180,
         borderWidth: 1
     },
     buttonText: {
@@ -183,7 +184,8 @@ const styles = StyleSheet.create({
     categoriesView: {
         flex:1,
         flexWrap: 'wrap',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        maxHeight: 750
     },
     categoriesButton: {
         padding: 10,

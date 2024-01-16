@@ -22,7 +22,7 @@ import {
     Text,
     TextInput,
     Pressable,
-    FlatList
+    StatusBar
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
@@ -83,6 +83,8 @@ function DicoMainScreen() {
 
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.container}>
+            <StatusBar barStyle="light-content" translucent={true}/>
+
             <Text style={styles.title}>日本語辞書</Text>
 
             <TextInput

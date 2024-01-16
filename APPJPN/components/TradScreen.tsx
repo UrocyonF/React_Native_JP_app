@@ -19,7 +19,8 @@ import {
     StyleSheet,
     Text,
     TextInput,
-    Pressable
+    Pressable,
+    StatusBar
 } from 'react-native';
 
 import Translator from 'react-native-translator';
@@ -49,6 +50,8 @@ function TradScreen() {
 
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.container}>
+            <StatusBar barStyle="light-content" translucent={true}/>
+
             <Text style={styles.title}>日本語訳</Text>
 
             <Translator
