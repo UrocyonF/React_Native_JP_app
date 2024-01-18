@@ -88,11 +88,12 @@ function DicoSearchScreen({ route }: { route: any }) {
 const styles = StyleSheet.create({
     view: {
         alignItems: 'center',
-        height: '200%'
+        height: '200%',
+        marginTop: 10
     },
 
     flatlist: {
-        marginBottom: 830
+        marginBottom: 920
     },
 
     firstarticle: {
