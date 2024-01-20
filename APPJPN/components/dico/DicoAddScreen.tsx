@@ -37,8 +37,9 @@ function DicoAddScreen() {
     const [kanji, setKanji] = useState('');
     const [romaji, setRomaji] = useState('');
 
+
     function addData() {
-        if (category === '' || fr === '' || (kana === '' && romaji === '')) {
+        if (['', category, fr, kana, romaji].some(value => value === '')) {
             setModalVisible(true);
             return;
         }
@@ -79,6 +80,7 @@ function DicoAddScreen() {
             setModalVisible(true);
         });
     }
+
 
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>

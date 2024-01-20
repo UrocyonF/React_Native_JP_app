@@ -66,15 +66,15 @@ class KanaScreen extends Component {
                     <View style={styles.kanaSeparator} />
                     <Text style={styles.title}>Composition Y</Text>
 
-                    <Text style={styles.kana}>    YA     YU     YO</Text>
-                    <Text style={styles.kana}>K きゃ きゅ きょ</Text>
-                    <Text style={styles.kana}>G ぎゃ ぎゅ ぎょ</Text>
-                    <Text style={styles.kana}>N にゃ にゅ にょ</Text>
-                    <Text style={styles.kana}>H ひゃ ひゅ ひょ</Text>
-                    <Text style={styles.kana}>B びゃ びゅ びょ</Text>
-                    <Text style={styles.kana}>P ぴゃ ぴゅ ぴょ</Text>
-                    <Text style={styles.kana}>M みゃ みゅ みょ</Text>
-                    <Text style={styles.kana}>R りゃ りゅ りょ</Text>
+                    <Text style={styles.kana}>       YA     YU     YO</Text>
+                    <Text style={styles.kana}>K    きゃ きゅ きょ</Text>
+                    <Text style={styles.kana}>G    ぎゃ ぎゅ ぎょ</Text>
+                    <Text style={styles.kana}>N    にゃ にゅ にょ</Text>
+                    <Text style={styles.kana}>H    ひゃ ひゅ ひょ</Text>
+                    <Text style={styles.kana}>B    びゃ びゅ びょ</Text>
+                    <Text style={styles.kana}>P    ぴゃ ぴゅ ぴょ</Text>
+                    <Text style={styles.kana}>M   みゃ みゅ みょ</Text>
+                    <Text style={styles.kana}>R    りゃ りゅ りょ</Text>
                     <Text></Text>
                     <Text style={styles.kana}>         A      U       O</Text>
                     <Text style={styles.kana}>SH しゃ しゅ しょ</Text>
@@ -191,7 +191,7 @@ class KanaScreen extends Component {
 const styles = StyleSheet.create({
     view: {
         flex:1,
-        marginTop: 15,
+        marginTop: 18,
         flexDirection: 'row',
         justifyContent: 'center'
     },

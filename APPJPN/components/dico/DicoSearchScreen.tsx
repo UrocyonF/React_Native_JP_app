@@ -55,26 +55,25 @@ function DicoSearchScreen({ route }: { route: any }) {
         romaji: ''
     });
 
-    // TODO: maybe use this
-    //useState<DataItem[]>([]);
 
     useEffect(readData, []);
+
 
     function readData() {
         RNFS.readFile(RNFS.DocumentDirectoryPath + '/dico.json', 'utf8')
         .then((contents) => {
             const dicoJson = JSON.parse(contents);
-            let tmpSearch = [];
-            for (let i = 0; i < dicoJson.categorys.length; i++) {
-                for (let j = 0; j < dicoJson[dicoJson.categorys[i]].length; j++) {
-                    if (dicoJson[dicoJson.categorys[i]][j].fr.normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(strSearch.normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
-                        || dicoJson[dicoJson.categorys[i]][j].kana.includes(strSearch)
-                        || dicoJson[dicoJson.categorys[i]][j].kanji.includes(strSearch)
-                        || dicoJson[dicoJson.categorys[i]][j].romaji.includes(strSearch)) {
-                        tmpSearch.push(dicoJson[dicoJson.categorys[i]][j]);
-                    }
-                }
-            }
+            const normalizedStrSearch = strSearch.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+
+            const tmpSearch = dicoJson.categorys.flatMap((category: string) =>
+                dicoJson[category].filter((item: any) =>
+                    item.fr.normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(normalizedStrSearch)
+                        || item.kana.includes(strSearch)
+                        || item.kanji.includes(strSearch)
+                        || item.romaji.includes(strSearch)
+                )
+            );
+
             setResponse(tmpSearch);
             return;
         })
@@ -93,16 +92,17 @@ function DicoSearchScreen({ route }: { route: any }) {
         .then((contents) => {
             let dicoJson = JSON.parse(contents);
 
-            for (let i = 0; i < dicoJson.categorys.length; i++) {
-                for (let j = 0; j < dicoJson[dicoJson.categorys[i]].length; j++) {
-                    if (dicoJson[dicoJson.categorys[i]][j].fr === modalItem.fr
-                        && dicoJson[dicoJson.categorys[i]][j].kana === modalItem.kana
-                        && dicoJson[dicoJson.categorys[i]][j].kanji === modalItem.kanji
-                        && dicoJson[dicoJson.categorys[i]][j].romaji === modalItem.romaji) {
-                        dicoJson[dicoJson.categorys[i]].splice(j, 1);
-                        break;
-                    }
-                }
+            const itemMap = dicoJson.categorys.reduce((map: { [key: string]: { category: string, index: number } }, category: string) => {
+                dicoJson[category].forEach((item: any, index: number) => {
+                    const key = `${item.fr}-${item.kana}-${item.kanji}-${item.romaji}`;
+                    map[key] = { category, index };
+                });
+                return map;
+            }, {});
+            
+            const itemLocation = itemMap[`${modalItem.fr}-${modalItem.kana}-${modalItem.kanji}-${modalItem.romaji}`];
+            if (itemLocation) {
+                dicoJson[itemLocation.category].splice(itemLocation.index, 1);
             }
 
             RNFS.writeFile(RNFS.DocumentDirectoryPath + '/dico.json', JSON.stringify(dicoJson), 'utf8')
@@ -119,6 +119,7 @@ function DicoSearchScreen({ route }: { route: any }) {
             console.log(err.message);
         });
     }
+
 
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>

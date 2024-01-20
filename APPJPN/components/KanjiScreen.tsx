@@ -60,44 +60,116 @@ class KanjiScreen extends Component {
 
 
 function KanjiMainScreen() {
-    const [choice, setChoice] = useState(Object);
-    const [precendChoice, setPrecendChoice] = useState(Object);
+    var showingCorrection = false;
+
+    const canvasRef = useRef<CanvasRef>(null);
+
+    const [topBarLang, setTopBarTxtLang] = useState('FR');
+    const [topBarOnyomiColor, setTopBarOnyomiColor] = useState('thistle');
+    const [topBarKunyomiColor, setTopBarKunyomiColor] = useState('thistle');
+
+    const [isOnyomi, setIsOnyomi] = useState(true);
+    const [isKunyomi, setIsKunyomi] = useState(true);
+    const [kunyomiDisplay, setKunyomiDisplay] = useState('');
+    const [onyomiDisplay, setOnyomiDisplay] = useState('');
+    const [tradDisplay, setTradDisplay] = useState('');
+
+    const [wordJson, setWordJson] = useState(Object);
+    const [lastWordJson, setPrecendWordJson] = useState(Object);
     
     const [correctionViewDisplay, setcorrectionViewDisplay] = useState('none');
     const [textInput, setTextInput] = useState('');
     const [textInoutWidth, setTextInoutWidth] = useState(300);
 
-    const [showingCorrection, setShowingCorrection] = useState(false);
     const [canvasSize, setCanvasSize] = useState(300);
     const [canvasEnabled, setCanvasEnabled] = useState(true);
     const [svgPath, setSvgPath] = useState(emptySvg);
 
     const [kanjiJson, setKanjiJson] = useState([{}]);
 
-    const canvasRef = useRef<CanvasRef>(null);
-
 
     useEffect(() => {
         setKanjiJson(kanjiData.jlpt5);
     }, []);
 
-
     useEffect(() => {
         giveNewKanji()
     }, [kanjiJson]);
 
+    useEffect(() => {
+        if (!isKunyomi && !isOnyomi) {
+            setIsOnyomi(true);
+            setTopBarOnyomiColor('thistle');
+        }
+    }, [isKunyomi]);
+
+    useEffect(() => {
+        if (!isKunyomi && !isOnyomi) {
+            setIsKunyomi(true);
+            setTopBarKunyomiColor('thistle');
+        }
+    }, [isOnyomi]);
+
+    useEffect(() => {
+        manageDisplayYomi();
+        if (topBarLang === 'FR') {
+            setTradDisplay(wordJson.fr);
+        } else {
+            setOnyomiDisplay(wordJson.fr);
+            setTradDisplay(wordJson.kunyomi === '' ? wordJson.onyomi : wordJson.kunyomi + '\n' + wordJson.onyomi);
+            setKunyomiDisplay('');
+        }
+    }, [wordJson, isKunyomi, isOnyomi]);
+
 
     const giveNewKanji = () => {
-        if (kanjiJson.length > 0) {
-            let choice = kanjiJson[Math.floor(Math.random() * kanjiJson.length)]
-            while (choice === precendChoice) {
-                choice = kanjiJson[Math.floor(Math.random() * kanjiJson.length)]
-            }
-            setChoice(choice);
-            setPrecendChoice(choice);
+        let choice;
+        if (kanjiJson.length > 1) {
+            do {
+                choice = kanjiJson[Math.floor(Math.random() * kanjiJson.length)];
+            } while (choice === lastWordJson);
+        } else {
+            choice = kanjiJson[0];
+        }
+        setWordJson(choice);
+        setPrecendWordJson(choice);
+    }
+
+    const changeLanguage = () => {
+        newWord();
+        giveNewKanji();
+        if (topBarLang === 'FR') {
+            if (!isKunyomi) manageKunyomi();
+            if (!isOnyomi) manageOnyomi();
+            setTopBarTxtLang('JP');
+        } else {
+            setTopBarTxtLang('FR');
         }
     }
 
+    const newWord = () => {
+        setTextInput('');
+        resetCanvas(300, 300, true);
+        giveNewKanji();
+        showingCorrection = false;
+    }
+
+    const manageKunyomi = () => {
+        const tmp = topBarKunyomiColor === 'thistle' ? 'rgba(216, 191, 216, 0.4)' : 'thistle';
+        setTopBarKunyomiColor(tmp);
+        setIsKunyomi(!isKunyomi);
+    }
+
+    const manageOnyomi = () => {
+        const tmp = topBarOnyomiColor === 'thistle' ? 'rgba(216, 191, 216, 0.4)' : 'thistle';
+        setTopBarOnyomiColor(tmp);
+        setIsOnyomi(!isOnyomi);
+    }
+
+    const manageDisplayYomi = () => {
+        setKunyomiDisplay(isKunyomi ? wordJson.kunyomi : '');
+        setOnyomiDisplay(isOnyomi ? wordJson.onyomi : '');
+    }
 
     const validate = () => {
         if (!showingCorrection) {
@@ -106,10 +178,9 @@ function KanjiMainScreen() {
             if (paths) {
                 setSvgPath(paths);
             }
-            setShowingCorrection(true);
+            showingCorrection = true;
         }
     }
-
 
     const resetCanvas = (
         size: React.SetStateAction<number>,
@@ -126,14 +197,7 @@ function KanjiMainScreen() {
         } else {
             setcorrectionViewDisplay('flex');
         }
-        setShowingCorrection(false);
-    }
-
-    const newWord = () => {
-        setTextInput('');
-        resetCanvas(300, 300, true);
-        giveNewKanji();
-        setShowingCorrection(false);
+        showingCorrection = false;
     }
 
 
@@ -141,36 +205,35 @@ function KanjiMainScreen() {
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.container}>
             <StatusBar barStyle="light-content" translucent={true}/>
 
-            <View style={styles.viewFlexRow}>
-                <Pressable
-                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.topBarItems]}
-                    onPress={() => resetCanvas(300, 300, true)}>
-                    {({ pressed }) => (
-                        <Text style={[{ color: pressed ? 'white' : 'black' }]}>Réinitialiser</Text>
-                    )}
-                </Pressable>
+            <View style={{...styles.viewFlexRow, marginBottom: 12}}>
+                <View>
+                    <Pressable
+                        style={({ pressed }) => [{ backgroundColor: pressed ? 'rgba(200, 200, 200, 0.2)' : 'transparent' }, styles.topBarItems]}
+                        onPress={() => changeLanguage()}>
+                        <Text style={{...styles.topBarText, color: 'thistle'}}>{topBarLang}</Text>
+                    </Pressable>
+                </View>
+                
+                <View style={styles.topBarItemsRight}>
+                    <Pressable
+                        disabled={topBarLang === 'FR' ? false : true}
+                        style={({ pressed }) => [{ backgroundColor: pressed ? 'rgba(200,200,200,0.2)' : 'transparent' }, styles.topBarItems]}
+                        onPress={() => manageKunyomi()}>
+                        <Text style={{...styles.topBarText, textAlign: 'right', color: topBarKunyomiColor}}>KUN</Text>
+                    </Pressable>
 
-                <Pressable
-                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.topBarItems]}
-                    onPress={() => resetCanvas(300, 300, true)}>
-                    {({ pressed }) => (
-                        <Text style={[{ color: pressed ? 'white' : 'black' }]}>Réinitialiser</Text>
-                    )}
-                </Pressable>
-
-                <Pressable
-                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.topBarItems]}
-                    onPress={() => resetCanvas(300, 300, true)}>
-                    {({ pressed }) => (
-                        <Text style={[{ color: pressed ? 'white' : 'black' }]}>Réinitialiser</Text>
-                    )}
-                </Pressable>
+                    <Pressable
+                        disabled={topBarLang === 'FR' ? false : true}
+                        style={({ pressed }) => [{ backgroundColor: pressed ? 'rgba(200,200,200,0.2)' : 'transparent' }, styles.topBarItems]}
+                        onPress={() => manageOnyomi()}>
+                        <Text style={{...styles.topBarText, textAlign: 'right', color: topBarOnyomiColor}}>ON</Text>
+                    </Pressable>
+                </View>
             </View>
 
-
-            <View style={{height: 130, paddingTop: 5}}>
-                <Text style={styles.wordGiven}>{choice.kunyomi}</Text>
-                <Text style={styles.wordGiven}>{choice.onyomi}</Text>
+            <View style={styles.wordGiven}>
+                <Text style={styles.wordGivenText}>{kunyomiDisplay}</Text>
+                <Text style={styles.wordGivenText}>{onyomiDisplay}</Text>
             </View>
 
             <View style={styles.centredView}>
@@ -188,7 +251,7 @@ function KanjiMainScreen() {
                     </View>
 
                     <View style={{...styles.viewRow, minHeight: 156, minWidth: 156, display: correctionViewDisplay as "none" | "flex"}}>
-                        <Text style={styles.kanjiCorrection}>{choice.kanji}</Text>
+                        <Text style={styles.kanjiCorrection}>{wordJson.kanji}</Text>
                     </View>
                 </View>
 
@@ -216,7 +279,7 @@ function KanjiMainScreen() {
                         <TextInput
                             editable = {false}
                             style={{...styles.tradInput, width: 180}}
-                            value={choice.fr}
+                            value={tradDisplay}
                             multiline={true}
                         />
                     </View>
@@ -236,7 +299,7 @@ function KanjiMainScreen() {
                     {({ pressed }) => (
                         <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Suivant</Text>
                     )}
-            </Pressable>
+                </Pressable>
             </View>
         </LinearGradient>
     );
@@ -246,17 +309,30 @@ function KanjiMainScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        marginTop: 23
     },
 
     topBarItems: {
-        alignSelf: 'center',
-
+        width: 61,
+        height: 30,
+        borderRadius: 6
+    },
+    topBarItemsRight: {
+        position: 'absolute',
+        right: 0
+    },
+    topBarText: {
+        fontSize: 20,
+        marginHorizontal: 10
     },
 
     wordGiven: {
+        height: 130
+    },
+    wordGivenText: {
         textAlign: 'center',
         fontSize: 27,
-        color: 'white',
+        color: 'white'
     },
 
     centredView: {

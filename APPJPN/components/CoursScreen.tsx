@@ -60,6 +60,7 @@ function DicoMainScreen() {
 
     const [data, setData] = useState<DataItem[]>([]);
 
+
     useEffect(() => {
         RNFS.readFileAssets('data/dico.json', 'utf8')
             .then((contents) => {
@@ -69,6 +70,7 @@ function DicoMainScreen() {
                 console.log(err.message, err.code);
             });
     }, []);
+
 
     const search = () => {
         let res = '';
@@ -80,6 +82,7 @@ function DicoMainScreen() {
         }
         setResult(res);
     }
+
 
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.container}>

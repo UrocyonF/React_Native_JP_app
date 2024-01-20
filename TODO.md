@@ -8,8 +8,11 @@ npm start -- --reset-cache
 Color palette:
 noir : 'black'
 blanc : 'white'
+blanc transparent : 'rgba(200, 200, 200, 0.2)'
+
 gris : 'grey'
 rose : 'thistle'
+rose transparent : 'rgba(216, 191, 216, 0.4)'
 rouge : 'crimson'
 vert : 'limegreen'
 

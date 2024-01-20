@@ -30,26 +30,20 @@ function DicoSearchScreen({ route }: { route: any }) {
     const strCategory = route.params.category.item;
     const [dicoJson, setDicoJson] = useState([]);
 
+
     useEffect(() => {
         RNFS.readFile(RNFS.DocumentDirectoryPath + '/dico.json', 'utf8')
         .then((contents) => {
             let json = JSON.parse(contents);
-            //tri pas ordre alphabétique les mots à partir de la clé "fr"
-            json[strCategory].sort((a: any, b: any) => {
-                if (a.fr < b.fr) {
-                    return -1;
-                }
-                if (a.fr > b.fr) {
-                    return 1;
-                }
-                return 0;
-            });
+            // Sort words alphabetically based on the "fr" key
+            json[strCategory].sort((a: any, b: any) => a.fr.localeCompare(b.fr));
             setDicoJson(json);
         })
         .catch((err) => {
             console.log(err.message);
         });
     }, []);
+
 
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>

@@ -37,6 +37,7 @@ import DicoSearchScreen from './dico/DicoSearchScreen';
 
 const DicoStack = createStackNavigator();
 
+
 class DicoScreen extends Component {
     render() {
     return (
@@ -72,6 +73,7 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
     const [dicoJson, setDicoJson] = useState({categorys: []});
     const [search, setSearch] = useState('');
 
+
     useEffect(() => {
         RNFS.exists(RNFS.DocumentDirectoryPath + '/dico.json')
         .then((result) => {
@@ -104,6 +106,7 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
         });
     }, [])
 
+
     function toSearchScreen() {
         if (search !== "") {
             setSearch(search.toLowerCase().replace(/ /g, ''));
@@ -111,6 +114,7 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
         }
         setSearch('');
     }
+
 
     return (
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>
