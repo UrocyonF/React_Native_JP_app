@@ -13,24 +13,26 @@
 
 import 'react-native-gesture-handler';
 import React from 'react';
+import {
+    StatusBar,
+    StyleSheet,
+    Text,
+    View
+} from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import {
-    StyleSheet,
-    Text,
-    Pressable,
-    View,
-    StatusBar
-} from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
 
-import DicoScreen from './components/DicoScreen';
-import TradScreen from './components/TradScreen';
-import KanaScreen from './components/KanaScreen';
-import KanjiScreen from './components/KanjiScreen';
-import CoursScreen from './components/CoursScreen';
+import Knob from './components/Knob';
+
+import DicoScreen from './screens/DicoScreen';
+import TradScreen from './screens/TradScreen';
+import KanaScreen from './screens/KanaScreen';
+import KanjiScreen from './screens/KanjiScreen';
+import LessonScreen from './screens/LessonScreen';
+
 
 const MainStack = createStackNavigator();
 
@@ -62,8 +64,8 @@ function App(): JSX.Element {
                     component={KanjiScreen}
                 />
                 <MainStack.Screen
-                    name="CoursScreen"
-                    component={CoursScreen}
+                    name="LessonScreen"
+                    component={LessonScreen}
                 />
             </MainStack.Navigator>
         </NavigationContainer>
@@ -82,45 +84,40 @@ function HomeScreen({ navigation }: { navigation: any }) {
                 <Text style={styles.titleText}>語</Text>
             </View>
 
-            <Pressable
-                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
-                onPress={() => navigation.navigate('DicoScreen')}>
-                {({ pressed }) => (
-                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Dictionnaire</Text>
-                )}
-            </Pressable>
+            <Knob
+                textContent="Dictionnaire"
+                onPressContent={() => navigation.navigate('DicoScreen')}
+                buttonStyle={styles.button}
+                textStyle={styles.buttonText}
+            />
 
-            <Pressable
-                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
-                onPress={() => navigation.navigate('TradScreen')}>
-                {({ pressed }) => (
-                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Traduction</Text>
-                )}
-            </Pressable>
+            <Knob
+                textContent="Traduction"
+                onPressContent={() => navigation.navigate('TradScreen')}
+                buttonStyle={styles.button}
+                textStyle={styles.buttonText}
+            />
 
-            <Pressable
-                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
-                onPress={() => navigation.navigate('KanaScreen')}>
-                {({ pressed }) => (
-                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Kana</Text>
-                )}
-            </Pressable>
+            <Knob
+                textContent="Kana"
+                onPressContent={() => navigation.navigate('KanaScreen')}
+                buttonStyle={styles.button}
+                textStyle={styles.buttonText}
+            />
 
-            <Pressable
-                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
-                onPress={() => navigation.navigate('KanjiScreen')}>
-                {({ pressed }) => (
-                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Kanji</Text>
-                )}
-            </Pressable>
+            <Knob
+                textContent="Kanji"
+                onPressContent={() => navigation.navigate('KanjiScreen')}
+                buttonStyle={styles.button}
+                textStyle={styles.buttonText}
+            />
 
-            <Pressable
-                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
-                onPress={() => navigation.navigate('CoursScreen')}>
-                {({ pressed }) => (
-                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Leçons</Text>
-                )}
-            </Pressable>
+            <Knob
+                textContent="Leçons"
+                onPressContent={() => navigation.navigate('LessonScreen')}
+                buttonStyle={styles.button}
+                textStyle={styles.buttonText}
+            />
         </LinearGradient>
     );
 }

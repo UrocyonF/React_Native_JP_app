@@ -96,16 +96,16 @@ class KanaScreen extends Component {
                     <View style={styles.kanaSeparator} />
                     <Text style={styles.title}>Cas particuliers katakana</Text>
 
-                    <Text style={styles.kana}>        A        I        U</Text>
-                    <Text style={styles.kana}>W            ウィ</Text>
+                    <Text style={styles.kana}>           A         I           U</Text>
+                    <Text style={styles.kana}>W                 ウィ</Text>
                     <Text style={styles.kana}>SH</Text>
                     <Text style={styles.kana}>CH</Text>
-                    <Text style={styles.kana}>TS  ツァ</Text>
-                    <Text style={styles.kana}>T             ティ トゥ</Text>
-                    <Text style={styles.kana}>F    ファ フィ</Text>
+                    <Text style={styles.kana}>TS    ツァ</Text>
+                    <Text style={styles.kana}>T                 ティ    トゥ</Text>
+                    <Text style={styles.kana}>F       ファ  フィ</Text>
                     <Text style={styles.kana}>J</Text>
-                    <Text style={styles.kana}>D             ディ ドゥ</Text>
-                    <Text style={styles.kana}>DY                   デゥ</Text>
+                    <Text style={styles.kana}>D                 ディ    ドゥ</Text>
+                    <Text style={styles.kana}>DY                           デゥ</Text>
                 </View>
 
                 <View>
@@ -173,14 +173,14 @@ class KanaScreen extends Component {
                     <View style={styles.kanaSeparator} />
                     <Text></Text><Text></Text>
 
-                    <Text style={styles.kana}>      E        O</Text>
-                    <Text style={styles.kana}>   ウェ  ウォ</Text>
-                    <Text style={styles.kana}>   シェ</Text>
-                    <Text style={styles.kana}>   チェ</Text>
-                    <Text style={styles.kana}>   ツェ  ツォ</Text>
+                    <Text style={styles.kana}>         E         O</Text>
+                    <Text style={styles.kana}>      ウェ   ウォ</Text>
+                    <Text style={styles.kana}>      シェ</Text>
+                    <Text style={styles.kana}>      チェ</Text>
+                    <Text style={styles.kana}>      ツェ   ツォ</Text>
                     <Text></Text><Text></Text>
-                    <Text style={styles.kana}>   フェ  フォ</Text>
-                    <Text style={styles.kana}>   ジェ</Text>
+                    <Text style={styles.kana}>      フェ   フォ</Text>
+                    <Text style={styles.kana}>      ジェ</Text>
                 </View>
             </LinearGradient>
         </ScrollView>

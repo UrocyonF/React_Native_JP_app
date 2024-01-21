@@ -13,22 +13,21 @@
 
 import 'react-native-gesture-handler';
 import React, { useState, Component, useEffect } from 'react';
-
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-
 import {
     StyleSheet,
-    Text,
     TextInput,
-    Pressable,
     FlatList,
     StatusBar
 } from 'react-native';
 
-import LinearGradient from 'react-native-linear-gradient';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import RNFS from 'react-native-fs';
+
+import LinearGradient from 'react-native-linear-gradient';
+
+import Knob from '../components/Knob';
 
 import DicoCategoryScreen from './dico/DicoCategoryScreen';
 import DicoAddScreen from './dico/DicoAddScreen';
@@ -129,27 +128,26 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
                 onEndEditing={toSearchScreen}
             />
 
-            <Pressable
-                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
-                onPress={() => navigation.navigate('DicoAddScreen')}>
-                {({ pressed }) => (
-                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Ajouter</Text>
-                )}
-            </Pressable>
+            <Knob
+                textContent="Ajouter"
+                onPressContent={() => navigation.navigate('DicoAddScreen')}
+                buttonStyle={styles.button}
+                textStyle={styles.buttonText}
+            />
 
-            <FlatList style={styles.categoriesView}
+            <FlatList 
+                style={styles.categoriesView}
                 horizontal={false}
                 numColumns={2}
                 data={dicoJson.categorys}
                 renderItem={
-                    ({item}) => 
-                    <Pressable
-                        style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.categoriesButton ]}
-                        onPress={() => navigation.navigate('DicoCategoryScreen', {category: {item}})}>
-                        {({ pressed }) => (
-                            <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>{(item as string).charAt(0).toUpperCase() + (item as string).slice(1)}</Text>
-                        )}
-                    </Pressable>
+                    ({item}) =>
+                    <Knob
+                        textContent={(item as string).charAt(0).toUpperCase() + (item as string).slice(1)}
+                        onPressContent={() => navigation.navigate('DicoCategoryScreen', {category: {item}})}
+                        buttonStyle={styles.categoriesButton}
+                        textStyle={styles.buttonText}
+                    />
                 }
             />
         </LinearGradient>
@@ -172,7 +170,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         textAlign: 'center',
-        fontSize: 20,
+        fontSize: 20
     },
 
     input: {

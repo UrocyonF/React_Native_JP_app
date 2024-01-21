@@ -13,19 +13,21 @@
 
 import 'react-native-gesture-handler';
 import React, { useState } from 'react';
-import LinearGradient from 'react-native-linear-gradient';
-
 import {
     StyleSheet,
     View,
     Text,
-    TextInput,
     Pressable,
     Modal,
     StatusBar
 } from 'react-native';
 
+import LinearGradient from 'react-native-linear-gradient';
+
 import RNFS from 'react-native-fs';
+
+import Input from '../../components/dico/Input';
+import Knob from '../../components/Knob';
 
 
 function DicoAddScreen() {
@@ -87,58 +89,43 @@ function DicoAddScreen() {
             <StatusBar barStyle="light-content" translucent={true}/>
 
             <View style={styles.inputView}>
-                <TextInput
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    style={styles.input}
-                    placeholder="Catégorie"
-                    value = {category}
-                    onChange={(event) => setCategory(event.nativeEvent.text.toLowerCase())}
+
+                <Input
+                    valueContent={category}
+                    onChangeContent={(event: any) => setCategory(event.nativeEvent.text.toLowerCase())}
+                    placeholderContent="Catégorie"
                 />
 
-                <TextInput
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    style={styles.input}
-                    placeholder="Français"
-                    value = {fr}
-                    onChange={(event) => setFr(event.nativeEvent.text.toLowerCase())}
+                <Input
+                    valueContent={fr}
+                    onChangeContent={(event: any) => setFr(event.nativeEvent.text.toLowerCase())}
+                    placeholderContent="Français"
                 />
 
-                <TextInput
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    style={styles.input}
-                    placeholder="Kana"
-                    value = {kana}
-                    onChange={(event) => setKana(event.nativeEvent.text)}
+                <Input
+                    valueContent={kana}
+                    onChangeContent={(event: any) => setKana(event.nativeEvent.text)}
+                    placeholderContent="Kana"
                 />
 
-                <TextInput
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    style={styles.input}
-                    placeholder="Kanji"
-                    value = {kanji}
-                    onChange={(event) => setKanji(event.nativeEvent.text)}
+                <Input
+                    valueContent={kanji}
+                    onChangeContent={(event: any) => setKanji(event.nativeEvent.text)}
+                    placeholderContent="Kanji"
                 />
 
-                <TextInput
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    style={styles.input}
-                    placeholder="Romaji"
-                    value = {romaji}
-                    onChange={(event) => setRomaji(event.nativeEvent.text.toLowerCase())}
+                <Input
+                    valueContent={romaji}
+                    onChangeContent={(event: any) => setRomaji(event.nativeEvent.text.toLowerCase())}
+                    placeholderContent="Romaji"
                 />
 
-                <Pressable
-                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
-                    onPress={addData}>
-                    {({ pressed }) => (
-                        <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Ajouter</Text>
-                    )}
-                </Pressable>
+                <Knob
+                    textContent="Ajouter"
+                    onPressContent={addData}
+                    buttonStyle={styles.button}
+                    textStyle={styles.buttonText}
+                />
             </View>
 
             <Modal
@@ -178,19 +165,13 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         alignItems: 'center'
     },
-    input: {
-        backgroundColor: 'white',
-        borderRadius: 10,
-        width: 250,
-        fontSize: 18
-    },
 
     button: {
         marginTop: 25,
         padding: 10,
         borderRadius: 6,
         width: 200,
-        borderWidth: 1,
+        borderWidth: 1
     },
     buttonText: {
         fontSize: 20,
@@ -227,7 +208,7 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 6,
         width: 180,
-        borderWidth: 1,
+        borderWidth: 1
     }
 });
 

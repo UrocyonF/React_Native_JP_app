@@ -11,20 +11,17 @@
  * @format
 */
 import 'react-native-gesture-handler';
-
 import React, { useRef, useState, Component, useEffect } from 'react';
-
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-
 import {
     StyleSheet,
     Text,
     TextInput,
-    Pressable,
     View,
     StatusBar
 } from 'react-native';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import {
     Canvas,
@@ -35,7 +32,10 @@ import  { SvgXml } from 'react-native-svg';
 
 import LinearGradient from 'react-native-linear-gradient';
 
-import kanjiData from './kanji/kanji.json';
+import kanjiData from '../constants/kanji.json';
+
+import TopBarButton from '../components/kanji/TopBarButton';
+import Knob from '../components/Knob';
 
 
 const KanjiStack = createStackNavigator();
@@ -115,9 +115,9 @@ function KanjiMainScreen() {
         if (topBarLang === 'FR') {
             setTradDisplay(wordJson.fr);
         } else {
-            setOnyomiDisplay(wordJson.fr);
             setTradDisplay(wordJson.kunyomi === '' ? wordJson.onyomi : wordJson.kunyomi + '\n' + wordJson.onyomi);
-            setKunyomiDisplay('');
+            setKunyomiDisplay(wordJson.fr);
+            setOnyomiDisplay('');
         }
     }, [wordJson, isKunyomi, isOnyomi]);
 
@@ -207,27 +207,31 @@ function KanjiMainScreen() {
 
             <View style={{...styles.viewFlexRow, marginBottom: 12}}>
                 <View>
-                    <Pressable
-                        style={({ pressed }) => [{ backgroundColor: pressed ? 'rgba(200, 200, 200, 0.2)' : 'transparent' }, styles.topBarItems]}
-                        onPress={() => changeLanguage()}>
-                        <Text style={{...styles.topBarText, color: 'thistle'}}>{topBarLang}</Text>
-                    </Pressable>
+                    <TopBarButton
+                        disabledContent={false}
+                        onPressContent={() => changeLanguage()}
+                        textContent={topBarLang}
+                        textAlignContent="left"
+                        colorContent="thistle"
+                    />
                 </View>
                 
                 <View style={styles.topBarItemsRight}>
-                    <Pressable
-                        disabled={topBarLang === 'FR' ? false : true}
-                        style={({ pressed }) => [{ backgroundColor: pressed ? 'rgba(200,200,200,0.2)' : 'transparent' }, styles.topBarItems]}
-                        onPress={() => manageKunyomi()}>
-                        <Text style={{...styles.topBarText, textAlign: 'right', color: topBarKunyomiColor}}>KUN</Text>
-                    </Pressable>
+                    <TopBarButton
+                        disabledContent={topBarLang === 'FR' ? false : true}
+                        onPressContent={() => manageKunyomi()}
+                        textContent="KUN"
+                        textAlignContent="right"
+                        colorContent={topBarKunyomiColor}
+                    />
 
-                    <Pressable
-                        disabled={topBarLang === 'FR' ? false : true}
-                        style={({ pressed }) => [{ backgroundColor: pressed ? 'rgba(200,200,200,0.2)' : 'transparent' }, styles.topBarItems]}
-                        onPress={() => manageOnyomi()}>
-                        <Text style={{...styles.topBarText, textAlign: 'right', color: topBarOnyomiColor}}>ON</Text>
-                    </Pressable>
+                    <TopBarButton
+                        disabledContent={topBarLang === 'FR' ? false : true}
+                        onPressContent={() => manageOnyomi()}
+                        textContent="ON"
+                        textAlignContent="right"
+                        colorContent={topBarOnyomiColor}
+                    />
                 </View>
             </View>
 
@@ -255,14 +259,13 @@ function KanjiMainScreen() {
                     </View>
                 </View>
 
-                <Pressable
-                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
-                    onPress={() => resetCanvas(300, 300, true)}>
-                    {({ pressed }) => (
-                        <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Réinitialiser</Text>
-                    )}
-                </Pressable>
-                
+                <Knob
+                    textContent="Réinitialiser"
+                    onPressContent={() => resetCanvas(300, 300, true)}
+                    buttonStyle={styles.button}
+                    textStyle={styles.buttonText}
+                />
+
                 <View style={{...styles.viewFlexRow, height: 140}}>
                     <View style={{...styles.viewRow, backgroundColor: "none", borderWidth: 0}}>
                         <TextInput
@@ -285,21 +288,19 @@ function KanjiMainScreen() {
                     </View>
                 </View>
 
-                <Pressable
-                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
-                    onPress={validate}>
-                    {({ pressed }) => (
-                        <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Vérifier</Text>
-                    )}
-                </Pressable>
+                <Knob
+                    textContent="Vérifier"
+                    onPressContent={validate}
+                    buttonStyle={styles.button}
+                    textStyle={styles.buttonText}
+                />
 
-                <Pressable
-                    style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
-                    onPress={newWord}>
-                    {({ pressed }) => (
-                        <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Suivant</Text>
-                    )}
-                </Pressable>
+                <Knob
+                    textContent="Suivant"
+                    onPressContent={newWord}
+                    buttonStyle={styles.button}
+                    textStyle={styles.buttonText}
+                />
             </View>
         </LinearGradient>
     );
@@ -312,18 +313,9 @@ const styles = StyleSheet.create({
         marginTop: 23
     },
 
-    topBarItems: {
-        width: 61,
-        height: 30,
-        borderRadius: 6
-    },
     topBarItemsRight: {
         position: 'absolute',
         right: 0
-    },
-    topBarText: {
-        fontSize: 20,
-        marginHorizontal: 10
     },
 
     wordGiven: {

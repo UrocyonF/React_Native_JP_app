@@ -13,8 +13,6 @@
 
 import 'react-native-gesture-handler';
 import React, { useState, useEffect } from 'react';
-import LinearGradient from 'react-native-linear-gradient';
-
 import {
     StyleSheet,
     View,
@@ -25,7 +23,11 @@ import {
     StatusBar
 } from 'react-native';
 
+import LinearGradient from 'react-native-linear-gradient';
+
 import RNFS from 'react-native-fs';
+
+import ExampleFlatList from '../../components/dico/ExampleFlatList';
 
 
 interface ResponseItem {
@@ -73,7 +75,6 @@ function DicoSearchScreen({ route }: { route: any }) {
                         || item.romaji.includes(strSearch)
                 )
             );
-
             setResponse(tmpSearch);
             return;
         })
@@ -125,15 +126,7 @@ function DicoSearchScreen({ route }: { route: any }) {
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.view}>
             <StatusBar barStyle="light-content" translucent={true}/>
 
-            <View style={styles.firstarticle}>
-                <Text style={styles.articleText}>Français</Text>
-                <Text style={styles.articleText}>Kana</Text>
-
-                <View>
-                    <Text style={styles.articleText}>Kanji</Text>
-                    <Text style={styles.articleTextRomanji}>Romaji</Text>
-                </View>
-            </View>
+            <ExampleFlatList/>
 
             <FlatList
                 data={response}
@@ -196,19 +189,8 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
 
-    firstarticle: {
-        backgroundColor: 'white',
-        padding: 10,
-        borderRadius: 10,
-        margin: 20,
-        width: 330,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        height: 70
-    },
-
     flatlist: {
-        marginBottom: 920,
+        marginBottom: 920
     },
 
     article: {
@@ -218,7 +200,7 @@ const styles = StyleSheet.create({
         margin: 5,
         width: 350,
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'space-between'
     },
     articleText: {
         textAlignVertical: 'center',
@@ -228,9 +210,6 @@ const styles = StyleSheet.create({
         minWidth: 40,
         flexWrap: 'wrap',
         flex: 1
-    },
-    atricleViewKanjiRomanji: {
-        flexDirection: 'column'
     },
     articleTextRomanji: {
         fontSize: 11,
@@ -288,7 +267,7 @@ const styles = StyleSheet.create({
         margin: 5
     },
     buttonText: {
-        fontSize: 20,
+        fontSize: 20
     }
 });
 

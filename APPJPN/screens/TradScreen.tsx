@@ -25,6 +25,8 @@ import {
 
 import Translator from 'react-native-translator';
 
+import Knob from '../components/Knob';
+
 
 function TradScreen() {
     type Language = "fr" | "ja";
@@ -70,13 +72,12 @@ function TradScreen() {
 
             <Text style={styles.output}>{result}</Text>
 
-            <Pressable
-                style={({ pressed }) => [{ backgroundColor: pressed ? 'thistle' : 'white' }, styles.button ]}
-                onPress = {changeLangue}>
-                {({ pressed }) => (
-                    <Text style={[{ color: pressed ? 'white' : 'black' }, styles.buttonText]}>Changer de langue</Text>
-                )}
-            </Pressable>
+            <Knob
+                textContent = "Changer de langue"
+                onPressContent = {changeLangue}
+                buttonStyle = {styles.button}
+                textStyle = {styles.buttonText}
+            />
         </LinearGradient>
     );
 }
