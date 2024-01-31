@@ -157,7 +157,8 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
 const styles = StyleSheet.create({
     view: {
         flex: 1,
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingTop: StatusBar.currentHeight
     },
 
     button: {
@@ -178,7 +179,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         margin: 10,
         marginBottom: 20,
-        marginTop: 50,
+        marginTop: 30,
         width: 250
     },
 

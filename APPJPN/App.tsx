@@ -128,8 +128,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: "space-evenly",
-        paddingBottom: 15,
-        paddingTop: 15
+        paddingTop: StatusBar.currentHeight
     },
 
     title: {

@@ -57,7 +57,7 @@ class LessonScreen extends Component {
 
 
 function LessonMainScreen({ navigation }: { navigation: any }) {
-    const [lessonsJson, setLessonsJson] = useState([{}]);
+    const [lessonsJson, setLessonsJson] = useState<string[][]>([]);
 
 
     useEffect(() => {
@@ -75,7 +75,7 @@ function LessonMainScreen({ navigation }: { navigation: any }) {
                 data={lessonsJson}
                 renderItem={({item}) =>
                     <Knob
-                        textContent={(item as string)}
+                        textContent={(item[0] as string)}
                         onPressContent={() => navigation.navigate('LessonTemplateScreen', {lesson: {item}})}
                         buttonStyle={styles.button}
                         textStyle={styles.buttonText}
@@ -91,26 +91,28 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        paddingTop: StatusBar.currentHeight
     },
 
     title: {
-        fontSize: 50,
+        fontSize: 35,
         fontWeight: 'bold',
         color: 'white',
-        marginBottom: 50
+        marginBottom: 30,
+        marginTop: 20
     },
 
     button: {
         padding: 7,
         borderRadius: 6,
-        marginBottom: 30,
-        width: 180,
+        marginBottom: 15,
+        width: 240,
         borderWidth: 1
     },
     buttonText: {
         textAlign: 'center',
-        fontSize: 20
+        fontSize: 25
     }
 });
 

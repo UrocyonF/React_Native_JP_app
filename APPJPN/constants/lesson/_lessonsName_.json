@@ -1,6 +1,18 @@
 {
     "name": [
-        "Verbe",
-        "Nom commun"
+        ["Verbe", "1_verb"],
+        ["Nom commun", "2_name"],
+        ["Adjectif", "3_adjective"],
+        ["Adverbe", "4_adverb"],
+        ["Pronom", "5_pronoun"],
+        ["Préposition", "6_preposition"],
+        ["Conjonction", "7_conjunction"],
+        ["Interjection", "8_interjection"],
+        ["Déterminant", "9_determinant"],
+        ["Particule", "10_particle"],
+        ["Article", "11_article"],
+        ["Numéral", "12_numeral"],
+        ["Nom propre", "13_proper_noun"],
+        ["Nom", "14_noun"]
     ]
 }

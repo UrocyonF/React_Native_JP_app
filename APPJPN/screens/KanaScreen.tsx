@@ -191,9 +191,9 @@ class KanaScreen extends Component {
 const styles = StyleSheet.create({
     view: {
         flex:1,
-        marginTop: 18,
         flexDirection: 'row',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        paddingTop: StatusBar.currentHeight
     },
 
     title: {

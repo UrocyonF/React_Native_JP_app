@@ -2,12 +2,12 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 
-interface MoreProps {
+interface WarningProps {
     textContent: string;
 }
 
 
-const More: React.FC<MoreProps> = ({ textContent }) => (
+const Warning: React.FC<WarningProps> = ({ textContent }) => (
     <View>
         <Text>{textContent}</Text>
     </View>
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default More;
+export default Warning;

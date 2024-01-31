@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     view: {
         alignItems: 'center',
         height: '200%',
-        marginTop: 10
+        paddingTop: StatusBar.currentHeight
     },
 
     flatlist: {
