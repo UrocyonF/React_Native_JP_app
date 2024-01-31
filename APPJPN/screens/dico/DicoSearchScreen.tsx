@@ -93,7 +93,7 @@ function DicoSearchScreen({ route }: { route: any }) {
         .then((contents) => {
             let dicoJson = JSON.parse(contents);
 
-            const itemMap = dicoJson.categorys.reduce((map: { [key: string]: { category: string, index: number } }, category: string) => {
+            const itemMap = dicoJson.categorys.reduce((map: { [key: string]: { category: string, index: number }}, category: string) => {
                 dicoJson[category].forEach((item: any, index: number) => {
                     const key = `${item.fr}-${item.kana}-${item.kanji}-${item.romaji}`;
                     map[key] = { category, index };

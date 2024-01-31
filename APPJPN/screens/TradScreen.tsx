@@ -19,7 +19,6 @@ import {
     StyleSheet,
     Text,
     TextInput,
-    Pressable,
     StatusBar
 } from 'react-native';
 

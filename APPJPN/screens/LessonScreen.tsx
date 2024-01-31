@@ -6,7 +6,7 @@
  * LICENSE file in the root directory of this source tree. 
  *
  * Author: BALLEUR Maxime
- * Date: 2023
+ * Date: 2023-2024
  *
  * @format
 */
@@ -16,13 +16,12 @@ import React, { useState, Component, useEffect } from 'react';
 import {
     StyleSheet,
     Text,
-    StatusBar
+    StatusBar,
+    FlatList
 } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-import { FlatList } from 'react-native-gesture-handler';
 
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -42,8 +41,8 @@ class LessonScreen extends Component {
         <NavigationContainer independent={true}>
             <LessonStack.Navigator>
                 <LessonStack.Screen
-                    name="LessonMainScreen" 
-                    component={LessonMainScreen} 
+                    name="LessonMainScreen"
+                    component={LessonMainScreen}
                     options={{ headerShown: false }}
                 />
                 <LessonStack.Screen
@@ -70,7 +69,7 @@ function LessonMainScreen({ navigation }: { navigation: any }) {
         <LinearGradient colors={['#02006F', '#10002B']} style={styles.container}>
             <StatusBar barStyle="light-content" translucent={true}/>
 
-            <Text style={styles.title}>日本語辞書</Text>
+            <Text style={styles.title}>Choisi ta leçon !</Text>
 
             <FlatList
                 data={lessonsJson}

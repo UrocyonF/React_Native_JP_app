@@ -43,8 +43,8 @@ class DicoScreen extends Component {
         <NavigationContainer independent={true}>
             <DicoStack.Navigator>
                 <DicoStack.Screen
-                    name="DicoMainScreen" 
-                    component={DicoMainScreen} 
+                    name="DicoMainScreen"
+                    component={DicoMainScreen}
                     options={{ headerShown: false }}
                 />
                 <DicoStack.Screen
@@ -140,8 +140,7 @@ function DicoMainScreen({ navigation }: { navigation: any }) {
                 horizontal={false}
                 numColumns={2}
                 data={dicoJson.categorys}
-                renderItem={
-                    ({item}) =>
+                renderItem={({item}) =>
                     <Knob
                         textContent={(item as string).charAt(0).toUpperCase() + (item as string).slice(1)}
                         onPressContent={() => navigation.navigate('DicoCategoryScreen', {category: {item}})}
